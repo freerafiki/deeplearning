@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors like me">
+	<meta name="generator" content="Jekyll v3.8.6">
+	<title>Deep Learning Course - Kiel</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- MAYBE FOR WEB? integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<link href="css/s.css" rel="stylesheet">
+	<script src="js/dl.js"></script>
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+  	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark pl-5 pr-5">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Deep Learning <span class="sr-only">(current)</span></a>
+					</li>
+           </ul>
+           <ul class="navbar-nav text-right">
+					<li class="nav-item">
+						<a class="nav-link" href="#materialid">Material</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#weeksid">Weekly Summary</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#projectsid">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#faqid">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://chat.opencampus.sh/sose20/channels/deep-learning">Mattermost Channel</a>
+					</li>
+				</ul>
+			</div>
+  	</nav>
+	
+    <div class="masthead">
+      <h1>A collection of resources about Deep Learning</h1> 
+    </div>
+  </header>
+    
+
+	<div class="container p-5">
+		<div class="material" id="materialid">
+			<p class="titletext"><b>Material and Resources</b></p>
+			<div class="expltext">The course is based on various Coursera courses. It may be seen as a subset of the <a href="https://www.coursera.org/specializations/deep-learning">DeepLearning Specialization on Coursera</a>, available also at <a href="https://www.deeplearning.ai/">DeepLearning.ai</a> (it may slightly differs).
+			However, both specialization has a lot of contents and are not for free (even though on Coursera the course can be audit for free).<br>
+			In this course we will go through the first 3 Courses:
+			<ul class="list">
+				<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning">Neural Networks and Deep Learning</a>, </li>
+				<li><a href="https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</a>,</li>
+				<li><a href="https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning">Structuring Machine Learning Projects</a></li>
+			</ul>
+			<p class="expltext">The course will make use of the <a href="https://colab.research.google.com/notebooks/intro.ipynb">Google Colab</a> tool for the programming part, which allow for a very smooth collaborative working environment with no need to install anything on the personal computer and access to GPU computing. <br> 
+			The programming will be done in the <a href="https://www.python.org/">Python</a> language. Everybody should have basic knowledge in this language (or Matlab, R and similar) in order to be able to complete the assignment. Working with array and matrices is needed and is very well handled from the <a href="https://numpy.org/">numpy</a> python library.<br>
+			In the second week of the <a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning#syllabus">Neural Networks and Deep Learning</a> course a further insight on vectorization in python is given, so no need to worries if you are not yet very familiar with such operations.
+			Some of the concepts explained in the course will require some basic knowledge of mathematics and linear algebra. Again, the first 2 weeks of the <a href="https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning#syllabus">Neural Networks and Deep Learning</a> course will give hopefully enough examples to clarify the matter. On request, additional bibliography can also be provided. 
+			</div>
+			
+			<div class="tools">
+			<p class="subtitletext">Useful tools:</p>
+			<ul class="expltext">
+				<li><a href="https://github.com/">Github</a> and <a href="https://about.gitlab.com/">Gitlab:</a> online hosting for repositories with version control using <a href="https://git-scm.com/">git</a> (this may be annoying at the beginning, but then it's great!). <br>
+				They are very similar, with small differences that may be subjective. Lately gitlab has been growing a lot and it may offer more options for deployment and testing of the code.<br>
+				I give here references to github, yet the same things can be made also with gitlab, the choice is yours.<br>
+				You can use it to <a href="https://help.github.com/en/github/getting-started-with-github/create-a-repo">create a repository upload your code</a>, <a href="https://help.github.com/en/github/administering-a-repository/setting-repository-visibility">keeping it either private or public</a>, <a href="https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository">collaborate with others</a>, <a href="https://pages.github.com/">create static webpages for your projects</a> (like this one), <a href="https://help.github.com/en/github/building-a-strong-community/about-wikis">create wikis for your software</a>, <a href="https://help.github.com/en/actions">and much more.</a></li>
+				<li><a href="https://colab.research.google.com/notebooks/intro.ipynb">Google Colab:</a> collaborative  coding environment with access to GPU computing power. We will use this during the course - it is strictly related to the coursera courses and provided there as a tool to complete the assignment. It uses <a href="https://ipython.org/notebook.html">Python Notebooks</a> to allow the creation of an interactive document where code and text can be combined.</li>
+				<li>Python Notebooks can also be used offline with <a href="https://jupyter.org/">Project Jupyter</a>, <a href="https://jupyter.org/install">installing it on your own computer</a>, and notebooks can be uploaded to github <a href="https://help.github.com/en/github/managing-files-in-a-repository/working-with-jupyter-notebook-files-on-github">and they will be rendered as <i>static HTML</i></a>. That means that images and plot you made will be also visibles from others. <br>
+				If you want it to be interactive, <a href="https://mybinder.org/">Binder</a> is an awesome tool that allows to do that very quickly, and support also <a href="https://realpython.com/python-virtual-environments-a-primer/">virtual environments</a>.</li>
+				<li>Kaggle: Environment for <a href="https://www.kaggle.com/datasets">dataset</a>, <a href="https://www.kaggle.com/notebooks">notebooks</a> and competitions for Deep Learning. It is very easy to connect with Google Colab. <a href="https://www.kaggle.com/general/51898">Here a discussion</a> and <a href="https://medium.com/analytics-vidhya/how-to-fetch-kaggle-datasets-into-google-colab-ea682569851a">here an article</a> explaining step by step</li>
+			</ul>
+			</div>
+		</div>
+		
+		<hr class="sephr" id="weeksid">
+		
+		<div class="weeks" >
+			<p class="titletext"><b>Weekly Summary</b></p>
+			<p class="expltext">The course takes place every week. Here a recap of what happened - what is planned and related resources.</p>
+			<!-- WEEKS -->
+			
+			<!-- WEEK 1 -->
+			<a onclick="toggleWeek('1')"><div class="week"> <span class="symbol" id="symb1">&#9658;</span><b>&nbsp;Week 1 - General Introduction - 20.04</b></div></a>
+			<p class="weektext weekcontent" id="week1">
+				An introduction about the course and the people in it. A short overview of the course, contents and how it will work. Information about accounts, forum and contacts are provided. 
+				First homeworks assigned.<br>
+				<b>Resources:</b>
+				<a href="weeks/week1.html">Slides</a><br>
+			</p>
+			
+			<!-- WEEK 2 -->
+			<a onclick="toggleWeek('2')"><div class="week"> <span class="symbol" id="symb2">&#9658;</span><b>&nbsp;Week 2 - Introduction to Deep Learning - 27.04</b></div></a>
+			<p class="weektext weekcontent" id="week2">
+				First week of real course. We check if everything worked with the tools we started using, and take a look at the first doubts about neural network as general topic. First session with small quiz and round of discussion. Homework for next week.<br>
+				<b>Resources:</b> <a href="weeks/week2.html">Slides</a> - <a href="weeks/week2_wa.html">Slides with discussions</a><br>
+				<b>Paper of the week:</b> <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"><i>Deep Learning</i>, Y. LeCunn, Y. Bengio and G. Hinton, <i>Nature, 2015</i></a>
+			</p>
+			
+			<!-- WEEK 3 -->
+			<a onclick="toggleWeek('3')"><div class="week"> <span class="symbol" id="symb3">&#9658;</span><b>&nbsp;Week 3 - Neural Network Basics - 04.05</b></div></a>
+			<p class="weektext weekcontent" id="week3">
+				Second week of the first Coursera course. Discussion about python environment, dot product against element wise multiplication, and first exercise session training a small neural network recognizing cats!<br>
+				<b>Resources:</b> <a href="weeks/week3.html">Slides</a><br>
+				<b>Paper of the week:</b> <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"><i>ImageNet Classification with Deep Convolutional Neural Networks</i>, A. Krizhevsky, I. Sutskever, G. E. Hinton, <i> Proceedings of the 25th International Conference on Neural Information Processing Systems (Lake Tahoe, NV, Dec. 2012), 1097–1105.</i></a>
+			</p>
+			
+			<!-- WEEK 4 -->
+			<a onclick="toggleWeek('4')"><div class="week"> <span class="symbol" id="symb4">&#9658;</span><b>&nbsp;Week 4 - Shallow Neural Networks - 11.05</b></div></a>
+			<p class="weektext weekcontent" id="week4">
+				Backpropagation: some math to understand the basics behind the magic. Weights initialization in the training and notebook example of planar data classification changint the number of hidden unit in a shallow network - only 1 hidden layer.<br>
+				<b>Resources:</b> <a href="weeks/week4.html">Slides</a>, <a href="weeks/w4_ex.html">Exercise for the lecture</a><br>
+				<b><s>Paper</s>Resource of the week:</b> <a href="https://blog.tensorflow.org/2020/03/introducing-model-garden-for-tensorflow-2.html">Tensor Flow Model Garden</a>, <a href="https://tfhub.dev/">Tensor Flow Hub</a>
+			</p>
+			
+			<!-- WEEK 5 -->
+			<a onclick="toggleWeek('5')"><div class="week"> <span class="symbol" id="symb5">&#9658;</span><b>&nbsp;Week 5 - Deep Neural Networks - 18.05</b></div></a>
+			<p class="weektext weekcontent" id="week5">
+				Deep neural network. First example of generalizing a neural network with L layers. Discussion and choice about the projects, presentation of the Hackathon. Quick overview of different network architectures and when they may be used. End of the first Coursera course.<br>
+				<b>Resources:</b> <a href="weeks/week5.html">Slides</a><br>
+				<b>Paper of the week:</b> <a href="http://proceedings.mlr.press/v15/coates11a.html"><i>An analysis of single-layer networks in unsupervised feature learning</i></a>, A. Coates, Honglak Lee and Andrew Y. Ng<i>, Proceedings of the Fourteenth International Conference on Artificial Intelligence and Statistics, PMLR 15:215-223, 2011.</i>
+			</p>
+			
+			<!-- WEEK 6 -->
+			<a onclick="toggleWeek('6')"><div class="week"> <span class="symbol" id="symb6">&#9658;</span><b>&nbsp;Week 6 - Practical Aspects of Deep Learning - 25.05</b></div></a>
+			<p class="weektext weekcontent" id="week6">
+				Practical hints about initialization and regularization techniques to avoid overfitting and improving the training of a neural network.<br>
+				<b>Resources:</b> <a href="weeks/week6.html">Slides</a><br>
+				<b>Paper of the week:</b> <a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><i>Generative Adversarial Nets</i></a>, Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, <i>NIPS'14: Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2December 2014 Pages 2672–2680</i>
+			</p>
+			
+			<!-- WEEK 7 -->
+			<a onclick="toggleWeek('7')"><div class="week"> <span class="symbol" id="symb7">&#9658;</span><b>&nbsp;Week 7 - Optimization Algorithms - 01.06</b></div></a>
+			<p class="weektext weekcontent" id="week7">
+				Mini-batches, Momentum, RMSProp and AdamOptimizer: an overview of optimization algorithm to train faster neural networks. <br>
+				<b>Resources:</b> <a href="weeks/week7.html">Slides</a><br>
+				<b>Paper of the week:</b> <a href="https://arxiv.org/abs/1906.02243"><i>How Does Batch Normalization Help Optimization?</i></a>, Emma Strubell, Ananya Ganesh and Andrew McCallum, <i> 57th Annual Meeting of the Association for Computational Linguistics (ACL). Florence, Italy. July 2019</i>
+			</p>
+			
+			<!-- WEEK 8 -->
+			<a onclick="toggleWeek('8')"><div class="week"> <span class="symbol" id="symb8">&#9658;</span><b>&nbsp;Week 8 - Hyperparameter Tuning - 08.06</b></div></a>
+			<p class="weektext weekcontent" id="week8">
+				Quick overview of the projects, report from Hackathon, discussion about batch normalization and hyperparameters search, first assignment using Tensorflow to create a small neural network. Small discussion about Tensorflow ideas and modalities and difference between 1.0 and 2.0 versions.
+				<b>Resources:</b> <a href="weeks/week8.html">Slides</a><br>
+				<b>Paper of the week:</b> <a href="https://arxiv.org/abs/1805.11604"><i>Energy and Policy Considerations for Deep Learning in NLP</i></a>, Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry,<i> Thirty-second Conference on Neural Information Processing Systems, NeurIPS 2018</i>
+			</p>
+			
+			<!-- WEEK 9 -->
+			<a onclick="toggleWeek('9')"><div class="week"> <span class="symbol" id="symb9">&#9658;</span><b>&nbsp;Week 9 - Machine Learning Strategy 1 - 15.06</b></div></a>
+			<p class="weektext weekcontent" id="week9">
+				Talk about how to structure the training, test and validation set, and more general on how to structure the whole project.<br>
+				Since there were no programming assignment for this week, walkthrough an LSTM tutorial on time series.<br>
+				<b>Resources:</b> <a href="weeks/week9.html">Slides</a>, <a href="https://github.com/freerafiki/Notebooks/blob/master/DeepLearning/Tutorial_LSTM_%5Bedit%5D.ipynb">Notebook</a><br>
+			</p>
+			
+			<!-- WEEK 10 -->
+			<a onclick="toggleWeek('10')"><div class="week"> <span class="symbol" id="symb10">&#9658;</span><b>&nbsp;Week 10 - Machine Learning Strategy 2 - 22.06</b></div></a>
+			<p class="weektext weekcontent" id="week10">
+				Guidelines for the projects presentations, suggestions on what to put on them, baseline and human performances. What about using transfer learning, end-to-end approaches, divide the problem into smaller subproblems, or using multi-tasking? Sometimes the problem can be seen from another perspective. <br>
+				Walkthrough a small code used for hyperparameter search: grid search, randomized search, and an example of tensorboard to visualize results
+				<b>Resources:</b> <a href="weeks/week10.html">Slides</a>, <a href="https://github.com/freerafiki/Notebooks/blob/master/DeepLearning/In_search_of_the_hyperparameters.ipynb">Notebook</a><br>
+			</p>
+			
+			<!-- WEEK 11 -->
+			<a onclick="toggleWeek('11')"><div class="week"> <span class="symbol" id="symb11">&#9658;</span><b>&nbsp;Week 11 - Presentation of Final Projects - 29.06</b></div></a>
+			<p class="weektext weekcontent" id="week11">
+				<a>Slides</a><br>
+			</p>
+		</div>
+	
+		<hr class="sephr">
+		
+		<div class="projects" id="projectsid">
+			<p class="titletext"><b>Projects</b></p>
+			<p class="expltext">Here we give an overview of the projects that will be carried out during the course. It will be updated when the projects start.</p>
+			<p class="projtitle"><b>&#9658; Learning to predict DNA-Binding</b></p>
+			<p class="expltext">Using DNA-Binding data to train the network, the aim is to be able to predict the amount of binding on new data on different samples. More details at the end of the course.</p>
+			<p class="projtitle"><b>&#9658; Surf Spots Prediction</b></p>
+			<p class="expltext">Using data from the last 4 years of the well-known Windfinder website, the project consists in creating a model able to predict whether the surf spot quality for the next day(s). Will be ready just in time for the summer! More details at the end of the course.</p>
+			<p class="projtitle"><b>&#9658; Fake News</b></p>
+			<p class="expltext">A project about classification of fake news. Initially using datasets from the web, with the possibility to extend to a more handmade dataset. Is this actually true or just a fake news? Ask the network! More details at the end of the course.</p>
+			<p class="projtitle"><b>&#9658; Credit Card Fraud Detection</b></p>
+			<p class="expltext">Can the network detect if the transaction is real or a fraud? More details at the end of the course.</p>
+			<p class="projtitle"><b>&#9658; Bakery Prediction</b></p>
+			<p class="expltext">After pandemic time, patterns are not the same anymore. How will the network adapt to this? More details at the end of the course.</p>
+		</div>
+		
+		<hr class="sephr">
+		
+		<div class="FAQ" id="faqid">
+			<p class="titletext"><b>FAQ</b></p>
+			<p class="faqquest">How can I register to the Mattermost Channel for the Course?</p>
+			<p class="expltext">The registration is unfortunately separate from the OpenCampus registration, and can be made here: <a href="https://chat.opencampus.sh/signup_user_complete/?id=yc6wgbqbx3bgxrt5ey1fga1oro">Link for registration</a>.<br>
+			You can create a different user account. Once you are registered, please join the <a href="https://chat.opencampus.sh/sose20/channels/town-square">General Channel for the Summer Semester</a> and the <a href="https://chat.opencampus.sh/sose20/channels/deep-learning">Deep Learning Channel</a>.</p>
+			<p class="faqquest">Where is the course?</p>
+			<p class="expltext">The course is online and will be given via the Zoom platform every Monday at 16.00. The lectures are open, and the link is the following: <a href="https://zoom.us/j/400574033">Link to Join the Zoom Meeting</a>.</p>
+			<p class="faqquest">Can I follow the course also if I am not online on Mondays?</p>
+			<p class="expltext">In theory yes, but the best parts are the discussion, who will happen online on Mondays. Of course you can follow the online Coursera courses and then ask question on the Mattermost channel and still participate, if you like it this way. </p>
+			<p class="faqquest">Will the course be recorded?</p>
+			<p class="expltext">No, at the moment this is not planned. The slides will be uploaded in this page and some external links to material and resources may also be available here, but the discussions will not be fully available.</p>
+		</div>
+<!-- END OF THE PAGE -->
+</div>
+
+<script>
+	closeAllWeeks();
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+</body>
+</html>

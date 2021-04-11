@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="freerafiki">
+		<meta name="generator" content="Jekyll v3.8.6">
+		<title>Reviewing Machine Learning Papers</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="../../css/bootstrap.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+		</script>
+		<script src="../../js/jquery.slim.min.js"></script>
+		<style>
+			body {margin: 2.5em;}
+			.centered {text-align: center;}
+			.disclaimer {border-radius: 0.4em; background-color: mediumblue; color: white; padding: 0.3em 1em;}
+			.signature {text-align: right; font-style: italic }
+			.green {color: green}
+			.lime {color: yellowgreen}
+			.yellow {color: goldenrod}
+			.orange {color: darkorange}
+			.red {color: red}
+			.expl {padding: 0.5em;}
+			.tldr {padding: 0.5em; margin-bottom: 0.8em;}
+			.link {padding: 0.3em 0.5em; border: 1px solid blue; background-color: dodgerblue; color: white; text-align: center; border-radius: 0.5em;}
+			.link a:link { color: #ffffff; }
+			.link a:visited { color: #ffffff; }
+			.link a:hover { color: #ffffff; }
+			.link a:active { color: #ffffff; }
+			.cat {padding: 0.3em 0.5em; text-align: center; border-radius: 0.5em; font-size: 0.6rem;}
+			.images {border: 1px solid darkblue; background-color: darkblue; color: white;}
+			.general {border: 1px solid #777; background-color: #666; color: white;}
+			.pioneer {border: 1px solid darkorange; background-color: orange; color: white;}
+		</style>
+		
+	</head>
+	<body>
+		<h1 class="centered">Reviewing Papers</h1>
+		
+		<p> Just a collection of thoughts about the main papers in the machine learning field that I was reading (and suggesting for the <a href="../deeplearning/">deep learning course</a>). In the end of the page there is a <a href="#usefulterms">useful terms section</a>, if some terms used in the text do not make any sense. If a term shows up very often, I try to use a consistent notation to make it easier to read.</p>
+		<h5>Should I read all the papers (or at least all the reviews)?</h5>
+		<p>Up to you, I find it very useful to take the time to read as much as I can. But of course usually we do not manage to read all of them, so I am using a simple star notation to denote (IMHO) how important a paper was, plus the year, to give a context in terms of time. A timeline would also be nice, let's see when I manage to make a good one.</p>
+		<h4 class="centered">Legend</h4>
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-2"><span class="green"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <br> super important</span>
+			</div>
+
+			<div class="col-2">
+				<span class="lime"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <br> highly important</span>
+			</div>
+			<div class="col-2">
+				<span class="yellow"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <br> medium</span>
+			</div>
+			
+			<div class="col-2">
+			<span class="orange"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <br> interesting, but whatever</span></div>
+		
+			<div class="col-2">
+			<span class="red"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+			</svg> <br> honestly, you can skip</span> </div>
+			<div class="col-1"></div>
+		</div><!-- end row of legend -->
+		<br><h5>Format of the reviews:</h5>
+		<p>The reviews are a short description of what the paper contains, not a substitute for the whole paper, but  it may help in the choice of whether you want to read it or not. At the end of each session there is  a TL;DR brief one sentence summary.</p>
+		<p class="disclaimer">
+		Please note that these are my interpretation and thoughts, do not take as dogmatic truth, instead try to discuss and criticize it, and of course, contact me if you want to discuss or if you find errors! </p>
+		<p class="signature">Thanks,<br>Luca</p>
+		
+		<!-- maybe not needed?
+		<h2>Summary:</h2>
+		<ul id="summary_list">
+		<script>
+			var papers_el = $('.paper');
+			for (paper in papers_el) {
+				$("#summary_list").append('<li><a href="#' + papers_el[paper].id + '>New list item</a></li>');
+			}
+		</script>
+		</ul>
+		-->
+		
+		<h2>Papers:</h2>
+		
+		<div class="papers-container" id="vue-app-div">
+			
+			<!-- NEW PAPER -->
+					 
+			<div class="row" @click="isOpenBM = !isOpenBM">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(1986) Learning and relearning in Boltzmann machines </h3>
+				</div>
+				<div class="col-lg-2 col-md-2 col-2"><span class="cat general">GENERAL</span> <span class="cat pioneer">PIONEER</span></div>
+				<div class="review" v-show="isOpenBM">
+					<div class="centered"><span class="link"><a href="https://www.researchgate.net/publication/242509302_Learning_and_relearning_in_Boltzmann_machines"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						A quite old paper which poses the questions that neural network addressed even before starting: will the network settle, will the network learn, what actually will be learnt, how long will it take and how are the weights that encode the knowledge acquired?
+						The paper focuses on the last question, describing a general <i>learning</i> procedure.
+						It goes throught the energy minimization framework, the problem of weak and strong constraint, local/global minima and how to avoid getting stuck, gradient descent.
+						It defines Boltzmann Machines - i have to finish reading
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 1988 -->
+					 
+			<div class="row" @click="isOpenAE = !isOpenAE">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(1988) Auto-association by multilayer perceptrons and singular value decomposition</h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenAE">
+					<div class="centered"><span class="link"><a href="https://www.semanticscholar.org/paper/Auto-association-by-multilayer-perceptrons-and-Bourlard-Kamp/f5821548720901c89b3b7481f7500d7cd64e99bd?p2df"target="_blank" target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 1997 -->
+					 
+			<div class="row" @click="isOpenGBDR = !isOpenGBDR">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(1997) Long-Short Term Memory </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenGBDR">
+					<div class="centered"><span class="link"><a href="https://www.bioinf.jku.at/publications/older/2604.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 1997 -->
+					 
+			<div class="row" @click="isOpenBRNN = !isOpenBRNN">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(1997) Bidirectional Recurrent Neural Networks </h3>
+				</div>
+					<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenBRNN">
+					<div class="centered"><span class="link"><a href="https://www.di.ufpe.br/~fnj/RNA/bibliografia/BRNN.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 1998 -->
+					 
+			<div class="row" @click="isOpenGBDR = !isOpenGBDR">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(1998) Gradient-based learning applied to document recognition. </h3>
+				</div>
+					<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenGBDR">
+					<div class="centered"><span class="link"><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation sadasdasfagsedax sd asd asdas dasdsa
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="row" @click="isOpenImagenet = !isOpenImagenet">
+				<div class="col-lg-2 col-md-3 5-star-paper">
+					<h3><span class="green"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+	</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+	</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+	</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+	</svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+						</svg></span> &nbsp; </h3>
+				</div>
+				<div class="col-lg-8 col-md-7 col-10" id="imagenet">
+					<h3>(2012) ImageNet Classification with Deep Convolutional Neural Networks </h3>
+				</div>
+				<div class="col-lg-2 col-md-2 col-2"><span class="cat images">IMAGES</span></div>
+			</div>
+			<div class="review" v-show="isOpenImagenet">
+				<div class="centered"><span class="link"><a href="https://dl.acm.org/doi/10.1145/3065386"target="_blank" >Link to the Paper</a></span></div>
+				<div class="expl" id="imagenet" >
+					First big breakthrough in 2012 where the ImageNet Challenge was won by far from the neural network presented in this paper. 
+					They combined various techniques, with a network that seen now looks very trivial. 
+					They were the first to use ReLU instead of the (then) standard <math>tanh</math> activation function, which ensured faster training times. Plus they trained on multiple GPUs. 
+					The biggest advantage is the training, which is longer and much better organized, more than a very innovative architecture (they order the section in terms of importance, and ReLU comes first, network architecture only fifth).
+					The contributions, in order of importance, are described as:
+					<ol>
+						<li>using ReLU as activation function to reduce training time;</li>
+						<li>parallelization of the training on multiple GPU with partial comunication (only in some layers);</li>
+						<li>response normalization: ReLU tends to learn and increase weights, and a normalization helps improving generalization across adjacent neurons; (1.2-1.4% error reduction)</li>
+						<li>overlapping pooling: the patch used to group neighbouring pixels are overlapping and this tends to reduce chances overfitting (very slightly, it seems it's not the winning factor - 0.3-0.4% error reduction);</li>
+						<li>overall architecture: as said, this is the last point, which may sound counterintuitive. It has 8 layers, 5 fully convolutional and 3 fully connected layers, the last is a softmax with 1000 output neurons (for the 1000 class)</li>
+					</ol>
+					Moreover, they also took care of reducing overfitting, by using:
+					<ul>
+						<li>data augmentation (the idea was taken from previous work, so it's nothing new in this case, the feeling is that they did it better, or at least it worked better combined with the other features they introduced) under the form of image translation and horizontal reflections and altering the RGB intensities ( This proved to be very effective - over 1% error reduction) and </li>
+						<li>dropout, which at the time was a recently introduced techniques, with a probability of <math>p=0.5</math>.</li>
+					</ul>
+					They trained using stochastic gradient descent, gaussian initialization of the weights for all layers for five to six days at the time.
+					Results were very good and showed that larger network could work. It was probably the first time that using a larger network worked (they even tested removing some layers to show that shallower networks did not reach such high accuracies, stating the importante of deeper networks) because of a well-structured training (and the activation function), which makes a huge difference, because it proved the potential of larger network, which then developed much further until the huge network we see now. 
+				</div>
+				<div class="tldr">
+					<h5>TL;DR</h5>
+					ReLU combined with longer training on multiple GPU worked as a proof of concept for the ability of larger network to reach higher accuracy on classification tasks.
+				</div>
+			</div>
+
+
+			<!-- NEW PAPER 2012 -->
+
+			<div class="row" @click="isOpenUnsupFL = !isOpenUnsupFL">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2012) An Analysis of Single-Layer Networks in Unsupervised Feature Learning </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenUnsupFL">
+					<div class="centered"><span class="link"><a href="https://ai.stanford.edu/~ang/papers/nipsdlufl10-AnalysisSingleLayerUnsupervisedFeatureLearning.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl" id="openunsupfl" >
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+
+			<!-- NEW PAPER 2014 -->
+					 
+			<div class="row" @click="isOpenNTM = !isOpenNTM">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2014) Neural Turing Machines </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenNTM">
+					<div class="centered"><span class="link"><a href="https://arxiv.org/pdf/1410.5401v2.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 2014 -->
+					 
+			<div class="row" @click="isOpenGRU = !isOpenGRU">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2014) Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenGRU">
+					<div class="centered"><span class="link"><a href="https://arxiv.org/pdf/1412.3555v1.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 2014 -->
+					 
+			<div class="row" @click="isOpenVAE = !isOpenVAE">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2014) Auto-Encoding Variational Bayes </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenVAE">
+					<div class="centered"><span class="link"><a href="https://arxiv.org/pdf/1312.6114v10.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			<!-- NEW PAPER 2016 -->
+					 
+			<div class="row" @click="isOpenTransformer = !isOpenTransformer">
+				<div class="col-lg-2 col-md-4 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2016) Spatial Transformer Networks </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenTransformer">
+					<div class="centered"><span class="link"><a href="https://arxiv.org/pdf/1506.02025.pdf"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<!-- NEW PAPER -->
+					 
+			<div class="row" @click="isOpenCapsule = !isOpenCapsule">
+				<div class="col-lg-2 col-md-3 4-star-paper">
+				</div>
+				<div class="col-lg-8 col-md-7 col-10">
+					<h3>(2017) Dynamic Routing Between Capsules </h3>
+				</div>
+				<div class="cat col-lg-2 col-md-2 col-2"></div>
+				<div class="review" v-show="isOpenCapsule">
+					<div class="centered"><span class="link"><a href="https://arxiv.org/abs/1710.09829"target="_blank" >Link to the Paper</a></span></div>
+					<div class="expl">
+						real explanation
+					</div>
+					<div class="tldr">
+						<h5>TL;DR</h5>
+						short summary
+					</div>
+				</div>
+			</div>
+			
+			
+
+			<br>
+			<h3 id="usefulterms">Useful Terms:</h3>
+			<ul>
+				<li><b>ImageNet:</b> ImageNet is a dataset of over 15 million labeled high-resolution images belonging to roughly 22,000categories.  The images were collected from the web and labeled by human labelers using Amazon’s Mechanical Turk crowd-sourcing tool.  Starting in 2010, as part of the Pascal Visual ObjectChallenge, an annual competition called the ImageNet Large-Scale Visual Recognition Challenge(ILSVRC) has been held. ILSVRC uses a subset of ImageNet with roughly 1000 images in each of1000 categories. In all, there are roughly 1.2 million training images, 50,000 validation images, and150,000 testing images.</li>
+				<li><b>ReLU:</b> Rectified Linear Unit, the activation function for a neuron, which follows the simple formula  <math xmlns = "http://www.w3.org/1998/Math/MathML">z=max(0,f)</math> and proved to be very successful in training neural network faster.</li>
+			</ul>
+		
+		</div>
+	</body>
+	<script>
+		var app5 = new Vue({
+			el: '#vue-app-div',
+			data: {
+				isOpenImagenet: false,
+				isOpenUnsupFL: false,
+				isOpenBM: false,
+				isOpenGBDR: false,
+				isOpenNTM: false,
+				isOpenCapsule: false,
+				isOpenGRU: false,
+				isOpenBRNN: false,
+				isOpenAE: false,
+				isOpenVAE: false
+			}
+		})
+//		$( document ).ready(function() {
+//			console.log( "ready!" );
+//			var superpapers = $('.5-star-paper');
+//			//var superpapers = document.getElementsByClassName('5-star-paper');
+//			for (var i=0; i < superpapers.length; i++) {
+//				var cur_div = superpapers[i];
+//				console.log("super-paper at index " + i + " is " + cur_div);
+//				cur_div.html('<h3><span class="green"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg></span> &nbsp; </h3>');
+//			}
+//		})
+	</script>
+</html>

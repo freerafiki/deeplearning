@@ -1,0 +1,156 @@
+.container {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding: 1rem;
+	font-family: "Open Sans";
+}
+.titletext {
+	font-size: 1.5rem;
+}
+.material {
+	padding-top: 3.5rem;
+}
+.expltext {
+	font-size: 0.9rem;
+}
+.list {
+	padding-top: 0.3rem;
+}
+.projects {
+	padding-top: 1rem;
+}
+.week {
+	font-weight: 900;
+	font-size: 1.3rem;
+	padding-bottom: 0.3rem;
+	padding-top: 0.3rem;
+	color:#0989ff;
+}
+.rotated {
+	float:left;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	transform:rotate(90deg);
+	transition: .5 ease;
+}
+.faqquest {
+	font-weight: 800;
+	font-size: 1.2rem;
+}
+.subtitletext {
+	font-weight: 700;
+	font-size: 1.15rem;
+}
+/* SLIDES CSS */
+.slidetitle {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color:bisque;
+}
+.slidetitle-2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color:coral;
+}
+.slidewithalotoftext {
+	font-size: 2.0rem;
+}
+.slidewithreallyalotoftext {
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+.source {
+	font-size: 1.5rem;
+	font-weight: 100;
+}
+.bigger {
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.huge {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.smaller {
+	font-size: 2.2rem;
+	font-weight: 600;
+}
+.leftcol {
+	position: absolute;
+	left: 0%;
+	right: 50%;
+}
+.rightcol {
+	position: absolute;
+	left: 50%;
+	right: 00%;
+}
+.firstof3 {
+	padding: 1rem;
+	position: absolute;
+	left: 0%;
+	right: 66%;
+}
+.secondof3 {
+	padding: 1rem;
+	position: absolute;
+	left: 33%;
+	right: 33%;
+}
+.thirdof3 {
+	padding: 1rem;
+	position: absolute;
+	left: 66%;
+	right: 0%;
+}
+.spacetop {
+	padding-top: 5rem;
+}
+.col4 {
+	width: 1rem;
+	display: inline;
+}
+.arrowforw {
+	left: 20%;
+	position: absolute;
+	top:65%;
+}
+.arrowback {
+	left: 20%;
+	position: absolute;
+	top:365%;
+	-webkit-animation: moveRight 5s;
+	animation: linear moveRight 5s;
+}
+.projtitle {
+	font-weight: 900;
+	font-size: 1.3rem;
+}
+.sephr {
+	border: none;
+	height: 0.1rem;
+	color: darkslategrey;
+	background-color: darkslategrey;
+}
+.wbg {
+	background-color: aliceblue;
+}
+.left {
+	text-align: left !important;
+}
+.img-slide {
+	border: 0px;
+	background-color: aliceblue;
+}
+
+.masthead {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  background-color: dodgerblue;
+  color: aliceblue;
+}
+
