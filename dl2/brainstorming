@@ -1,0 +1,27 @@
+Advanced Deep Learning:
+
+    Let's have a short brainstorming session:
+
+    Write down here below some ideas that you may have for your project. (Each person has a different color, you can set your name on the top right corner (or bottom, depending on screen size), but it's not needed, anonymous is also fine).
+
+ Face Mask Recognition 2.0
+ -> Do the Face Mask NN "properly"
+
+  2.   Object Detection/ Localization  in a video ( YOLO like ) ||  Pose Estimation
+  Object detection to use
+
+  Text processing using recurrent models
+
+  prediction of some financial process with special data ( like opening price of stock market or sth else)
+
+
+  image recognition and classification (Building on the painting classification idea especially distinguish between real and fake paintings.)
+
+
+  Image Classification (like doing some thing with detecting and classifying plants by their images.)
+
+
+
+  1. object detection to identify the face (maybe also the ehnecity) then it give option to choose the different ethnic version of the face.
+
+2. create a chess game player
