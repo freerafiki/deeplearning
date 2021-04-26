@@ -1,170 +1,94 @@
 <html>
 	<head>
       <!-- for gitbook -->
-      <title>Week 3 - Deep Learning @ Opencampus</title>
+      <title>Week 3 - Advanced Deep Learning @ Opencampus</title>
       <meta charset="UTF-8">
-      <meta name="description" content="Linear algebra with Numpy, gradient descent, learning rate and convex functions.">
-      <meta name="keywords" content="Deep Learning, Opencampus, gradient descent">
+      <meta name="description" content="Resources, activation functions and types of learning.">
+      <meta name="keywords" content="Deep Learning, Opencampus, activation">
       <meta name="author" content="Luca Palmieri">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
+      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+      <meta property="og:image" content="../../res/icon/dl-icon.png">
       <!-- until here -->
-      
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/blood.css">
+		<link rel="stylesheet" href="../../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<!-- WELCOME TO THE COURSE -->
+
+				<!-- WELCOME TO WEEK 3 -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 3</p><br>
+					<p class="slidetitle-2">Advanced Deep Learning - Week 3</p><br>
 					<p>Course starts soon..</p><br>
-					
+
 				</section>
-             
-             <!-- QUIZ -->
+
+				<!-- ADMIN -->
 				<section>
-                <p class="slidetitle">QUIZ</p><br>
+                <p class="slidetitle-2">Quiz</p><br>
                 <p>We will start now with a quiz based on the first week material</p>
                 <p>You have 6 minutes to answer the quiz. </p>
                 <p>The quiz link: <br>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UMzRBOTlCNFpPVTgySE1XSlBXTlIxRFhJNy4u">Quiz Link</a><br>
+                <a href="https://forms.office.com/r/52kXCuarhk">Quiz Link</a><br>
                 It will be copied in Mattermost and in the Zoom chat.</p>
 				</section>
-				
+
             <section>
-                <p class="slidetitle">Matrices in python</p>
-                <a href="https://colab.research.google.com/drive/1lc17eJBSaukFYCw9QB9SevqpRNN0-6la?usp=sharing">A Notebook to play with matrices</a>
+              <section>
+                <p class='slidetitle-2'>Project Ideas</p>   
+                <p>Round of presentation of your ideas</p>
+              </section>
+              <section>
+                <p class='slidetitle-2'>Group</p>   
+                <p>We should select 3 projects and create 3 groups.</p>
+              </section>
             </section>
-             
-				<!-- QUESTIONS -->
-				<section>
-					<p class="slidetitle">QUESTIONS</p><br>
-					<p class="bigger">Do you have any question?</p>
-					<p class="slidewithalotoftext">Questions can be about anything:<br>
-						course, exercise, website, problems, tools..</p>
-				</section>
-				
-				<!-- KAGGLE -->
-				<section>
-					<section>
-						<p class="slidetitle">Start thinking about your Project</p>
-						<img src="../res/w3/kaggle.png" height="450rem">
-					</section>
-					<section>
-						<p class="slidetitle">Ideal playground to start</p>
-						<img src="../res/notebk.png">
-					</section>
-               <section>
-						<p class="slidetitle">Integrated Notebook</p>
-						<img src="../res/w3/kaggle_kernel.png">
-					</section>
-					<section>
-						<p class="slidetitle">Thousands of Datasets</p>
-						<img src="../res/kaggle.png">
-					</section>
-					<section>
-						<p class="slidetitle">Easy Connection with Google </p>
-						<img src="https://miro.medium.com/max/1400/1*q6Bmq8Vr3gXLozhoXCez8g.png">
-						<p class="slidewithalotoftext"><a href="https://www.kaggle.com/general/51898">Here a discussion</a> and <a href="https://medium.com/analytics-vidhya/how-to-fetch-kaggle-datasets-into-google-colab-ea682569851a">here an article</a> explaining step by step</p>
-					</section>
-				</section>
-				
-				<!-- PAPER OF THE WEEK -->
-				<section>
-					<p class="slidetitle">PAPER OF THE WEEK</p>
-					<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"><i>ImageNet Classification with Deep Convolutional Neural Networks</i></a><br>
-					A. Krizhevsky, I. Sutskever, G. E. Hinton <br><i> Proceedings of the 25th International Conference on Neural Information Processing Systems (Lake Tahoe, NV, Dec. 2012), 1097–1105.</i>
-				</section>
-				
-				<!-- QUIZ -->
-				<section>
-					<p class="slidetitle">QUIZ (15 mins)</p><br>
-					<p>
-						1. Why is the cost function important and why we need such a function for logistic regression?<br>
-						1b. Are you familiar with the concept of convex functions and why this helps gradient find the minimum?<br>
-						2. Is the concept of gradient descent clear? How do learning rate correlates to number of iterations?<br>
-						3. Why is vectorization faster than a loop in python?<br>
-					<br>
-					</p>
-				</section>
-				
+
 				<!-- ANSWERS -->
+		      <!-- QUIZ -->
 				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-					</section>
-					<section>
-						<p class="slidetitle">Cost Function</p>
-						<img src="../res/cf.png">
-						<p class="source">Image from <a href="https://www.internalpointers.com/post/cost-function-logistic-regression">this article</a>.</p>
-					</section>
-					<section>
-						<p class="slidetitle">Non Convex Functions</p>
-						<img src="../res/ngconv.png" >
-					</section>
-					<section>
-						<p class="slidetitle">Gradient Descent</p>
-						<img src="https://miro.medium.com/max/1400/1*N5WjbzwsCFse-KPjBWZZ6g.jpeg" width="70%">
-						<p class="source">Image from <a href="https://towardsdatascience.com/linear-regression-using-gradient-descent-97a6c8700931">this article</a>.</p>
-					</section>
-                <section>
-                    <p class="slidetitle">Vectorization</p>
-                    <a href="https://stackoverflow.com/questions/1422149/what-is-vectorization">A nice explanation about what vectorization is</a> <br>and<br>
-                    <a href="https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops">An interesting discussion on Stackoverflow</a>
-                </section>
+                <p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
+                <ol class="slidewithalotoftext">
+                    <li>Why is important to learn the identity function and how is this helping performance in ResNet?</li>
+                    <li>How comes mobile net save some computations? Why are not all other network also doing the same? Where is the catch? </li>
+                    <li>Can you think of a rule of thumb for:<br>a) when to use transfer learning, <br>b) when to use data augmentation?</li>
+                </ol>
 				</section>
-				
-				<!-- EXERCISES -->
-				<section>
-					<section>
-						<p class="slidetitle">Exercise (15-20 mins)</p>
-						We go through the programming assignment that were planned for this week.<br>	
-					</section>
-				</section>
-				
-            <section>
-                <section>
-						<p class="slidetitle">Open Source Project of the Week</p>
-                   <img src="https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/doc/img/embedding.gif" width="92%" height="450rem">
-					</section>
-                <section>
-                    <p class="slidetitle">Fashion MNIST Datasets</p>
-                <a href="https://github.com/zalandoresearch/fashion-mnist">Github Repository with Examples for MNIST Datasets</a>
-               </section>
-               <section>
-                    <p class="slidetitle">Why?</p>
-                   <p class="fragment"><img src="../res/w3/whynot.png"></p>
-                   <p class="fragment"><img src="../res/w3/why.png"></p>
-                </section>
-                <section>
-                    <p class="slidetitle">Conclusions</p>
-                    <p>It is a good playground for your first project<br>A reward to motivate you further</p>
-                </section>
-            </section>
-             
+
+           <section>
+              <p class="slidetitle-2">Homework</p>
+              <p>John</p>
+              <p>(Atul)</p>
+           </section>
+
+
+
 				<!-- HAUSAUFGABE -->
 				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle-2">For the next week</p>
 					<ul>
-						<li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/3">third week of the course</a></li>
-						<li>Do the Programming Assignment on Planar Data Classification</li>
+                  <li>Finish the third week of the course, check all the videos</li>
+                  <li>Try to form groups for the projects</li>
+						<li>Work on the assignment for car detection</li>
+						<li>Work on the assignment for image segmentation</li>
 					</ul>
 				</section>
-				
+
+
+
 			</div>
 		</div>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
 		</script>

@@ -1,33 +1,33 @@
 <html>
 	<head>
       <!-- for gitbook -->
-      <title>Week 3 - Deep Learning @ Opencampus</title>
+      <title>Week 3 - Deep Learning from Scratch @ Opencampus.sh</title>
       <meta charset="UTF-8">
       <meta name="description" content="Linear algebra with Numpy, gradient descent, learning rate and convex functions.">
       <meta name="keywords" content="Deep Learning, Opencampus, gradient descent">
       <meta name="author" content="Luca Palmieri">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
+      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+      <meta property="og:image" content="../../res/icon/dl-icon.png">
       <!-- until here -->
       
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/league.css">
+		<link rel="stylesheet" href="../../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- WELCOME TO THE COURSE -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 3</p><br>
+					<p class="slidetitle">Deep Learning from Scratch - Week 3</p><br>
 					<p>Course starts soon..</p><br>
 					
 				</section>
@@ -36,9 +36,9 @@
 				<section>
                 <p class="slidetitle">QUIZ</p><br>
                 <p>We will start now with a quiz based on the first week material</p>
-                <p>You have 6 minutes to answer the quiz. </p>
+                <p>You have 7 minutes to answer the quiz. </p>
                 <p>The quiz link: <br>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UMzRBOTlCNFpPVTgySE1XSlBXTlIxRFhJNy4u">Quiz Link</a><br>
+                <a href="https://forms.office.com/r/H21sq6ZuX0">Quiz Link</a><br>
                 It will be copied in Mattermost and in the Zoom chat.</p>
 				</section>
 				
@@ -46,37 +46,12 @@
                 <p class="slidetitle">Matrices in python</p>
                 <a href="https://colab.research.google.com/drive/1lc17eJBSaukFYCw9QB9SevqpRNN0-6la?usp=sharing">A Notebook to play with matrices</a>
             </section>
-             
-				<!-- QUESTIONS -->
-				<section>
-					<p class="slidetitle">QUESTIONS</p><br>
-					<p class="bigger">Do you have any question?</p>
-					<p class="slidewithalotoftext">Questions can be about anything:<br>
-						course, exercise, website, problems, tools..</p>
-				</section>
 				
 				<!-- KAGGLE -->
 				<section>
 					<section>
 						<p class="slidetitle">Start thinking about your Project</p>
-						<img src="../res/w3/kaggle.png" height="450rem">
-					</section>
-					<section>
-						<p class="slidetitle">Ideal playground to start</p>
-						<img src="../res/notebk.png">
-					</section>
-               <section>
-						<p class="slidetitle">Integrated Notebook</p>
-						<img src="../res/w3/kaggle_kernel.png">
-					</section>
-					<section>
-						<p class="slidetitle">Thousands of Datasets</p>
-						<img src="../res/kaggle.png">
-					</section>
-					<section>
-						<p class="slidetitle">Easy Connection with Google </p>
-						<img src="https://miro.medium.com/max/1400/1*q6Bmq8Vr3gXLozhoXCez8g.png">
-						<p class="slidewithalotoftext"><a href="https://www.kaggle.com/general/51898">Here a discussion</a> and <a href="https://medium.com/analytics-vidhya/how-to-fetch-kaggle-datasets-into-google-colab-ea682569851a">here an article</a> explaining step by step</p>
+						<img src="../../res/d1/w3/kaggle.png" height="450rem">
 					</section>
 				</section>
 				
@@ -95,6 +70,7 @@
 						1b. Are you familiar with the concept of convex functions and why this helps gradient find the minimum?<br>
 						2. Is the concept of gradient descent clear? How do learning rate correlates to number of iterations?<br>
 						3. Why is vectorization faster than a loop in python?<br>
+                  3b. Is it always the case? Can you think of a case when vectorization is not faster, or even slower?
 					<br>
 					</p>
 				</section>
@@ -111,7 +87,7 @@
 					</section>
 					<section>
 						<p class="slidetitle">Non Convex Functions</p>
-						<img src="../res/ngconv.png" >
+						<img src="../../res/ngconv.png" >
 					</section>
 					<section>
 						<p class="slidetitle">Gradient Descent</p>
@@ -144,8 +120,8 @@
                </section>
                <section>
                     <p class="slidetitle">Why?</p>
-                   <p class="fragment"><img src="../res/w3/whynot.png"></p>
-                   <p class="fragment"><img src="../res/w3/why.png"></p>
+                   <p class="fragment"><img src="../../res/w3/whynot.png"></p>
+                   <p class="fragment"><img src="../../res/w3/why.png"></p>
                 </section>
                 <section>
                     <p class="slidetitle">Conclusions</p>
@@ -164,7 +140,7 @@
 				
 			</div>
 		</div>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
 		</script>
