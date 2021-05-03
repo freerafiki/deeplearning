@@ -11,16 +11,19 @@
       <meta property="og:image" content="../res/icon/dl-icon.png">
       <!-- until here -->
       
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/league.css">
+		<link rel="stylesheet" href="../../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <style>
+        .hard {color:coral;} 
+     </style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -41,24 +44,45 @@
                 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UQUlJS0FCQUcxNlRFRlpLN1lZREVDQ0ZDRS4u">Quiz Link</a><br>
                 It will be copied in Mattermost and in the Zoom chat.</p>
 				</section>
+           
+           <section>
+             <section>
+               <p class="slidetitle">Questions from last week</p>
+               <p>Leaky ReLU and negative numbers on the activation</p>
+               <p>Cost function for unsupervised learning</p>
+             </section>
+             <section>
+              <p class="slidetitle">Leaky ReLU</p>
+                <img src="../../res/leaky_ng.png" width="20%">
+               <p>difference between activation functions in hidden layers and output layer</p>
+               <p>from CS231:</p>
+               <img src="../../res/leaky.png">
+             </section>
+             <section>
+              <p class="slidetitle">Cost function for unsupervised learning</p>
+               <p>much wider topic: as an idea, the function it is used for is usually different</p>
+               <p>a typical example is to "learn" the characteristics of the input, for example dividing into different clusters or learning a lower dimensional representation. In this case the cost function can be defined as the difference betweeen the "learned" representation and the input and is then minimized through the training.</p>
+               <a href="https://wtf-deeplearning.github.io/unsupervised/AISTATS2011_CoatesNL11.pdf">For more information, check out this paper from Adam Coates and Andrew Ng.</a>
+             </section>
+           </section>
 				
 				<!-- PAPER OF THE WEEK -->
 				<section>
-					<p class="slidetitle">RESOURCE OF THE WEEK</p>
-					<a href="https://blog.tensorflow.org/2020/03/introducing-model-garden-for-tensorflow-2.html"><img src="https://camo.githubusercontent.com/577f2cdea25bbca2f3bb47339cfc9ae7c97353a8/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f6d6f64656c5f67617264656e5f6172746966616374732f54465f4d6f64656c5f47617264656e2e706e67"><br>Tensor Flow Model Garden</a>
-					<br>
-					<a href="https://tfhub.dev/"><img class="wbg" src="https://www.gstatic.com/aihub/tfhub/tensorflow_hub_logo_fullcolor.svg" width="50%"><br>Tensor Flow Hub</a>
+					<p class="slidetitle">Projects</p>
+					<p></p>
 				</section>
 				
              
 				<!-- QUIZ -->
 				<section>
 					<p class="slidetitle">Quiz (15 mins)</p>
-					 1. Why we need to have random initialization and we cannot leave all weights equal to zeros?<br>
-                2. Is random really the best we can do?<br>
-                3. Do all neurons of a layer need to be connected to the neurons of the next one?<br>
-                4. Do you know any example of networks with layers which are not fully connected?<br>
-                5. If you had to set the connection between neurons of different layers in your network, which solution would you choose?<br>
+                <ul class='slidewithalotoftext'>
+                  <li>What are the characteristics of an activation function?</li>
+                  <li>Why we need to have random initialization and we cannot leave all weights equal to zeros?</li>
+                  <li>We initialize the weights of the neurons randomly. Is this really the best we can do? Do you have an idea about how we could do it?</li>
+                  <li>Are all neurons of a layer always connected to all the neurons of the next one?</li>
+                  <li>What is the relation between the cost function, gradient descent, the activation function and the weights of the network?</li>
+                </ul>
 				</section>	
 				
 				<!-- ANSWERS -->
@@ -106,7 +130,7 @@
 				
 			</div>
 		</div>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
 		</script>

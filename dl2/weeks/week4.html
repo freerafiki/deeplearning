@@ -21,6 +21,22 @@
          link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
          document.getElementsByTagName( 'head' )[0].appendChild( link );
       </script>
+      <style>
+        .week {
+          border: 1px solid;
+          border-radius: 0.5rem;
+        }
+        .event {
+          color:red;
+          font-weight: 800;
+          float:right;
+          padding-right: 1rem; 
+        }
+        .maybe {
+          color:orange;
+          font-weight: 600;
+        }
+      </style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -39,39 +55,50 @@
                 <p>We will start now with a quiz based on the first week material</p>
                 <p>You have 6 minutes to answer the quiz. </p>
                 <p>The quiz link: <br>
-                <a href="https://forms.office.com/r/yjet29qsgt">Quiz Link</a><br>
+                <a href="https://forms.office.com/r/kSTXuQ1LZi">Quiz Link</a><br>
                 It will be copied in Mattermost and in the Zoom chat.</p>
 				</section>
 
-
-            <section>
-              <p class='slidetitle-2'>Coursera</p>
-              <p>Coursera updated the course last week. It may be that you have a different version.</p>
-              <p><a href="https://www.coursera.org/learn/convolutional-neural-networks/discussions/all/threads/wQVqAJuSEeudRwr4jvLA4w">You may have to reset the deadlines or wait for the deadlines to end to get access to the new materials.</a></p>
-              <p>Quick check: who is seeing what?</p>
-            </section>
-
             <section>
               <section>
-                <p class='slidetitle-2'>Projects</p>
-                <p class="">I would like you to bring a project idea next week</p>
-                <p class='fragment'>Next week we will have a small talk (5/10 minutes) about your projects</p>
+                <p class='slidetitle-2'>Project Groups</p>
+                <p class="">We need to make the groups to start preparing the projects</p>
               </section>
               <section>
-               <p class='slidetitle-2'>What do I mean by project idea</p>
-                <p class="fragment">1) A general theme (ex: chess engine, face classification)</p>
-                <p class="fragment">2) A dataset (or a workflow on how to get the data)</p>
-                <p class="fragment">3) A general guess about the architecture (CNN, RNN) and if possible a paper or some implementations</p>
+                <p class='slidetitle-2'>Project Workflow</p>
+                <p class="">Try to agree on how to meet and work together</p>
               </section>
               <section>
-                <p class='slidetitle-2'>Where can you find all of this?</p>
-                <p><a href="https://www.kaggle.com/code">Kaggle</a></p>
-                <p><a href="https://huggingface.co/">HuggingFace (NLP)</a></p>
-                <p><a href="https://github.com/tensorflow/models/tree/master/community">Tensorflow Model Garden - Community</a></p>
-                <p><a href="https://paperswithcode.com/">Papers with Code</a></p>
-                <p>other resources are possible, too</p>
+                <p class='slidetitle-2'>Tools and Programming Environment</p>
+                <ul>
+                  <li>Atom - Teletype: real time collaboration, local resources</li>
+                  <li>Google Colab: delay in real time collaboration, google cloud resources</li>
+                  <li>VSCode/ium: real time collaboration, local resources</li>
+                  <li>Gitpod: still learning about real time collaboration, cloud environment, no installation</li>
+                  <li>Many more..</li>
+                </ul>
+              </section>
+              <section>
+                <p class='slidetitle-2'>Project Timelines</p>
+                <p class="fragment">Starting today --> presenting in the end of June</p>
+                <p class="fragment">In 2 weeks there is a checkpoint, where you discuss the state of the project</p>
+                <p class="fragment">The state would be about dataset, objective, architecture and related work</p>
+                <p class="fragment">Then you have 4 more weeks until the presentations, which will be focused on implementation</p>
+                <p class="fragment">We can have an extra meeting to discuss if you have doubts</p>
+              </section>
+              <section>
+                <p class='slidetitle-2'>A visual example</p>
+                <p class="week">03 May --> 10 May: preparation</p>
+                <p class="week">10 May --> 17 May: preparation week 2 <span class="event">19 May: Checkpoint!</span></p>
+                <p class="week">17 May --> 24 May: start programming</p>
+                <p class="week">24 May --> 31 May: more programming</p>
+                <p class="week">31 May --> 07 June: getting some results and fine-tuning</p>
+                <p class="week">07 June --> 14 June: working towards good results, images and comparisons</p>
+                <p class="week">14 June --> 22 June: preparing the final presentation <span class="event">21 June: Presentation!</span></p>
+                <p class="week"><span class="maybe">In case of need, we may skip the session of the 21st and present on the 28th of June</span></p>
               </section>
             </section>
+           
 
 
 				<!-- ANSWERS -->
@@ -79,14 +106,16 @@
 				<section>
                 <p class="slidetitle-2">Quiz (10 Minutes)</p><br>
                 <ol class="slidewithalotoftext">
-                    <li>What is the biggest advantage of CNN over traditional FFNN? And what it its biggest limitation?</li>
-                    <li>Pooling layers are often applied after convolution layers. What would you think it would happen if you switch their position, so that the image will pass through the pooling step first and then will the convolution be applied?</li>
-                    <li>Why is it often the case that the width and height of an image reduces and the third dimension (channel) increase when getting deeper into the network? </li>
+                    <li>Is the transposed convolution the inverse of the convolution? What are its advantages and limitations?</li>
+                    <li>YOLO object detection</li>
+                    <li>Region proposal</li>
                 </ol>
 				</section>
 
            <section>
               <p class="slidetitle-2">Homework</p>
+              <p>Bennet for the YOLO Assignment</p>
+              <p>Atul for the Semantic Segmentation Assignment</p>
            </section>
 
 
@@ -95,29 +124,11 @@
 				<section>
 					<p class="slidetitle-2">For the next week</p>
 					<ul>
-                  <li>Finish the second week of the course, check all the videos (including <a href="https://coursera.org/share/377d3d6b4fe5fe3d45f8e377b2b343c5">MobileNet</a>, <a href="https://coursera.org/share/4090755613c20f6cb0a9601b02e4c331">its architecture</a> and <a href="https://coursera.org/share/d298afdd520df70e912d87f79ca4e5e7">EfficientNet</a>)</li>
-						<li>Prepare your project idea</li>
-						<li>Try the assignment on Residual Networks</li>
-						<li>Work on the assignment on Transfer Learning with MobileNet</li>
+						<li>Start preparing the project - template folder, repository, collaboration</li>
+						<li>Assignment on Face Recognition (Monfared?)</li>
+						<li>Assignment on Neural Style Transfer (Abhinav/Kwabena/Usman?)</li>
 					</ul>
 				</section>
-
-				<section>
-					<p class="slidetitle-2">Homework Distribution</p>
-					<ul>
-						<li>['  John', 'Kimani']</li>
-						<li>['  Atul Kumar', 'Yadav']</li>
-						<li>['  Bennet', 'Möller']</li>
-						<li>['  Foroogh', 'Gharibi Monfared']</li>
-						<li>['  Chetanya abhinav', 'Nagineni']</li>
-						<li>['  Modeus', 'Abdelnaby']</li>
-						<li>['  Prosper Kwabena ', 'Adjei']</li>
-						<li>['  Syed Usman', 'Farooq']</li>
-						<li>['  Suman', 'Singha']</li>
-						<li>['  Niko', 'Schmidt']</li>
-					</ul>
-				</section>
-
 
 			</div>
 		</div>
