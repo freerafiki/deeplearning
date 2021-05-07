@@ -8,26 +8,26 @@
       <meta name="author" content="Luca Palmieri">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
+      <meta property="og:image" content="../../res/icon/dl-icon.png">
       <!-- until here -->
       
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
-		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/league.css">
+		<link rel="stylesheet" href="../../css/s.css">
+      <script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- WELCOME TO THE COURSE -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 5</p><br>
+					<p class="slidetitle">Deep Learning from Scratch - Week 5</p><br>
 					<p>Course starts soon..</p><br>
 					
 				</section>
@@ -39,7 +39,7 @@
                     <p>We will start now with a quiz based on the first week material</p>
                     <p>You have 6 minutes to answer the quiz. </p>
                     <p>The quiz link: <br>
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UQVkxWlM0MTFDU0VWQllZWkdWWTMxU1lRUC4u">Quiz Link</a><br>
+                    <a href="https://forms.office.com/r/uWQYRwk9Nw">Quiz Link</a><br>
                     It will be copied in Mattermost and in the Zoom chat.</p>
                 </section>
                 <section>
@@ -61,16 +61,23 @@
                     <li>A notebook with working code and explanation/comments</li>
                     <li>A small video/screen recording/presentation.</li>
                    </ul>
+               </section>
+              
+              
+               <section>
+                    <p class="slidetitle">Project Template Folder</p>
+                    <a href="https://github.com/opencampus-sh/project_template_folder"><img width=65% src="../../res/template_project.png">
+                    <p>Please use the project template</p></a>
 					</section>
                 
-                <section>
-                    <p class="slidetitle">Possiblities</p>
-                    <ul>
-                        <li>Public presentation with Guests</li>
-                        <li>Write a blog post about it (on Kiel.AI)</li>
-                        <li>Continue working on it to get it to the Waterkant Festival</li>
-                   </ul>
-                </section>
+              <section>
+                <p class="slidetitle">Bakery Sales Prediction</p>
+                <p>
+                  <a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Dataset available</a>
+						PRO: Dataset is well structured, we know the source, kiel-based, good fit for the course, challenge.<br>
+						CONS: 
+                </p>
+              </section>
 					
 					<section>
 						<p class="slidetitle">Fake News</p>
@@ -100,12 +107,7 @@
 						PRO: Very practical task that you can use yourself and as a starting project for future works <br>
 						CONS: It may not be complete and language dependent, plus is a quite abstract and complicated task
 					</section>
-                <section>
-                    <p class="slidetitle">Bike Sharing Prediction</p>
-						<a href="https://www.kaggle.com/c/bike-sharing-demand">Dataset on Kaggle</a><br>
-						PRO: Interesting dataset, well documented and the bike sharing project is applicable to many cities (also Kiel) <br>
-						CONS: It may be a bit complex to decide exactly what to predict and to check how good the prediction is. 
-                </section>
+
                 <section>
                     <p class="slidetitle">Climate Change</p>
 						  <a href="https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data">Dataset on Earth Surface Temperature</a><br>
@@ -226,7 +228,7 @@ test_loss, test_acc = model.evaluate(test_images,  test_labels)
 			</div>
 		</div>
       <script src="plugin/highlight/highlight.js"></script>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
 		</script>
