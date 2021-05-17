@@ -39,7 +39,7 @@
                     <p>We will start now with a quiz based on the first week material</p>
                     <p>You have 6 minutes to answer the quiz. </p>
                     <p>The quiz link: <br>
-                    <a href="https://forms.office.com/r/zFsF96EaCr">Quiz Link</a><br>
+                    <a href="https://forms.office.com/r/zFsF96EaCr" target="_blank">Quiz Link</a><br>
                     It will be copied in Mattermost and in the Zoom chat.</p>
                 </section>
 				</section>
@@ -98,7 +98,9 @@
 						<p class="slidewithalotoftext">
 							1. What does having high bias mean? How is this related to the bias parameter <i>b</i>?<br>
 							2. Dropout consists in setting to 0 a random number of neurons. Why don't we eliminate them directly and we use less? Is dropout used in training, in testing or in both phases?<br>
-                     3. Dropout and Regularization are techniques to reduce the usage of neurons. So why is it that we create always bigger network with more neurons and then techniques to shut them down? Would not be easier to just use smaller networks?
+                     3. Dropout and Regularization are techniques to reduce the usage of neurons. So why is it that we create always bigger network with more neurons and then techniques to shut them down? Would not be easier to just use smaller networks?<br>
+                     4. If you are training a neural network which tends to overfit, would you choose Dropout or Regularization?<br>
+                     5. How do you choose which part of the dataset goes into the training and which one into the test or dev set?<br>
 						<br>
 						</p>
 				</section>
@@ -108,14 +110,22 @@
 					<section>
 						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
 					</section>
-                 
+               <section>
+                 <p class="slidetitle">Dropout vs Regularization</p>
+                 <p class="slidewithalotoftext">
+                   <b>TL;DR</b><br>
+                   They are similar techinques with similar results, dropout seems to work slightly better for larger networks<br>
+                   <b>Long Answer</b><br>
+                  <a href="https://uksim.info/isms2016/CD/data/0665a174.pdf">There is even a full paper about that.. (for one-layer networks only)</a>
+                 </p>
+               </section>
 				</section>
 				
 				<!-- PAPER OF THE WEEK -->
 				<section>
 					<section>
 						<p class="slidetitle">PAPER OF THE WEEK</p>
-						<a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><img src="../res/w6/gan.png"></a>
+						<a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><img src="../../res/d1/w6/gan.png"></a>
 						<p class="source"><i><a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">Generative Adversarial Nets</a></i>, Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, <br><i>NIPS'14: Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2December 2014 Pages 2672–2680</i></p>
 					</section>
 					
