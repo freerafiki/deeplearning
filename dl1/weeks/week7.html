@@ -1,247 +1,246 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 7 - Deep Learning @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Mini-batch, regularization, momentum, RMSProp and different Optimizers.">
-      <meta name="keywords" content="Deep Learning, Opencampus, optimizers">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
-      <!-- until here -->
-      
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
-		<script>
+<head>
+	<!-- for gitbook -->
+	<title>Week 7 - Deep Learning from Scratch @ Opencampus - SoSe 2021</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Mini-batch, regularization, momentum, RMSProp and different Optimizers.">
+	<meta name="keywords" content="Deep Learning, Opencampus, optimizers">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
+
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/league.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
 	var link = document.createElement( 'link' );
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
 	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- WELCOME TO THE COURSE -->
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<p class="slidetitle">Deep Learning from Scratch - Week 7</p><br>
+				<p>Course starts soon..</p><br>
+
+			</section>
+
+			<!-- QUIZ -->
+			<section>
 				<section>
-					<p class="slidetitle">Deep Learning - Week 7</p><br>
-					<p>Course starts soon..</p><br>
-					
+					<p class="slidetitle">Quiz</p><br>
+					<p>We will start now with a quiz based on the first week material</p>
+					<p>You have 6 minutes to answer the quiz. </p>
+					<p>The quiz link: <br>
+						<a href="https://forms.office.com/r/Tnrb9iJ60n">Quiz Link</a><br>
+						It will be copied in Mattermost and in the Zoom chat.</p>
+					</section>
 				</section>
-				
-				 <!-- QUIZ -->
-				<section>
-                <section>
-                    <p class="slidetitle">Quiz</p><br>
-                    <p>We will start now with a quiz based on the first week material</p>
-                    <p>You have 6 minutes to answer the quiz. </p>
-                    <p>The quiz link: <br>
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UNlVGVEFTRlZPS0JaNVYzMUo5SDhIV0JaRC4u">Quiz Link</a><br>
-                    It will be copied in Mattermost and in the Zoom chat.</p>
-                </section>
-				</section>
-					
+
 
 				<!-- ANSWERS -->
 				<section>
 					<section>
-                    <p class="slidetitle">Short Overview of different Networks</p>
-                    <div class="row">
-                        <div class="col-6"><p class="fragment">FFNN</p>
-                        </div>
-                        <div class="col-6"><p class="fragment">ENCODER/DECODER</p>
-                        </div>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="col-6"><p class="fragment">CNN</p>
-                        </div>
-                        <div class="col-6"><p class="fragment">RNN/LSTM</p>
-                        </div>
-                    </div>
-                </section>
-             </section>
-                
-             <section>
-                <!-- FFNN -->
-                <section>
-                    <p class="slidetitle">Feed Forward Neural Networks</p>
-                    <img class="r-stretch" src="../../advml/img/ffnn.png" >
-                    <p >The network we saw during the course: <br>input layer, hidden layer(s), output layer</p>
-                </section>
-                <section>
-                    <p class="">Introduced in 1958 as the perceptron [1]</p>
-                    <img src="../../advml/img/peceptron.png" class="r-stretch">
-                    <p class="">Biologically inspired</p>
-                </section>
-                <section>
-                    <p class="slidetitle">Bibliography</p>
-                    <p class="slidewithalotoftext" style="text-align: left">
-                    <br>[1] <a href="https://www.ling.upenn.edu/courses/cogs501/Rosenblatt1958.pdf">Rosenblatt, Frank. <i>The perceptron: a probabilistic model for information storage and organization in the brain.</i> Psychological review 65.6 (1958): 386.</a>
-                    </p>
-                </section>
-             </section>
-                    
-                <!-- ENCODER -->    
-                <!-- AE/VAE --> 
-                <section>
-                    <section>
-                        <p class="slidetitle">Autoencoders</p>
-                        <img src="../../advml/img/ae.png" class="r-stretch">
-                        <p >What is an encoder doing?</p>
-                    </section>
-                    <section>
-                        <p class="slidewithalotoftext"><i>An autoencoder is a neural network that learns to copy its input to its output.</i> [1]</p>
-                        <p class="fragment slidewithreallyalotoftext"><i>It has an internal (hidden) layer that describes a code used to represent the input, and it is constituted by two main parts: an encoder that maps the input into the code, and a decoder that maps the code to a reconstruction of the original input.</i> [1]<br>
-                        <img src="../../advml/img/ae_schema.jpg" width=30%><br></p>
-                        <p class="fragment slidewithalotoftext"><i>Often when people write autoencoders, the hope is that the middle layer h will take on useful properties in some compressed format. [2]</i></p>
-                    </section>
-                    <section>
-                        <p class="slidetitle">An example of when we do not need it [2,3]</p>
-                        <p class="fragment"><img src="../../advml/img/ae1.png" height=253rem;></p>
-                        <p class="fragment"><img src="../../advml/img/ae2.png" height=200rem;></p>
-                    </section>
-                    <section>
-                        <p class="slidetitle">An example of when we do need it [2,3]</p>
-                        <p class="fragment"><img src="../../advml/img/denoising.png" width=1600rem;></p>
-                        <p class="fragment"><img src="../../advml/img/denoising2.png" width=1600rem;></p>
-                    </section>
-                    <section>
-                        <p class="slidetitle">Bibliography</p>
-                        <p class="slidewithreallyalotoftext" style="text-align: left">
-                            <b>Articles:</b>
-                            <br>[1] <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoder on Wikipedia</a>
-                            <br>[2] <a href="https://towardsdatascience.com/autoencoder-neural-networks-what-and-how-354cba12bf86">Article about autoencoders and denoising example (Towardsdatascience.com)</a>  
-                            <br>[3] <a href="https://blog.keras.io/building-autoencoders-in-keras.html">Building Autoencoders in Keras</a>
-                            <br><b>Papers:</b>
-                            <br>[4] <a href="http://publications.idiap.ch/downloads/reports/2000/rr00-16.pdf">Bourlard, Hervé, and Yves Kamp. <i>Auto-association by multilayer perceptrons and singular value decomposition.</i> Biological cybernetics 59.4-5 (1988): 291-294.</a>
-                            <br>[5] <a href="https://arxiv.org/pdf/1312.6114v10.pdf">Kingma, Diederik P., and Max Welling. <i>Auto-encoding variational bayes.</i> arXiv preprint arXiv:1312.6114 (2013).</a>
-                            <br>[6] <a href="http://machinelearning.org/archive/icml2008/papers/592.pdf">Vincent, Pascal, et al. <i>Extracting and composing robust features with denoising autoencoders.</i> Proceedings of the 25th international conference on Machine learning. ACM, 2008.</a>
-                        </p>
-                    </section>
-                 </section> 
-                    
-                 <!-- CNN -->
-                 <section>
-                    <section>
-                        <p class="slidetitle">Convolutional Neural Networks</p>
-                        <img src="../../advml/img/cnn.png" class="r-stretch">
-                        <p >What is a convolution?</p>
-                    </section>
-                    <section>
-                        <p class="slidetitle">A Convolution, animated [1,2]</p>
-                        <img src="../../advml/img/full_padding_no_strides_transposed.gif" class="r-stretch">
-                    </section>
-                    <section>
-                        <p class="slidetitle">A Convolutional Neural Network explained [3]</p>
-                        <a href="https://youtu.be/aircAruvnKk?t=172"><img src="../../advml/img/vid_prev.png" width="1700rem" height="500px"></a>
-                    </section>
-                    <section>
-                      <p class="slidetitle">Compare image classifiers</p>
-                      <img src="../res/w5/horse.png" width=80%>
-                      <p class="source"><a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slide from Samek's presentation at ICIP 2018 [4]</a></p>
-                   </section>
-                   <section>
-                      <p class="slidetitle">Not always as expected..</p>
-                      <img src="../res/w5/horse2.png" width=80%>
-                      <p class="source"><a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slide from Samek's presentation at ICIP 2018 [4]</a></p>
-                   </section>
-                   <section>
-                      <p class="slidetitle">Deep Visualization Toolbox</p>
-                      <img src="../res/w5/deepvis_freckles.jpg" width="50%">
-                      <p class="source"><a href="http://yosinski.com/deepvis">Image from the website</a>[5]. Here also the <a href="https://github.com/yosinski/deep-visualization-toolbox">source code</a> of the Toolbox [6]</p>
-                   </section>
-                    <section>
-                         <p class="slidetitle"><a href="https://poloclub.github.io/cnn-explainer/">Bonus: CNN Explainer Demo [7]</a></p>
-                         <a href="https://poloclub.github.io/cnn-explainer/"><img src="../../advml/img/cnn_exp.png" width=100%></a>
-                    </section> 
-                     <section>
-                         <p class="slidetitle"><a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html">Bonus: CNN Visualizer Demo [8]</a></p>
-                         <a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html"><img src="../../advml/img/cnn_vis.png" width=100%></a>
-                    </section> 
-                    <section>
-                        <p class="slidetitle">CNN Bibliography</p>
-                        <p class="slidewithreallyalotoftext" style="text-align: left">
-
-                            <br>[1] <a href="https://arxiv.org/abs/1603.07285"><i>A guide to convolution arithmetic for deep learning</i>, Dumoulin et al. (2018)</a>
-                            <br>[2] <a href="https://github.com/vdumoulin/conv_arithmetic">Github repository for the animations related to the convolution arithmetic [1]</a>
-                            <br>[3] <a href="https://www.3blue1brown.com">3blue1brown: a great resource for math explanation and visualizations.</a>
-                            <br>[4] <a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slides from Samek's presentation at ICIP 2018</a>
-                            <br>[5] <a href="http://yosinski.com/deepvis">Toolbox for Deep Visualization</a>
-                            <br>[6] <a href="https://github.com/yosinski/deep-visualization-toolbox">Github Repository of the Toolbox</a>
-                            <br>[7] <a href="https://poloclub.github.io/cnn-explainer/">CNN Explainer Demo: play with a CNN in your browser</a>
-                            <br>[8] <a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html">CNN Visualizer Demo: Flat 2D Visualization</a>
-                        </p>
-                    </section>
-                 </section> 
-                    
-                <!-- RNN/LSTM -->
-             <section>
-                <section>
-                    <p class="slidetitle">Recurrent Neural Networks and Long Short Term Memory</p>
-                    <img src="../../advml/img/lstm.png" class="r-stretch">
-                    <p>A leap into language processing</p>
-                </section>
-                <section>
-                    <p class="slidetitle">What makes Recurrent Networks so special? [1]</p>
-                    <p class="fragment"><i>they [Neural Networks] accept a fixed-sized vector as input (e.g. an image) and produce a fixed-sized vector as output (e.g. probabilities of different classes). [..] The core reason that recurrent nets are more exciting is that they allow us to operate over sequences of vectors: Sequences in the input, the output, or in the most general case both.</i> [1]</p>
-                </section>
-                <section>
-                     <p class="slidetitle">What does Long Short Term Memory means?</p>
-                     <p class="slidewithalotoftext"><i>[LSTM] are a special kind of RNN, capable of learning long-term dependencies. They were introduced by Hochreiter &amp; Schmidhuber (1997) [2] [..] LSTMs are explicitly designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically their default behavior, not something they struggle to learn!</i> [3]</p>
-                </section>
-                <section>
-                    <p class="slidetitle">Natural Language Processing Application [4]</p>
-                    <iframe src="https://distill.pub/2019/memorization-in-rnns/#ar-demo" width=100% height="500rem;" style="background: white"></iframe>
-                </section>
-                <section>
-						<p class="slidetitle">Compare text classifiers</p>
-						<img src="../res/w5/text.png" width=68%>
-						<p class="source"><a href="http://iphome.hhi.de/samek/pdf/ICIP2018_4.pdf">Slide from Samek's presentation at ICIP 2018 [5]</a></p>
-					 </section>
-                <section>
-                    <p class="slidetitle">RNN/LSTM Bibliography</p>
-                    <p class="slidewithalotoftext" style="text-align: left">
-                        <br>[1] <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The unreasonable Effectiveness of RNN - Andrej Karpathy</a>
-                        <br>[2] <a href="https://www.bioinf.jku.at/publications/older/2604.pdf"><i>Long Short Term Memory</i>, Hochreiter et al. (1997)</a>
-                        <br>[3] <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs - Colah's Blog</a>
-                        <br>[4] <a href="https://distill.pub/2019/memorization-in-rnns/">Memorization RNN/LSTM</a>
-                        <br>[5] <a href="http://iphome.hhi.de/samek/pdf/ICIP2018_4.pdf">Slide from Samek's presentation at ICIP 2018</a>
-                        <br>Additional Resources:
-                        <br>[6] <a href="http://joshvarty.github.io/VisualizingRNNs/">Animation RNN</a>
-                        <br>[7] <a href="http://blog.echen.me/">Detailed Explanation, LSTM</a>
-                        <br>[8] <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">RNN representation</a>
-                        
-                    </p>
-                </section>
-             </section>
-				
-					<!-- EXERCISES -->
-				<section>
-					<section>
-						<p class="slidetitle">EXERCISE (15-20 mins)</p>
-						We go through the programming assignment that were planned for this week.<br>	
-						Here M. Peixeiro actually wrote an article <a href="https://towardsdatascience.com/the-3-best-optimization-methods-in-neural-networks-40879c887873">that explains exactly the solution of the assignment for this week.</a>
+						<p class="slidetitle">Short Overview of different Networks</p>
+						<div class="row">
+							<div class="col-6"><p class="fragment">FFNN</p>
+							</div>
+							<div class="col-6"><p class="fragment">ENCODER/DECODER</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6"><p class="fragment">CNN</p>
+							</div>
+							<div class="col-6"><p class="fragment">RNN/LSTM</p>
+							</div>
+						</div>
 					</section>
 				</section>
-				
-				<!-- HAUSAUFGABE -->
+
 				<section>
-					<p class="slidetitle">For the next week</p>
-					<ul>
-						<li>Finish the third week of the course! Second course is also done!</li>
-						<li>Do the Programming Assignment on Tensorflow</li>
-					</ul>
+					<!-- FFNN -->
+					<section>
+						<p class="slidetitle">Feed Forward Neural Networks</p>
+						<img class="r-stretch" src="../../advml/img/ffnn.png" >
+						<p >The network we saw during the course: <br>input layer, hidden layer(s), output layer</p>
+					</section>
+					<section>
+						<p class="">Introduced in 1958 as the perceptron [1]</p>
+						<img src="../../advml/img/peceptron.png" class="r-stretch">
+						<p class="">Biologically inspired</p>
+					</section>
+					<section>
+						<p class="slidetitle">Bibliography</p>
+						<p class="slidewithalotoftext" style="text-align: left">
+							<br>[1] <a href="https://www.ling.upenn.edu/courses/cogs501/Rosenblatt1958.pdf">Rosenblatt, Frank. <i>The perceptron: a probabilistic model for information storage and organization in the brain.</i> Psychological review 65.6 (1958): 386.</a>
+						</p>
+					</section>
 				</section>
-				
+
+				<!-- ENCODER -->
+				<!-- AE/VAE -->
+				<section>
+					<section>
+						<p class="slidetitle">Autoencoders</p>
+						<img src="../../advml/img/ae.png" class="r-stretch">
+						<p >What is an encoder doing?</p>
+					</section>
+					<section>
+						<p class="slidewithalotoftext"><i>An autoencoder is a neural network that learns to copy its input to its output.</i> [1]</p>
+						<p class="fragment slidewithreallyalotoftext"><i>It has an internal (hidden) layer that describes a code used to represent the input, and it is constituted by two main parts: an encoder that maps the input into the code, and a decoder that maps the code to a reconstruction of the original input.</i> [1]<br>
+							<img src="../../advml/img/ae_schema.jpg" width=30%><br></p>
+							<p class="fragment slidewithalotoftext"><i>Often when people write autoencoders, the hope is that the middle layer h will take on useful properties in some compressed format. [2]</i></p>
+						</section>
+						<section>
+							<p class="slidetitle">An example of when we do not need it [2,3]</p>
+							<p class="fragment"><img src="../../advml/img/ae1.png" height=253rem;></p>
+							<p class="fragment"><img src="../../advml/img/ae2.png" height=200rem;></p>
+						</section>
+						<section>
+							<p class="slidetitle">An example of when we do need it [2,3]</p>
+							<p class="fragment"><img src="../../advml/img/denoising.png" width=1600rem;></p>
+							<p class="fragment"><img src="../../advml/img/denoising2.png" width=1600rem;></p>
+						</section>
+						<section>
+							<p class="slidetitle">Bibliography</p>
+							<p class="slidewithreallyalotoftext" style="text-align: left">
+								<b>Articles:</b>
+								<br>[1] <a href="https://en.wikipedia.org/wiki/Autoencoder">Autoencoder on Wikipedia</a>
+								<br>[2] <a href="https://towardsdatascience.com/autoencoder-neural-networks-what-and-how-354cba12bf86">Article about autoencoders and denoising example (Towardsdatascience.com)</a>
+								<br>[3] <a href="https://blog.keras.io/building-autoencoders-in-keras.html">Building Autoencoders in Keras</a>
+								<br><b>Papers:</b>
+								<br>[4] <a href="http://publications.idiap.ch/downloads/reports/2000/rr00-16.pdf">Bourlard, Hervé, and Yves Kamp. <i>Auto-association by multilayer perceptrons and singular value decomposition.</i> Biological cybernetics 59.4-5 (1988): 291-294.</a>
+								<br>[5] <a href="https://arxiv.org/pdf/1312.6114v10.pdf">Kingma, Diederik P., and Max Welling. <i>Auto-encoding variational bayes.</i> arXiv preprint arXiv:1312.6114 (2013).</a>
+								<br>[6] <a href="http://machinelearning.org/archive/icml2008/papers/592.pdf">Vincent, Pascal, et al. <i>Extracting and composing robust features with denoising autoencoders.</i> Proceedings of the 25th international conference on Machine learning. ACM, 2008.</a>
+							</p>
+						</section>
+					</section>
+
+					<!-- CNN -->
+					<section>
+						<section>
+							<p class="slidetitle">Convolutional Neural Networks</p>
+							<img src="../../advml/img/cnn.png" class="r-stretch">
+							<p >What is a convolution?</p>
+						</section>
+						<section>
+							<p class="slidetitle">A Convolution, animated [1,2]</p>
+							<img src="../../advml/img/full_padding_no_strides_transposed.gif" class="r-stretch">
+						</section>
+						<section>
+							<p class="slidetitle">A Convolutional Neural Network explained [3]</p>
+							<a href="https://youtu.be/aircAruvnKk?t=172"><img src="../../advml/img/vid_prev.png" width="1700rem" height="500px"></a>
+						</section>
+						<section>
+							<p class="slidetitle">Compare image classifiers</p>
+							<img src="../../res/d1/w5/horse.png" width=80%>
+							<p class="source"><a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slide from Samek's presentation at ICIP 2018 [4]</a></p>
+						</section>
+						<section>
+							<p class="slidetitle">Not always as expected..</p>
+							<img src="../../res/d1/w5/horse2.png" width=80%>
+							<p class="source"><a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slide from Samek's presentation at ICIP 2018 [4]</a></p>
+						</section>
+						<section>
+							<p class="slidetitle">Deep Visualization Toolbox</p>
+							<img src="../../res/d1/w5/deepvis_freckles.jpg" width="50%">
+							<p class="source"><a href="http://yosinski.com/deepvis">Image from the website</a>[5]. Here also the <a href="https://github.com/yosinski/deep-visualization-toolbox">source code</a> of the Toolbox [6]</p>
+						</section>
+						<section>
+							<p class="slidetitle"><a href="https://poloclub.github.io/cnn-explainer/">Bonus: CNN Explainer Demo [7]</a></p>
+							<a href="https://poloclub.github.io/cnn-explainer/"><img src="../../advml/img/cnn_exp.png" width=100%></a>
+						</section>
+						<section>
+							<p class="slidetitle"><a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html">Bonus: CNN Visualizer Demo [8]</a></p>
+							<a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html"><img src="../../advml/img/cnn_vis.png" width=100%></a>
+						</section>
+						<section>
+							<p class="slidetitle">CNN Bibliography</p>
+							<p class="slidewithreallyalotoftext" style="text-align: left">
+
+								<br>[1] <a href="https://arxiv.org/abs/1603.07285"><i>A guide to convolution arithmetic for deep learning</i>, Dumoulin et al. (2018)</a>
+								<br>[2] <a href="https://github.com/vdumoulin/conv_arithmetic">Github repository for the animations related to the convolution arithmetic [1]</a>
+								<br>[3] <a href="https://www.3blue1brown.com">3blue1brown: a great resource for math explanation and visualizations.</a>
+								<br>[4] <a href="http://iphome.hhi.de/samek/pdf/CERN2018.pdf">Slides from Samek's presentation at ICIP 2018</a>
+								<br>[5] <a href="http://yosinski.com/deepvis">Toolbox for Deep Visualization</a>
+								<br>[6] <a href="https://github.com/yosinski/deep-visualization-toolbox">Github Repository of the Toolbox</a>
+								<br>[7] <a href="https://poloclub.github.io/cnn-explainer/">CNN Explainer Demo: play with a CNN in your browser</a>
+								<br>[8] <a href="https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html">CNN Visualizer Demo: Flat 2D Visualization</a>
+							</p>
+						</section>
+					</section>
+
+					<!-- RNN/LSTM -->
+					<section>
+						<section>
+							<p class="slidetitle">Recurrent Neural Networks and Long Short Term Memory</p>
+							<img src="../../advml/img/lstm.png" class="r-stretch">
+							<p>A leap into language processing</p>
+						</section>
+						<section>
+							<p class="slidetitle">What makes Recurrent Networks so special? [1]</p>
+							<p class="fragment"><i>they [Neural Networks] accept a fixed-sized vector as input (e.g. an image) and produce a fixed-sized vector as output (e.g. probabilities of different classes). [..] The core reason that recurrent nets are more exciting is that they allow us to operate over sequences of vectors: Sequences in the input, the output, or in the most general case both.</i> [1]</p>
+						</section>
+						<section>
+							<p class="slidetitle">What does Long Short Term Memory means?</p>
+							<p class="slidewithalotoftext"><i>[LSTM] are a special kind of RNN, capable of learning long-term dependencies. They were introduced by Hochreiter &amp; Schmidhuber (1997) [2] [..] LSTMs are explicitly designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically their default behavior, not something they struggle to learn!</i> [3]</p>
+						</section>
+						<section>
+							<p class="slidetitle">Natural Language Processing Application [4]</p>
+							<iframe src="https://distill.pub/2019/memorization-in-rnns/#ar-demo" width=100% height="500rem;" style="background: white"></iframe>
+						</section>
+						<section>
+							<p class="slidetitle">Compare text classifiers</p>
+							<img src="../res/w5/text.png" width=68%>
+							<p class="source"><a href="http://iphome.hhi.de/samek/pdf/ICIP2018_4.pdf">Slide from Samek's presentation at ICIP 2018 [5]</a></p>
+						</section>
+						<section>
+							<p class="slidetitle">RNN/LSTM Bibliography</p>
+							<p class="slidewithalotoftext" style="text-align: left">
+								<br>[1] <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The unreasonable Effectiveness of RNN - Andrej Karpathy</a>
+								<br>[2] <a href="https://www.bioinf.jku.at/publications/older/2604.pdf"><i>Long Short Term Memory</i>, Hochreiter et al. (1997)</a>
+								<br>[3] <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs - Colah's Blog</a>
+								<br>[4] <a href="https://distill.pub/2019/memorization-in-rnns/">Memorization RNN/LSTM</a>
+								<br>[5] <a href="http://iphome.hhi.de/samek/pdf/ICIP2018_4.pdf">Slide from Samek's presentation at ICIP 2018</a>
+								<br>Additional Resources:
+								<br>[6] <a href="http://joshvarty.github.io/VisualizingRNNs/">Animation RNN</a>
+								<br>[7] <a href="http://blog.echen.me/">Detailed Explanation, LSTM</a>
+								<br>[8] <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">RNN representation</a>
+
+							</p>
+						</section>
+					</section>
+
+					<!-- EXERCISES -->
+					<section>
+						<section>
+							<p class="slidetitle">EXERCISE (15-20 mins)</p>
+							We go through the programming assignment that were planned for this week.<br>
+							Here M. Peixeiro actually wrote an article <a href="https://towardsdatascience.com/the-3-best-optimization-methods-in-neural-networks-40879c887873">that explains exactly the solution of the assignment for this week.</a>
+						</section>
+					</section>
+
+					<!-- HAUSAUFGABE -->
+					<section>
+						<p class="slidetitle">For the next week</p>
+						<ul>
+							<li>Finish the third week of the course! Second course is also done!</li>
+							<li>Do the Programming Assignment on Tensorflow</li>
+						</ul>
+					</section>
+
+				</div>
 			</div>
-		</div>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
-			Reveal.initialize();
+		Reveal.initialize();
 		</script>
 	</body>
 </html>
