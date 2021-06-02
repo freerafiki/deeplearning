@@ -10,96 +10,73 @@
       <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
       <meta property="og:image" content="../res/icon/dl-icon.png">
       <!-- until here -->
-      
+
 		<link rel="stylesheet" href="../css/reveal.css">
 		<link rel="stylesheet" href="../css/theme/league.css">
 		<link rel="stylesheet" href="../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- WELCOME TO THE COURSE -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 8</p><br>
+					<p class="slidetitle">Advanced Deep Learning - Week 8</p><br>
 					<p>Course starts soon..</p><br>
-					<p>Happy new year :)</p>
 				</section>
-				
-				<!-- QUESTIONS -->
+
+				<!-- ADMIN -->
 				<section>
-              <section>
-                <p class="slidetitle">Project Check</p><br>
-                <p>Today we skip the quiz and make a small check about the project, how you started and what your objectives are.</p>
-              </section>
-              <section>
-                <p class="slidetitle">How it works</p><br>
-                <p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
-                <p class="fragment slidewithalotoftext">The first group has 3 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the sceond group explains and first gives feedback. In total it takes 10 minutes.</p>
-                <p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
-              </section>
-              <section>
-                <p class="slidetitle">What should be explained</p>
-                <ul>
-                  <li>The choice of the dataset</li>
-                  <li>The choice of the network architecture (if already made)</li>
-                  <li>The objective (what you want to achieve)</li>
-                  <li>The problems or challenges you face</li>
-                </ul>
-              </section>
-				</section>		
-				
-				<!-- QUIZ -->
-				<section>
-						<p class="slidetitle">QUIZ (15 mins)</p><br>
-						<p class="slidewithalotoftext">
-                     1. Which approach should you use in your project? Train one model and try to fine-tune it, or train several models and see which one works better?<br>
-                     2. About hyperparameters search: which would you use? random, grid search, or a different solution? Is there a specific reason behind? <br>
-                     3. If we use batch normalization, should we stop using normalization before the input layer? Should we use batch normalization in only some layers or an all levels?<br>
-                     4. In which sense batch normalization makes the network train faster? If we add computations, shouldn't the single iteration be slower?<br>
-                     <br>
-						</p>
+                <p class="slidetitle-2">QUIZ</p><br>
+                <p>We will start now with a quiz based on the first week material</p>
+                <p>You have 6 minutes to answer the quiz. </p>
+                <p>The quiz link: <br>
+                <a href="https://forms.office.com/r/urkvSKpntL" target="_blank">Quiz Link</a><br>
+                It will be copied in Mattermost and in the Zoom chat.</p>
 				</section>
-			
+
 				<!-- ANSWERS -->
+	      <!-- QUIZ -->
 				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-					</section>
+            <p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
+            <ol class="slidewithalotoftext">
+              <li>Word Vectors</li>
+              <li>Emojis</li>
+              <li> </li>
+            </ol>
 				</section>
-				
-				<!-- PAPER OF THE WEEK -->
+
 				<section>
-					<p class="slidetitle">Paper of the Week</p>
-					<a href="https://arxiv.org/abs/1805.11604"><img src="../res/w8/bn.png"></a>
-					<p class="source"><i>How Does Batch Normalization Help Optimization?</i>, Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, <br><i>Thirty-second Conference on Neural Information Processing Systems, NeurIPS 2018</i></p>
-					<p>Also as <a href="http://gradientscience.org/batchnorm/">article</a> and <a href="https://www.youtube.com/watch?v=ZOabsYbmBRM&feature=youtu.be">video</a> </p>
+          <p class="slidetitle-2">Discussion</p><br>
+          <p><a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">The unreasonable effectiveness of RNNs</a><p>
+          <p><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs</a><p>
+          <p><a href="https://d2l.ai/chapter_recurrent-modern/bi-rnn.html">Bidirectional RNNs</a><p>
+
 				</section>
-				
-					<!-- EXERCISES -->
+
 				<section>
-					<section>
-						<p class="slidetitle">Exercise</p>
-						We go through the programming assignment that were planned for this week.
-					</section>
+					<p class="slidetitle-2">Homeworks</p>
+					<p>Operations on Word Vectors</p>
+					<p>Emojifying</p>
 				</section>
-				
+
+
 				<!-- HAUSAUFGABE -->
 				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle-2">For the next week</p>
 					<ul>
-						<li>Finish the first week of the last course</li>
-						<li>No Programming Assignment! Work on your project!</li>
-                  <li>One person per project should fill this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UOFlFRUVDT0lKWktQUVoxRktCNDhMTjBSUS4u">form</a> with project information!</li>
+						<li>Prepare the Peer Review process</li>
+						<li>Homework on Operations on Word Vectors</li>
+						<li>Homework on Emojifying</li>
 					</ul>
 				</section>
-				
+
 			</div>
 		</div>
 		<script src="../js/reveal.js"></script>

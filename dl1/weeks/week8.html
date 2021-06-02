@@ -1,7 +1,7 @@
 <html>
 	<head>
       <!-- for gitbook -->
-      <title>Week 8 - Deep Learning @ Opencampus</title>
+      <title>Week 8 - Deep Learning from Scratch @ Opencampus</title>
       <meta charset="UTF-8">
       <meta name="description" content="week 8.">
       <meta name="keywords" content="Deep Learning, Opencampus, week 8">
@@ -10,70 +10,69 @@
       <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
       <meta property="og:image" content="../res/icon/dl-icon.png">
       <!-- until here -->
-      
+
 		<link rel="stylesheet" href="../css/reveal.css">
 		<link rel="stylesheet" href="../css/theme/league.css">
 		<link rel="stylesheet" href="../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- WELCOME TO THE COURSE -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 8</p><br>
+					<p class="slidetitle">Deep Learning from Scratch - Week 8</p><br>
 					<p>Course starts soon..</p><br>
-					<p>Happy new year :)</p>
 				</section>
-				
+
 				<!-- QUESTIONS -->
 				<section>
-              <section>
-                <p class="slidetitle">Project Check</p><br>
-                <p>Today we skip the quiz and make a small check about the project, how you started and what your objectives are.</p>
-              </section>
-              <section>
-                <p class="slidetitle">How it works</p><br>
-                <p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
-                <p class="fragment slidewithalotoftext">The first group has 3 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the sceond group explains and first gives feedback. In total it takes 10 minutes.</p>
-                <p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
-              </section>
-              <section>
-                <p class="slidetitle">What should be explained</p>
-                <ul>
-                  <li>The choice of the dataset</li>
-                  <li>The choice of the network architecture (if already made)</li>
-                  <li>The objective (what you want to achieve)</li>
-                  <li>The problems or challenges you face</li>
-                </ul>
-              </section>
-				</section>		
-				
+          <section>
+            <p class="slidetitle">Project Check</p><br>
+            <p>Today we skip the quiz and make a small check about the project, how you started and what your objectives are.</p>
+          </section>
+          <section>
+            <p class="slidetitle">How it works</p><br>
+            <p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
+            <p class="fragment slidewithalotoftext">The first group has 3 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the sceond group explains and first gives feedback. In total it takes 10 minutes.</p>
+            <p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
+          </section>
+          <section>
+            <p class="slidetitle">What should be explained</p>
+            <ul>
+              <li>The choice of the dataset</li>
+              <li>The choice of the network architecture (if already made)</li>
+              <li>The objective (what you want to achieve)</li>
+              <li>The problems or challenges you face</li>
+            </ul>
+          </section>
+				</section>
+
 				<!-- QUIZ -->
 				<section>
 						<p class="slidetitle">QUIZ (15 mins)</p><br>
 						<p class="slidewithalotoftext">
-                     1. Which approach should you use in your project? Train one model and try to fine-tune it, or train several models and see which one works better?<br>
-                     2. About hyperparameters search: which would you use? random, grid search, or a different solution? Is there a specific reason behind? <br>
-                     3. If we use batch normalization, should we stop using normalization before the input layer? Should we use batch normalization in only some layers or an all levels?<br>
-                     4. In which sense batch normalization makes the network train faster? If we add computations, shouldn't the single iteration be slower?<br>
-                     <br>
+               1. Which approach should you use in your project? Train one model and try to fine-tune it, or train several models and see which one works better?<br>
+               2. About hyperparameters search: which would you use? random, grid search, or a different solution? Is there a specific reason behind? <br>
+               3. If we use batch normalization, should we stop using normalization before the input layer? Should we use batch normalization in only some layers or an all levels?<br>
+               4. In which sense batch normalization makes the network train faster? If we add computations, shouldn't the single iteration be slower?<br>
+               <br>
 						</p>
 				</section>
-			
+
 				<!-- ANSWERS -->
 				<section>
 					<section>
 						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
 					</section>
 				</section>
-				
+
 				<!-- PAPER OF THE WEEK -->
 				<section>
 					<p class="slidetitle">Paper of the Week</p>
@@ -81,7 +80,7 @@
 					<p class="source"><i>How Does Batch Normalization Help Optimization?</i>, Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, <br><i>Thirty-second Conference on Neural Information Processing Systems, NeurIPS 2018</i></p>
 					<p>Also as <a href="http://gradientscience.org/batchnorm/">article</a> and <a href="https://www.youtube.com/watch?v=ZOabsYbmBRM&feature=youtu.be">video</a> </p>
 				</section>
-				
+
 					<!-- EXERCISES -->
 				<section>
 					<section>
@@ -89,17 +88,16 @@
 						We go through the programming assignment that were planned for this week.
 					</section>
 				</section>
-				
+
 				<!-- HAUSAUFGABE -->
 				<section>
 					<p class="slidetitle">For the next week</p>
 					<ul>
 						<li>Finish the first week of the last course</li>
 						<li>No Programming Assignment! Work on your project!</li>
-                  <li>One person per project should fill this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5UOFlFRUVDT0lKWktQUVoxRktCNDhMTjBSUS4u">form</a> with project information!</li>
 					</ul>
 				</section>
-				
+
 			</div>
 		</div>
 		<script src="../js/reveal.js"></script>
