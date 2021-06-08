@@ -8,17 +8,17 @@
       <meta name="author" content="Luca Palmieri">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
+      <meta property="og:image" content="../../res/icon/dl-icon.png">
       <!-- until here -->
 
-		<link rel="stylesheet" href="../css/reveal.css">
-		<link rel="stylesheet" href="../css/theme/league.css">
-		<link rel="stylesheet" href="../css/s.css">
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/league.css">
+		<link rel="stylesheet" href="../../css/s.css">
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
@@ -29,7 +29,6 @@
 				<section>
 					<p class="slidetitle">Deep Learning - Week 9</p><br>
 					<p>Course starts soon..</p><br>
-
 				</section>
 
 				 <!-- QUIZ -->
@@ -44,6 +43,57 @@
           </section>
 				</section>
 
+				<section>
+					<section>
+						<p class="slidetitle">How to Upload Your Project:<br>1 - Choose</p><br>
+						<img src="../../res/choose.png">
+					</section>
+					<section>
+						<p class="slidetitle">How to Upload Your Project:<br>2 - Upload</p><br>
+						<img src="../../res/upload.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p class="slidetitle">Presentation of the final project</p>
+						<ul class="slidewithalotoftext">
+							<li>Each group will make a presentation. Ideally, the presentation would be divided among all members of the group.</li>
+              <li>Each group should take 10-15 minutes. There will be the presentation and a round of questions.</li>
+							<li>The structure of the presentation is not strictly fixed, nor it is its content. However, there are some suggestions to have similar structures.</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slidetitle">Guidelines for the presentation</p>
+						<ul class="slidewithreallyalotoftext">
+							<li><b>Group</b>: who are the people in the group.</li>
+                     <li><b>Project</b>: short description of the project and the motivation behind.</li>
+							<li><b>(*Optional) Tools</b>: which tools you used and how you managed to work in a group.</li>
+                     <li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
+							<li><b>(*Optional) Story</b>: attempts, failures, successes, whatever happened in the process. Sometimes what did not work can be as important as what worked!</li>
+							<li><b>Results</b>: how it works? can you quantify results or show some visualizations?</li>
+							<li><b>Baselines</b>:
+								<ul>
+									<li>is there a simple baseline with which you can compare? It can be as simple as the mean of the data for time series prediction, or a fixed value of 0.5 for the accuracy in a binary classification problem.</li>
+									<li>can you measure human performances on the task? can you personally take some samples from the test set and solve the problem yourself, and quantify the results?</li>
+								</ul>
+							</li>
+							<li><b>(*Optional) Missing:</b> is there something you missed to improve the project? Time, material, knowledge, data, computational power?</li>
+							<li><b>(*Optional) Future works:</b> how could the project be improved or extended?</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slidetitle">Sharing is caring</p>
+						Would you like to share and make the project available for everyone?
+						<ul class="slidewithalotoftext">
+							<li><b>Code</b>: is the code online, are you willing to share, can you provide a link to a repository that ideally contains some short instructions to reproduce it?<br>
+                       Please check that the code is at least clean (no testing or commented code) and hopefully some short comments/text to understand it!</li>
+							<li><b>Data:</b> is the data public, or it is not possible to share?</li>
+							<li><b>Presentation: </b>Do you allow me to upload/link the presentation (here I mean the slides) to the website for the next semesters?</li>
+						</ul>
+					</section>
+				</section>
+
 				<!-- QUESTIONS -->
 				<section>
           <section>
@@ -51,19 +101,6 @@
             <p>Today we skip the quiz and make a small check about the project, how you started and what your objectives are.</p>
           </section>
           <section>
-            <p class="slidetitle">How it works</p><br>
-            <p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
-            <p class="fragment slidewithalotoftext">The first group has 3 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the sceond group explains and first gives feedback. In total it takes 10 minutes.</p>
-            <p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
-          </section>
-          <section>
-            <p class="slidetitle">What should be explained</p>
-            <ul>
-              <li>The choice of the dataset</li>
-              <li>The choice of the network architecture (if already made)</li>
-              <li>The objective (what you want to achieve)</li>
-              <li>The problems or challenges you face</li>
-            </ul>
           </section>
 				</section>
 
@@ -117,7 +154,7 @@
 
 			</div>
 		</div>
-		<script src="../js/reveal.js"></script>
+		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
 		</script>
