@@ -1,7 +1,7 @@
 <html>
 	<head>
       <!-- for gitbook -->
-      <title>Week 10 - Deep Learning @ Opencampus</title>
+      <title>Week 10 - Advanced Deep Learning @ Opencampus</title>
       <meta charset="UTF-8">
       <meta name="description" content="week 10">
       <meta name="keywords" content="Deep Learning, Opencampus, week 10">
@@ -15,108 +15,227 @@
 		<link rel="stylesheet" href="../../css/theme/blood.css">
 		<link rel="stylesheet" href="../../css/s.css">
 		<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
-</script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- WELCOME TO THE COURSE -->
 				<section>
-					<p class="slidetitle">Deep Learning - Week 10</p><br>
+					<p class="slidetitle-2">Advanced Deep Learning - Week 10</p><br>
 					<p>Course starts soon..</p><br>
 
 				</section>
 
             <!-- QUIZ -->
 				<section>
-                <section>
-                    <p class="slidetitle">Quiz</p><br>
-                    <p>We will start now with a quiz based on the first week material</p>
-                    <p>You have 6 minutes to answer the quiz. </p>
-                    <p>The quiz link: <br>
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=o8B0DUIn4UCcYfg2EvvW96osw4AOHuZKpRSG1TW2RP5URE1JMVZMSTk5Q0NISDhJM0lNUzI1TkE0Uy4u">Quiz Link</a><br>
-                    It will be copied in Mattermost and in the Zoom chat.</p>
-                </section>
+          <section>
+            <p class="slidetitle-2">Quiz</p><br>
+            <p>We will start now with a quiz based on last week's material</p>
+            <p>You have 6 minutes to answer the quiz. </p>
+            <p>The quiz link: <br>
+            <a href="https://forms.office.com/r/GsSD0J22yH">Quiz Link</a><br>
+            It will be copied in Mattermost and in the Zoom chat.</p>
+          </section>
+				</section>
+
+				<section>
+					<p class="slidetitle-2">Short Feedback Round</p>
 				</section>
 
 				<!-- PRESENTATIONS -->
 				<section>
 					<section>
-						<p class="slidetitle">Presentation of the final project</p>
+						<p class="slidetitle-2">Presentation of the final project</p>
 						<ul class="slidewithalotoftext">
-							<li>Each group will make a presentation. Ideally, the presentation would be divided among all members of the group.</li>
-                     <li>Each group should take 10-15 minutes. There will be the presentation and a round of questions.</li>
-							<li>The structure of the presentation is not strictly fixed, nor it is its content. However, there are some suggestions to have similar structures.</li>
+							<li>Each group will make a presentation. </li>
+              <li>Each group should take 10-15 minutes.
+								There will be the presentation and a round of questions.</li>
+							<li>The structure of the presentation is not strictly fixed, nor it is its content.
+								However, there are some suggestions to have similar structures.</li>
 						</ul>
 					</section>
 					<section>
-						<p class="slidetitle">Guidelines for the presentation</p>
+						<p class="slidetitle-2">Guidelines for the presentation</p>
 						<ul class="slidewithreallyalotoftext">
 							<li><b>Group</b>: who are the people in the group.</li>
-                     <li><b>Project</b>: short description of the project and the motivation behind.</li>
-							<li><b>(*Optional) Tools</b>: which tools you used and how you managed to work in a group.</li>
-                     <li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
+              <li><b>Project</b>: short description of the project and the motivation behind.</li>
+							<li><b>(*Optional) Tools</b>: which tools you used.</li>
+              <li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
 							<li><b>(*Optional) Story</b>: attempts, failures, successes, whatever happened in the process. Sometimes what did not work can be as important as what worked!</li>
 							<li><b>Results</b>: how it works? can you quantify results or show some visualizations?</li>
-							<li><b>Baselines</b>:
-								<ul>
-									<li>is there a simple baseline with which you can compare? It can be as simple as the mean of the data for time series prediction, or a fixed value of 0.5 for the accuracy in a binary classification problem.</li>
-									<li>can you measure human performances on the task? can you personally take some samples from the test set and solve the problem yourself, and quantify the results?</li>
-								</ul>
-							</li>
-							<li><b>(*Optional) Missing:</b> is there something you missed to improve the project? Time, material, knowledge, data, computational power?</li>
+							<li><b>Baselines</b>: is there a baseline or an approach you can compare with?</li>
+							<li><b>(*Optional) Missing:</b> is there something you missed to improve the project?
+								Time, material, knowledge, data, computational power?</li>
 							<li><b>(*Optional) Future works:</b> how could the project be improved or extended?</li>
 						</ul>
 					</section>
 					<section>
-						<p class="slidetitle">Sharing is caring</p>
-						Would you like to share and make the project available for everyone?
+						<p class="slidetitle-2">Sharing is caring</p>
+						If not otherwise discussed with a single group,<br>
+						we will add your project to our <a href="https://opencampus-sh.github.io/ML-Projects/">Project Page</a>
 						<ul class="slidewithalotoftext">
-							<li><b>Code</b>: is the code online, are you willing to share, can you provide a link to a repository that ideally contains some short instructions to reproduce it?<br>
-                       Please check that the code is at least clean (no testing or commented code) and hopefully some short comments/text to understand it!</li>
-							<li><b>Data:</b> is the data public, or it is not possible to share?</li>
-							<li><b>Presentation: </b>Do you allow me to upload/link the presentation (here I mean the slides) to the website for the next semesters?</li>
+							<li><b>Code</b>: Provide a link to your repository if you have one,
+								and also some short instructions to reproduce it if needed<br>
+                Please check that the code is clean (no testing or commented code)
+								and has comments or text fields to understand it!</li>
+							<li><b>Data:</b> mention if the data is public (with link),
+								or if it is not possible to share.</li>
 						</ul>
 					</section>
 				</section>
 
-				<!-- QUIZ -->
 				<section>
-						<p class="slidetitle">Open Questions</p><br>
-						<p class="slidewithalotoftext">
-							1. Can you use transfer learning on your project? To have better results, what would you like the network to have learned before you fine-tune it?<br>
-							2. Can you think of a way to use end-to-end deep learning on your project? Or rather divide it into smaller steps? Or none of them fits?<br>
-							3. If you had 3 more months on your projects, what would be your next step? Assuming no money/time limitation, would you like to have more/better data, an expert validating your data, a more complex model, a more powerful machine to iterate the hyperparameter search, some time to test and apply different regularization techniques or something else?<br>
-						<br>
+					<section>
+						<p class="slidetitle-2">Open Discussion</p><br>
+						<ul>
+							<li>What are word embeddings?</li>
+							<li>What are positional embeddings?</li>
+							<li>How are they combined?</li>
+						</ul>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Positional Encoding (PE) [1]</p><br>
+						<img src="../../res/d2/tr/transformer-architecture-pe-751x510.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">PE is added to the Word Embedding (WE) [2]</p><br>
+						<img src="../../res/d2/tr/transformer_positional_encoding_example.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">LSTM processes word per word [3]</p><br>
+						<video autoplay loop>
+						 <source src="../../res/d2/tr/lstm_low.webm" type="video/webm">
+						 An animation of LSTM
+						</video> <video />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Transformers all at once [3]</p><br>
+						<video autoplay loop>
+						 <source src="../../res/d2/tr/transformers.webm" type="video/webm">
+						 An animation of LSTM
+						</video> <video />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">How would you encode positions? [3]</p><br>
+						<img src="../../res/d2/tr/empty_pos_enc.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Criteria [4]</p><br>
+						<img src="../../res/d2/tr/criteria.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normal order ? [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_std.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normal order does not work [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_std_no.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normalized ? [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_fraction.png" width=60%/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normalized does not work [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_fraction_no.png"  width=60% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Sin function [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_sin.png" width=50% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Sinusoidal waves [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_waves.png"  width=50% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Waves and ordering? [4]</p><br>
+						<img src="../../res/d2/tr/binary.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Relative positions [4, 5]</p><br>
+						<img src="../../res/d2/tr/paper.png"/><br><br>
+						<a href="https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/">Here the proof! [6]</a>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Embedding visualization [4, 5]</p><br>
+						<img src="../../res/d2/tr/curves.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Why summing and not concatenating? [7,8]</p><br>
+						<a href="https://github.com/tensorflow/tensor2tensor/issues/1591">Discussion on Tensorflow</a>
+						 or
+						<a href="https://www.reddit.com/r/MachineLearning/comments/cttefo/d_positional_encoding_in_transformer/exs7d08/">Discussion on Reddit</a>
+					</section>
+
+
+					<section>
+						<p class="slidetitle-2">Bibliography</p><br>
+						<p style='text-align: left'>
+							<a style='padding-bottom: 3; font-size: 2rem;' href='https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/'>
+								[1] Timo Denk's Blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://jalammar.github.io/illustrated-transformer/">
+								[2] Jay Alammar's blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://www.youtube.com/watch?v=dichIcUZfOw">
+								[3] Visual Guide to Transformer Neural Networks - (Episode 1) Position Embeddings (Youtube Video)
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://kazemnejad.com/blog/transformer_architecture_positional_encoding/">
+								[4] Amirhossein Kazemnejad's Blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://arxiv.org/abs/1706.03762">
+								[5] Vaswani et al. (2017), <i>Attention is All you Need</i>
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/">
+								[6] Mathematical proof of the linear combination of relative position
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://github.com/tensorflow/tensor2tensor/issues/1591">
+								[7] Tensorflow Repository Issue/Discussion about combination of positional encodings
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://www.reddit.com/r/MachineLearning/comments/cttefo/d_positional_encoding_in_transformer/exs7d08/">
+								[8] Reddit discussion about positional encoding
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 2rem;'  href="https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model">
+								[*] StackExchange question about positional encoding
+							</a><br>
+
 						</p>
-
-
-				</section>
-
-				<!-- ANSWERS -->
-				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
 					</section>
 				</section>
 
-					<!-- EXERCISES -->
 				<section>
-					<section>
-						<p class="slidetitle">Hyperparameters Search</p>
-						Can we make it easier?<br>
-						<a href="https://github.com/freerafiki/Notebooks/blob/master/DeepLearning/In_search_of_the_hyperparameters.ipynb">Notebook</a>
-					</section>
+					<p class='slidetitle-2'>Assignment</p>
+					If you had troubles, there is a
+					<a href="https://www.tensorflow.org/text/tutorials/transformer">
+						Tensorflow Tutorial
+					</a> which is more or less the same code
 				</section>
 
 				<!-- HAUSAUFGABE -->
 				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle-2">For the next week</p>
 					<ul>
 						<li>You are done with the courses!</li>
 						<li>Finish the final presentation!</li>
