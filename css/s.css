@@ -1,3 +1,7 @@
+.reveal {
+	color: #edecee;
+	font-family: "Poppins"
+}
 .container {
 	margin-top: 1rem;
 	margin-left: 1rem;
@@ -48,12 +52,36 @@
 .slidetitle {
 	font-size: 2.5rem;
 	font-weight: 700;
-	color:bisque;
+	color: #61ffca;
 }
 .slidetitle-2 {
 	font-size: 2.5rem;
 	font-weight: 700;
-	color:coral;
+	color: #61ffca;
+}
+.reveal a {
+	color:#a277ff !important;
+}
+.progress {
+	color:#61ffca !important;
+}
+img {
+	background: rgba(0,0,0,0) !important;
+	border: 0px !important;
+}
+img:hover {
+	background: rgba(0,0,0,0) !important;
+	border: 0px !important;
+}
+h2, h4 {
+	color:#61ffca !important;
+}
+
+.secondary-color {
+	color:#a277ff !important;
+}
+.controls-arrow {
+	color:#61ffca !important;
 }
 .slidewithalotoftext {
 	font-size: 2.0rem;
@@ -153,4 +181,3 @@
   background-color: dodgerblue;
   color: aliceblue;
 }
-

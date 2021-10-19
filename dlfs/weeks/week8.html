@@ -1,0 +1,192 @@
+<html>
+	<head>
+    <!-- for gitbook -->
+    <title>Week 8 - Deep Learning from Scratch @ Opencampus</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="week 8.">
+    <meta name="keywords" content="Deep Learning, Opencampus, week 8">
+    <meta name="author" content="Luca Palmieri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+    <meta property="og:image" content="../../res/icon/dl-icon.png">
+    <!-- until here -->
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/league.css">
+		<link rel="stylesheet" href="../../css/s.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- WELCOME TO THE COURSE -->
+				<section>
+					<p class="slidetitle">Deep Learning from Scratch - Week 8</p><br>
+					<p>Course starts soon..</p><br>
+				</section>
+
+
+				<section>
+					<p class="slidetitle">Quiz</p><br>
+					<p>We will start now with a survey on your opinion on the course</p>
+					<p>The quiz link: <br>
+						<a href="https://forms.office.com/r/cTLFqhQu0X" target="_blank">Quiz Link</a><br>
+						It will be copied in Mattermost and in the Zoom chat.</p>
+					</section>
+				</section>
+
+				<section>
+					<p class="slidetitle">Coding.Waterkant 2021</p>
+					<p>We had 8 Teams working on 4 Challenges</p>
+				</section>
+
+				<section>
+					<section>
+						<p class="slidetitle">Remaining Sessions</p>
+						<ul>
+							<li><b>07 June (today):</b> last homework on Tensorflow</li>
+							<li><b>07-14 June:</b> finish the third coursera course (2 weeks, no homeworks)</li>
+							<li><b>14 June:</b> discussion about project status and feedbacks</li>
+							<li><b>21 June:</b> final presentation, part 1</li>
+							<li><b>28 June:</b> final presentation, part 2</li>
+						</ul>
+					</section>
+					<section>
+            <p class="slidetitle">The third coursera course:<br>Structuring Machine Learning Projects</p><br>
+            <img src='../../res/struct_course.jpg' width=90%>
+          </section>
+          <section>
+            <p class="slidetitle">Next Week: Peer Review on Projects</p><br>
+            <p>For next week there are no coursera homeworks, but you will discuss your project with another group in a "peer review process"</p>
+          </section>
+					<section>
+            <p class="slidetitle">How it works</p><br>
+            <p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
+            <p class="fragment slidewithalotoftext">The first group has 5 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the second group explains and first gives feedback. In total it should take 14-15 minutes.</p>
+            <p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
+          </section>
+          <section>
+            <p class="slidetitle">What should be explained</p>
+            <ul>
+              <li>The choice of the dataset</li>
+              <li>The choice of the network architecture </li>
+              <li>The objective (what you want to achieve)</li>
+              <li>The problems or challenges you face</li>
+							<li>Whatever else you think may be important</li>
+            </ul>
+          </section>
+					<section>
+            <p class="slidetitle">Final Presentations</p><br>
+            <p>
+							We divide in 2 days to avoid sessions which are too long.<br>
+							Each group will have 20 minutes:<br>15 of presentation, 5 of questions<br>
+							<b>Both sessions are mandatory</b>
+						</p>
+          </section>
+					<section>
+            <p class="slidetitle">Final Presentations, Part 1</p><br>
+            <p><b>21 of June</b></p>
+						<ol>
+							<li><b>Bakery Prediction, Group 1: </b>(16.00-16.20)<br>
+								Amelie, Christopher, Niko, Samira</li>
+							<li><b>Bakery Prediction, Group 2: </b>(16.20-16.40)<br>
+								Jannik, Johannes, Osama, Pavan</li>
+							<li><b>Fake News, Group 1: </b>(16.40-17.00)<br>
+								Garima, Jendrik, Manpreet</li>
+							<li><b>Fake News, Group 2: </b>(17.00-17.20)<br>
+								Farjana, Junaid, Mahjarul</li>
+						</ol>
+						</p>
+          </section>
+					<section>
+            <p class="slidetitle">Final Presentations, Part 2</p><br>
+            <p><b>28 of June</b></p>
+						<ol>
+							<li><b>Climate Change </b>(16.00-16.20)<br>
+								Vineet, Shilpika</li>
+							<li><b>Windfinder: </b>(16.20-16.40)<br>
+								Kilian</li>
+							<li><b>Hydrochemistry Time Series: </b>(16.40-17.00)<br>
+								Irena, Julia, Matthias, Wanja</li>
+							<li><b>Phishing Website Detector: </b>(17.00-17.20)<br>
+								Anita, Malik, Dilini, Razeeb</li>
+						</ol>
+						</p>
+          </section>
+				</section>
+				<!-- QUIZ -->
+				<section>
+						<p class="slidetitle">QUIZ (15 mins)</p><br>
+						<p class="slidewithreallyalotoftext">
+               1. Which approach would you use in your project? Train one model and try to fine-tune it, or train several models and see which one works better?<br>
+               2. About hyperparameters search: which would you use? random, grid search, or a different solution? Is there a specific reason behind? <br>
+               3. If we use batch normalization, should we stop using normalization before the input layer? Should we use batch normalization in only some layers or an all levels?<br>
+               4. In which sense batch normalization makes the network train faster? If we add computations, shouldn't the single iteration be slower?<br>
+               5. Now you have seen many techniques as regularization, momentum, dropout, batch normalization. Would you use them in your project? Why?<br>
+							 6. Let's say you have to classify the animals in one image. You want to know if there are any dogs, cats, ducks or horses in the image, or none of the above.
+							 So you have 5 classes. How many output neurons would you use in your network?
+							 And would you use softmax or sigmoid as an activation function? Why?
+						</p>
+				</section>
+
+				<!-- ANSWERS -->
+				<section>
+					<section>
+						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+					</section>
+				</section>
+
+				<!-- PAPER OF THE WEEK -->
+				<section>
+					<p class="slidetitle">Paper of the Week</p>
+					<a href="https://arxiv.org/abs/1805.11604"><img src="../../res/d1/w8/bn.png"></a>
+					<p class="source"><i>How Does Batch Normalization Help Optimization?</i>, Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, <br><i>Thirty-second Conference on Neural Information Processing Systems, NeurIPS 2018</i></p>
+					<p>Also as <a href="http://gradientscience.org/batchnorm/">article</a> and <a href="https://www.youtube.com/watch?v=ZOabsYbmBRM&feature=youtu.be">video</a> </p>
+				</section>
+
+					<!-- EXERCISES -->
+				<section>
+					<section>
+						<p class="slidetitle">Exercise</p>
+						We go through the programming assignment that were planned for this week.
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p class="slidetitle">Poll about next week </p>
+						Since next week there is no assignment, we can go through an example all together.<br>
+						<br>Which option do you prefer?<br>
+						<br>
+						<ol>
+							<li>Image Processing -- CNN </li>
+							<li>Time Series Analysis -- LSTM </li>
+							<li>Skip discussion and finish earlier </li>
+						</ol>
+					</section>
+				</section>
+
+				<!-- HAUSAUFGABE -->
+				<section>
+					<p class="slidetitle">For the next week</p>
+					<ul>
+						<li>Finish the first week of the last course</li>
+						<li>No Programming Assignment! Work on your project!</li>
+						<li>Think about the peer review process</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+		<script src="../../js/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>

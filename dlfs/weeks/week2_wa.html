@@ -1,0 +1,224 @@
+<html>
+	<head>
+      <!-- for gitbook -->
+      <title>Week 2 - Deep Learning @ Opencampus.sh</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Introduction to the Opencampus and to the Course contents.">
+      <meta name="keywords" content="Deep Learning, Opencampus, Introduction">
+      <meta name="author" content="Luca Palmieri">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
+      <meta property="og:image" content="../res/icon/dl-icon.png">
+      <!-- until here -->
+
+      <link rel="stylesheet" href="../../css/reveal.css">
+      <link rel="stylesheet" href="../../css/theme/league.css">
+      <link rel="stylesheet" href="../../css/s.css">
+			<script>
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- WELCOME TO WEEK 2 -->
+
+
+				<section>
+					<p class="slidetitle">Deep Learning - Week 2</p><br>
+					<p>Course starts soon..</p><br>
+
+				</section>
+
+				<!-- ADMIN -->
+				<section>
+					<section>
+						<p class="slidetitle">PREPARATION</p><br>
+						<p class="">Somebody missed the first class?</p>
+						<p class="">Somebody had problem with Mattermost?</p>
+						<p class="">Somebody had problem with Coursera?</p>
+						<p class="">Did everybody receive the OpenCampus Coursera Invitation?</p>
+					</section>
+					<section><p class="slidetitle">OpenCampus on Coursera</p>
+						<img src="../res/occ.png">
+					</section>
+				</section>
+
+				<!-- QUESTIONS -->
+				<section>
+					<p class="slidetitle">QUESTIONS</p><br>
+					<p class="bigger">Do you have any question?</p>
+					<p class="slidewithalotoftext">Questions can be about anything:<br>
+						course, exercise, website, problems, tools..</p>
+				</section>
+
+				<!-- RESOURCES -->
+				<section>
+					<section>
+						<p class="slidetitle">RESOURCES</p><br>
+						<p>In case you need more material, you can check out these websites:</p>
+						<ul>
+							<li>Scientific: Papers With Code</li>
+							<li>Videos: Two Minute Papers</li>
+							<li>Articles: Medium</li>
+							<li>Book: Deep Learning Book</li>
+							<li>Q&amp;A: StackExchange</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slidetitle">Papers with Code</p>
+						<a href="https://paperswithcode.com/"><img src="../res/papwithcode.png"></a>
+					</section>
+					<section>
+						<p class="slidetitle">Two Minute Papers Videos</p>
+						<a href="https://www.youtube.com/user/keeroyz"><img src="../res/twominutepapers.png"></a>
+					</section>
+					<section>
+						<p class="slidetitle">Medium Articles</p>
+						<a href="https://medium.com/tag/deep-learning"><img src="../res/medium.png"></a>
+					</section>
+					<section>
+						<p class="slidetitle">The Deep Learning Book</p>
+						<a href="https://www.deeplearningbook.org/"><img src="../res/dlbook.png"></a>
+						<p>It is availabe in HTML format on the website.<br>
+							<a href="https://github.com/janishar/mit-deep-learning-book-pdf">A PDF version was created on Github</a></p>
+					</section>
+					<section>
+						<p class="slidetitle">Community Exchange</p>
+						<a href="https://stackexchange.com/"><img src="../res/stack.png"></a>
+						<p>The largest community for Q&amp;A.</p>
+					</section>
+
+				</section>
+
+				<!-- PAPER OF THE WEEK -->
+				<section>
+					<p class="slidetitle">PAPER OF THE WEEK</p>
+					<a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"><img src="../res/dl2015.png"></a>
+					<p><i>Deep Learning</i>, Y. LeCunn, Y. Bengio and G. Hinton, <br><i>Nature, 2015</i></p>
+
+				</section>
+
+				<!-- QUIZ -->
+				<section>
+						<p class="slidetitle">QUIZ</p><br>
+						<p>1. What are supervised and unsupervised training? Are there other forms of learning? Which one is more similar to a course?<br>
+						2. Is it clear what an activation function is? Is ReLU better then sigmoid? Why?<br>
+						3. do you have an intuition about forward and backpropagation? Can you describe it with a real-life example?<br>
+						<br>
+						</p>
+
+
+				</section>
+
+				<!-- ANSWERS -->
+				<section>
+					<section>
+						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+						Caution: these are fragments of the discussion we had online. They are not meant to cover the whole topic alone, yet they may help.
+					</section>
+					<section>
+					<div class="slidetitle">LEARNING</div>
+						<div class="slidewithreallyalotoftext">
+							Learning is usually divided into:
+							<ul>
+								<li>Supervised Learning: all data is labeled, so the network train itself following the labels. <a href="https://towardsdatascience.com/a-brief-introduction-to-supervised-learning-54a3e3932590">A brief article about supervised learning.</a></li>
+								<li>Reinforcement Learning: the network knows only the final outcome (whether is positive or negative, usually) and there are no label on a single data instance, so it has to decide on itself how to interpret the information about the outcome. <a href="https://www.youtube.com/watch?v=JgvyzIkgxF0">A video</a> about it.</li>
+								<li>Unsupervised Learning: no labels are provided, and the final outcome is also unknown. The network does all the work by itself. <a href="https://towardsdatascience.com/unsupervised-learning-and-data-clustering-eeecb78b422a">An article about unsupervised learning.</a></li>
+								<li>Tranfer Learning: the <i>knowledge</i> obtained training a network can be used for another network for a similar problem, widening the possible applications. <a href="https://towardsdatascience.com/what-is-transfer-learning-8b1a0fa42b4">A super short</a>, <a href="https://towardsdatascience.com/deep-learning-isnt-hard-anymore-26db0d4749d7">a long article</a> and <a href="https://ruder.io/transfer-learning/">an even longer article about transfer learning</a>. </li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<p class="slidetitle">MIXED LEARNING</p>
+							<p class="slidewithalotoftext">
+								What about mixing supervised and unsupervised learning? It is an interesting open discussion which does not have a definite answer. For more information, <a href="https://www.quora.com/Which-machine-learning-algorithms-effectively-combine-supervised-and-unsupervised-learning">here an interesting discussion on Quora</a> and a whole book about what is denoted as <a href="http://www.acad.bg/ebook/ml/MITPress-%20SemiSupervised%20Learning.pdf"><i>semi-supervised learning</i></a>. (I did not read the whole book, cannot guarantee about its quality, some chapters are co-authored from Bengio, which is worth trusting). The book is not so recent, but may give you ideas.<br>
+							</p>
+					</section>
+					<section>
+						<p class="slidetitle">Activation Function</p>
+						<p class="slidewithalotoftext">
+							Activation functions are important to regulate the contribution of each level to the network. The non linearity is important to ensure that the output is not just a linear combination of all the networks. <a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">Here</a> there is a discussion about the non-linearity, <a href="https://www.coursera.org/lecture/neural-networks-deep-learning/why-do-you-need-non-linear-activation-functions-OASKH">here a video from the Coursera Course, at week 3, about why we need non-linear activation functions</a>. No need to watch now, with some patience, we will get to it, yet I wanted you to have some discussion about it beforehand.<br>
+							More in general, a <a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">more basic </a> and <a href="https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0">more complete article </a> describing different activation functions.
+					</section>
+					<section>
+						<p class="slidetitle"><b>Re</b>ctified <b>L</b>inear <b>U</b>nit (ReLU)</p>
+						<p class="slidewithalotoftext">ReLU are <a href="http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf">biologically motivated from the activation function used in biology to describe neurons firing in our brain.</a> Plus they actually yield very good results, and now are used everywhere.</p>
+						<img src="../res/bio.png">
+						<p class="source">Image from <a href="http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf"><i>Deep Sparse Rectifier Neural Networks</i>, Glorot et al., 2011</a></p>
+					</section>
+
+					<section>
+						<p class="slidetitle">Forward and backpropagation</p>
+							It looked like this topic was well understood. I leave here a reference <a href="https://towardsdatascience.com/back-propagation-414ec0043d7">article about backpropagation</a> just in case.
+					</section>
+				</section>
+           
+           <!-- ANSWERS -->
+				<section>
+					<section>
+						<p class="slidetitle">Discussions and Answers</p><br>
+					</section>
+                <section>
+					<div class="slidetitle">Types of Learning</div>
+						<div class="slidewithreallyalotoftext">
+							Learning is usually divided into:
+							<ul>
+								<li>Supervised Learning: all data is labeled, so the network train itself following the labels. <a href="https://towardsdatascience.com/a-brief-introduction-to-supervised-learning-54a3e3932590">A brief article about supervised learning.</a></li>
+								<li>Reinforcement Learning: the network knows only the final outcome (whether is positive or negative, usually) and there are no label on a single data instance, so it has to decide on itself how to interpret the information about the outcome. <a href="https://www.youtube.com/watch?v=JgvyzIkgxF0">A video</a> about it.</li>
+								<li>Unsupervised Learning: no labels are provided, and the final outcome is also unknown. The network does all the work by itself. <a href="https://towardsdatascience.com/unsupervised-learning-and-data-clustering-eeecb78b422a">An article about unsupervised learning.</a></li>
+								<li>Tranfer Learning: the <i>knowledge</i> obtained training a network can be used for another network for a similar problem, widening the possible applications. <a href="https://towardsdatascience.com/what-is-transfer-learning-8b1a0fa42b4">A super short</a>, <a href="https://towardsdatascience.com/deep-learning-isnt-hard-anymore-26db0d4749d7">a long article</a> and <a href="https://ruder.io/transfer-learning/">an even longer article about transfer learning</a>. </li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<p class="slidetitle">Can we mix learning types?</p>
+							<p class="slidewithalotoftext">
+								What about mixing supervised and unsupervised learning? It is an interesting open discussion which does not have a definite answer. For more information, <a href="https://www.quora.com/Which-machine-learning-algorithms-effectively-combine-supervised-and-unsupervised-learning">here an interesting discussion on Quora</a> and a whole book about what is denoted as <a href="http://www.acad.bg/ebook/ml/MITPress-%20SemiSupervised%20Learning.pdf"><i>semi-supervised learning</i></a>. (I did not read the whole book, cannot guarantee about its quality, some chapters are co-authored from Bengio, which is worth trusting). The book is not so recent, but may give you ideas.<br>
+							</p>
+					</section>
+					<section>
+						<p class="slidetitle">Activation Functions</p>
+						<p class="slidewithalotoftext">
+							Activation functions are important to regulate the contribution of each level to the network. The non linearity is important to ensure that the output is not just a linear combination of all the networks. <a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">Here</a> there is a discussion about the non-linearity, <a href="https://www.coursera.org/lecture/neural-networks-deep-learning/why-do-you-need-non-linear-activation-functions-OASKH">here a video from the Coursera Course, at week 3, about why we need non-linear activation functions</a>. No need to watch now, with some patience, we will get to it, yet I wanted you to have some discussion about it beforehand.<br>
+							More in general, a <a href="https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6">more basic </a> and <a href="https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0">more complete article </a> describing different activation functions.
+					</section>
+					<section>
+						<p class="slidetitle"><b>Re</b>ctified <b>L</b>inear <b>U</b>nit (ReLU)</p>
+						<p class="slidewithalotoftext">ReLU are <a href="http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf">biologically motivated from the activation function used in biology to describe neurons firing in our brain.</a> Plus they actually yield very good results, and now are used everywhere.</p>
+						<img src="../res/bio.png">
+						<p class="source">Image from <a href="http://proceedings.mlr.press/v15/glorot11a/glorot11a.pdf"><i>Deep Sparse Rectifier Neural Networks</i>, Glorot et al., 2011</a></p>
+					</section>
+
+					<section>
+						<p class="slidetitle">Forward and backpropagation</p>
+							A couple of article to go through each step:
+                    <a href="https://towardsdatascience.com/back-propagation-414ec0043d7">with graphs</a> and <a href="https://tech.trustpilot.com/forward-and-backward-propagation-5dc3c49c9a05">with all the mathematical steps</a>.
+					</section>
+				</section>
+
+				<!-- HAUSAUFGABE -->
+				<section>
+					<p class="slidetitle">For the next week</p>
+					<ul>
+						<li>Finish the second week of the course</li>
+						<li>Take the quiz</li>
+						<li>Do the Programming Assignment on Logistic Regression</li>
+						<li>Do the Programming Assignment on Python Numpy (optional)</li>
+					</ul>
+				</section>
+
+
+			</div>
+		</div>
+		<script src="../../js/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>

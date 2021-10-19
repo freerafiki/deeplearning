@@ -1,0 +1,259 @@
+<html>
+	<head>
+      <!-- for gitbook -->
+      <title>Week 10 - Advanced Deep Learning @ Opencampus</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="week 10">
+      <meta name="keywords" content="Deep Learning, Opencampus, week 10">
+      <meta name="author" content="Luca Palmieri">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+      <meta property="og:image" content="../../res/icon/dl-icon.png">
+      <!-- until here -->
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/blood.css">
+		<link rel="stylesheet" href="../../css/s.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- WELCOME TO THE COURSE -->
+				<section>
+					<p class="slidetitle-2">Advanced Deep Learning - Week 10</p><br>
+					<p>Course starts soon..</p><br>
+
+				</section>
+
+            <!-- QUIZ -->
+				<section>
+          <section>
+            <p class="slidetitle-2">Quiz</p><br>
+            <p>We will start now with a quiz based on last week's material</p>
+            <p>You have 6 minutes to answer the quiz. </p>
+            <p>The quiz link: <br>
+            <a href="https://forms.office.com/r/GsSD0J22yH">Quiz Link</a><br>
+            It will be copied in Mattermost and in the Zoom chat.</p>
+          </section>
+				</section>
+
+				<section>
+					<p class="slidetitle-2">Short Feedback Round</p>
+				</section>
+
+				<!-- PRESENTATIONS -->
+				<section>
+					<section>
+						<p class="slidetitle-2">Presentation of the final project</p>
+						<ul class="slidewithalotoftext">
+							<li>Each group will make a presentation. </li>
+              <li>Each group should take 10-15 minutes.
+								There will be the presentation and a round of questions.</li>
+							<li>The structure of the presentation is not strictly fixed, nor it is its content.
+								However, there are some suggestions to have similar structures.</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slidetitle-2">Guidelines for the presentation</p>
+						<ul class="slidewithreallyalotoftext">
+							<li><b>Group</b>: who are the people in the group.</li>
+              <li><b>Project</b>: short description of the project and the motivation behind.</li>
+							<li><b>(*Optional) Tools</b>: which tools you used.</li>
+              <li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
+							<li><b>(*Optional) Story</b>: attempts, failures, successes, whatever happened in the process. Sometimes what did not work can be as important as what worked!</li>
+							<li><b>Results</b>: how it works? can you quantify results or show some visualizations?</li>
+							<li><b>Baselines</b>: is there a baseline or an approach you can compare with?</li>
+							<li><b>(*Optional) Missing:</b> is there something you missed to improve the project?
+								Time, material, knowledge, data, computational power?</li>
+							<li><b>(*Optional) Future works:</b> how could the project be improved or extended?</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slidetitle-2">Sharing is caring</p>
+						If not otherwise discussed with a single group,<br>
+						we will add your project to our <a href="https://opencampus-sh.github.io/ML-Projects/">Project Page</a>
+						<ul class="slidewithalotoftext">
+							<li><b>Code</b>: Provide a link to your repository if you have one,
+								and also some short instructions to reproduce it if needed<br>
+                Please check that the code is clean (no testing or commented code)
+								and has comments or text fields to understand it!</li>
+							<li><b>Data:</b> mention if the data is public (with link),
+								or if it is not possible to share.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p class="slidetitle-2">Open Discussion</p><br>
+						<ul>
+							<li>What are word embeddings?</li>
+							<li>What are positional embeddings?</li>
+							<li>How are they combined?</li>
+						</ul>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Positional Encoding (PE) [1]</p><br>
+						<img src="../../res/d2/tr/transformer-architecture-pe-751x510.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">PE is added to the Word Embedding (WE) [2]</p><br>
+						<img src="../../res/d2/tr/transformer_positional_encoding_example.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">LSTM processes word per word [3]</p><br>
+						<video autoplay loop controls>
+						 <source src="../../res/d2/tr/lstm_low.webm" type="video/webm">
+						 An animation of LSTM
+						</video> <video />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Transformers all at once [3]</p><br>
+						<video autoplay loop controls>
+						 <source src="../../res/d2/tr/transformers.webm" type="video/webm">
+						 An animation of LSTM
+						</video> <video />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">How would you encode positions? [3]</p><br>
+						<img src="../../res/d2/tr/empty_pos_enc.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Criteria [4]</p><br>
+						<img src="../../res/d2/tr/criteria.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normal order ? [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_std.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normal order does not work [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_std_no.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normalized ? [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_fraction.png" width=60%/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Normalized does not work [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_fraction_no.png"  width=60% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Sin function [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_sin.png" width=50% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Sinusoidal waves [3]</p><br>
+						<img src="../../res/d2/tr/pos_enc_waves.png"  width=50% />
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Waves and ordering? [4]</p><br>
+						<img src="../../res/d2/tr/binary.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Relative positions [4, 5]</p><br>
+						<img src="../../res/d2/tr/paper.png"/><br><br>
+						<a href="https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/">Here the proof! [6]</a>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Embedding visualization [4, 5]</p><br>
+						<img src="../../res/d2/tr/curves.png"/>
+					</section>
+
+					<section>
+						<p class="slidetitle-2">Why summing and not concatenating? [7,8]</p><br>
+						<a href="https://github.com/tensorflow/tensor2tensor/issues/1591">Discussion on Tensorflow</a>
+						 or
+						<a href="https://www.reddit.com/r/MachineLearning/comments/cttefo/d_positional_encoding_in_transformer/exs7d08/">Discussion on Reddit</a>
+					</section>
+
+
+					<section>
+						<p class="slidetitle-2">Bibliography</p><br>
+						<p class="slidewithalotoftext" style='text-align: left'>
+							<a style='padding-bottom: 3; font-size: 1.65rem;' href='https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/'>
+								[1] Timo Denk's Blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://jalammar.github.io/illustrated-transformer/">
+								[2] Jay Alammar's blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://www.youtube.com/watch?v=dichIcUZfOw">
+								[3] Visual Guide to Transformer Neural Networks - (Episode 1) Position Embeddings (Youtube Video)
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://kazemnejad.com/blog/transformer_architecture_positional_encoding/">
+								[4] Amirhossein Kazemnejad's Blog
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://arxiv.org/abs/1706.03762">
+								[5] Vaswani et al. (2017), <i>Attention is All you Need</i>
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://timodenk.com/blog/linear-relationships-in-the-transformers-positional-encoding/">
+								[6] Mathematical proof of the linear combination of relative position
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://github.com/tensorflow/tensor2tensor/issues/1591">
+								[7] Tensorflow Repository Issue/Discussion about combination of positional encodings
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://www.reddit.com/r/MachineLearning/comments/cttefo/d_positional_encoding_in_transformer/exs7d08/">
+								[8] Reddit discussion about positional encoding
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model">
+								[*] StackExchange question about positional encoding
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://towardsdatascience.com/master-positional-encoding-part-i-63c05d90a0c3">
+								[*] Towardsdatascience article about positional encoding (part I)
+							</a><br>
+							<a style='padding-bottom: 3; font-size: 1.65rem;'  href="https://towardsdatascience.com/master-positional-encoding-part-ii-1cfc4d3e7375">
+								[*] Towardsdatascience article about positional encoding (part II)
+							</a><br>
+
+
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<p class='slidetitle-2'>Assignment</p>
+					If you had troubles, there is a
+					<a href="https://www.tensorflow.org/text/tutorials/transformer">
+						Tensorflow Tutorial
+					</a> which is more or less the same code
+				</section>
+
+				<!-- HAUSAUFGABE -->
+				<section>
+					<p class="slidetitle-2">For the next week</p>
+					<ul>
+						<li>You are done with the courses!</li>
+						<li>Finish the final presentation!</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+		<script src="../../js/reveal.js"></script>
+		<script>
+			Reveal.initialize();
+		</script>
+	</body>
+</html>
