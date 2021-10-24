@@ -1,153 +1,160 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 3 - Deep Learning from Scratch @ Opencampus.sh</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Linear algebra with Numpy, gradient descent, learning rate and convex functions.">
-      <meta name="keywords" content="Deep Learning, Opencampus, gradient descent">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
 
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/league.css">
-		<link rel="stylesheet" href="../../css/s.css">
-		<script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- WELCOME TO THE COURSE -->
+<head>
+	<!-- for gitbook -->
+	<title>Week 3 - Deep Learning from Scratch @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Weights initialization, forward- and backpropagation.">
+	<meta name="keywords" content="Deep Learning, Opencampus, backpropagation">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
+	<meta property="og:image" content="../res/icon/dl-icon.png">
+	<!-- until here -->
+
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/league.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.hard {
+			color: coral;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<p class="slidetitle">Deep Learning from Scratch - Week 3</p><br>
+				<p class="slidetitle" style="padding-bottom: 4rem">
+					Shallow Neural Networks
+				</p>
+				<p>Course starts soon..</p><br>
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">Quiz</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 6 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/aTJKVAsbSS">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
+
+			<section>
 				<section>
-					<p class="slidetitle">Deep Learning from Scratch - Week 3</p><br>
-					<p>Course starts soon..</p><br>
-
+					<p class="slidetitle">Questions from last week</p>
+					<p>Leaky ReLU and negative numbers on the activation</p>
+					<p>Cost function for unsupervised learning</p>
 				</section>
-
-             <!-- QUIZ -->
 				<section>
-                <p class="slidetitle">QUIZ</p><br>
-                <p>We will start now with a quiz based on the first week material</p>
-                <p>You have 7 minutes to answer the quiz. </p>
-                <p>The quiz link: <br>
-                <a href="https://forms.office.com/r/H21sq6ZuX0">Quiz Link</a><br>
-                It will be copied in Mattermost and in the Zoom chat.</p>
+					<p class="slidetitle">Leaky ReLU</p>
+					<img src="../../res/leaky_ng.png" width="20%">
+					<p>difference between activation functions in hidden layers and output layer</p>
+					<p>from CS231:</p>
+					<img src="../../res/leaky.png">
 				</section>
-
-            <section>
-                <p class="slidetitle">Matrices in python</p>
-                <a href="https://colab.research.google.com/drive/1lc17eJBSaukFYCw9QB9SevqpRNN0-6la?usp=sharing">A Notebook to play with matrices</a>
-            </section>
-
-				<!-- KAGGLE -->
 				<section>
-					<section>
-						<p class="slidetitle">Start thinking about your Project</p>
-				      <ul>
-                    <li>What theme would you like to address?</li>
-                    <li>What kind of data you want to use?</li>
-                    <li>Remember to start simple and focus on feed forward neural networks.</li>
-                    <li>For this course, better a small project that works and can be extended than a big project abandoned halfway through.</li>
-                  </ul>
-					</section>
+					<p class="slidetitle">Cost function for unsupervised learning</p>
+					<p>much wider topic: as an idea, the function it is used for is usually different</p>
+					<p>a typical example is to "learn" the characteristics of the input, for example dividing into different clusters or learning a lower dimensional representation. In this case the cost function can be defined as the difference betweeen the
+						"learned" representation and the input and is then minimized through the training.</p>
+					<a href="https://wtf-deeplearning.github.io/unsupervised/AISTATS2011_CoatesNL11.pdf">For more information, check out this paper from Adam Coates and Andrew Ng.</a>
 				</section>
+			</section>
 
-				<!-- PAPER OF THE WEEK -->
+			<!-- KAGGLE -->
+			<section>
 				<section>
-					<p class="slidetitle">PAPER OF THE WEEK</p>
-					<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"><i>ImageNet Classification with Deep Convolutional Neural Networks</i></a><br>
-					A. Krizhevsky, I. Sutskever, G. E. Hinton <br><i> Proceedings of the 25th International Conference on Neural Information Processing Systems (Lake Tahoe, NV, Dec. 2012), 1097–1105.</i>
-				</section>
-
-				<!-- QUIZ -->
-				<section>
-					<p class="slidetitle">QUIZ (15 mins)</p><br>
-					<p class="slidewithalotoftext">
-						1. Why is the cost function important and why we need such a function for logistic regression?<br>
-						1b. Are you familiar with the concept of convex functions and why this helps gradient find the minimum?<br>
-						2. Is the concept of gradient descent clear? How do learning rate correlates to number of iterations?<br>
-						3. Why is vectorization faster than a loop in python?<br>
-                  3b. Is it always the case? Can you think of a case when vectorization is not faster, or even slower?
-					<br>
-					</p>
-				</section>
-
-				<!-- ANSWERS -->
-				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-					</section>
-					<section>
-						<p class="slidetitle">Cost Function</p>
-						<img src="../../res/cf.png">
-						<p class="source">Image from <a href="https://www.internalpointers.com/post/cost-function-logistic-regression">this article</a>.</p>
-					</section>
-					<section>
-						<p class="slidetitle">Non Convex Functions</p>
-						<img src="../../res/ngconv.png" >
-					</section>
-					<section>
-						<p class="slidetitle">Gradient Descent</p>
-						<img src="https://miro.medium.com/max/1400/1*N5WjbzwsCFse-KPjBWZZ6g.jpeg" width="70%">
-						<p class="source">Image from <a href="https://towardsdatascience.com/linear-regression-using-gradient-descent-97a6c8700931">this article</a>.</p>
-					</section>
-                <section>
-                    <p class="slidetitle">Vectorization</p>
-                    <a href="https://stackoverflow.com/questions/1422149/what-is-vectorization">A nice explanation about what vectorization is</a> <br>and<br>
-                    <a href="https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops">An interesting discussion on Stackoverflow</a>
-                </section>
-				</section>
-
-				<!-- EXERCISES -->
-				<section>
-					<section>
-						<p class="slidetitle">Exercise (15-20 mins)</p>
-						We go through the programming assignment that were planned for this week.<br>
-					</section>
-				</section>
-
-            <section>
-                <section>
-						<p class="slidetitle">Open Source Project of the Week</p>
-                   <img src="https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/doc/img/embedding.gif" width="92%" height="450rem">
-					</section>
-                <section>
-                    <p class="slidetitle">Fashion MNIST Datasets</p>
-                <a href="https://github.com/zalandoresearch/fashion-mnist">Github Repository with Examples for MNIST Datasets</a>
-               </section>
-               <section>
-                    <p class="slidetitle">Why?</p>
-                   <p class="fragment"><img src="../../res/d1/w3/whynot.png"></p>
-                   <p class="fragment"><img src="../../res/d1/w3/why.png"></p>
-                </section>
-                <section>
-                    <p class="slidetitle">Conclusions</p>
-                    <p>It is a good playground for your first project<br>A reward to motivate you further</p>
-                </section>
-            </section>
-
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle">Start thinking about your Project</p>
 					<ul>
-						<li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/3">third week of the course</a></li>
-						<li>Do the Programming Assignment on Planar Data Classification</li>
+						<li>What theme would you like to address?</li>
+						<li>What kind of data you want to use?</li>
+						<li>Remember to start simple and focus on feed forward neural networks.</li>
+						<li>For this course, better a small project that works and can be extended than a big project abandoned halfway through.</li>
 					</ul>
 				</section>
+			</section>
 
-			</div>
+			<!-- PAPER OF THE WEEK -->
+			<section>
+				<p class="slidetitle">Paper of the week</p>
+				<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"><i>ImageNet Classification with Deep Convolutional Neural Networks</i></a><br>
+				A. Krizhevsky, I. Sutskever, G. E. Hinton <br><i> Proceedings of the 25th International Conference on Neural Information Processing Systems (Lake Tahoe, NV, Dec. 2012), 1097–1105.</i>
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">Quiz (15 mins)</p>
+				<ul class='slidewithalotoftext'>
+					<li>What are the characteristics of an activation function?</li>
+					<li>Why we need to have random initialization and we cannot leave all weights equal to zeros?</li>
+					<li>We initialize the weights of the neurons randomly. Is this really the best we can do? Do you have an idea about how we could do it?</li>
+					<li>Are all neurons of a layer always connected to all the neurons of the next one?</li>
+					<li>What is the relation between the cost function, gradient descent, the activation function and the weights of the network?</li>
+				</ul>
+			</section>
+
+			<!-- ANSWERS -->
+			<section>
+				<section>
+					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+				</section>
+			</section>
+
+			<!-- EXERCISES -->
+			<section>
+				<section>
+					<p class="slidetitle">Exercise (15-20 mins)</p>
+					We go through the programming assignment that were planned for this week.<br>
+
+				</section>
+				<section>
+					Q: Is having more hidden units better in terms of performances? Is it worse? Does it depends on a specific parameter? Do you have an intuition why?<br>
+					Q2: Does having more hidden layers require more iterations to train?
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p class="slidetitle">Open Source Project of the Week</p>
+					<a href="https://unity3d.com/machine-learning">Machine Learning Toolkit for Unity</a>
+				</section>
+				<section>
+					<p class="slidetitle">ML-Agents Community Challenge Winners</p>
+					<a href="https://connect.unity.com/p/hide-escape-avoidance-of-pursuing-enemies">Hide / Escape - Avoidance of Pursuing Enemies</a><br>
+					<img src="https://connect-prd-cdn.unity.com/p/images/d9b3e109-2d1d-4d1f-b66b-4bf57feffffe_Hide_Environment.png.2000x0x1.webp" width=70%><br>
+					<a href="https://www.youtube.com/watch?v=Lu56xVlZ40M&feature=emb_rel_end">A cool video on state-of-the-art on hide/escape with AI!</a>
+				</section>
+			</section>
+
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle">For the next week</p>
+				<ul>
+					<li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/4">fourth week of the course</a></li>
+					<li>Do the Programming Assignments: Build your Neural Network Step by Step and Deep Neural Network Application </li>
+					<li>Prepare an idea for a project, or be ready to discuss projects ideas and start forming teams</li>
+				</ul>
+			</section>
+
 		</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>

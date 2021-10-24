@@ -1,157 +1,193 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 2 - Deep Learning @ Opencampus.sh</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Introduction to the Opencampus and to the Course contents.">
-      <meta name="keywords" content="Deep Learning, Opencampus, Introduction">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../res/icon/dl-icon.png">
-      <!-- until here -->
 
-      <link rel="stylesheet" href="../../css/reveal.css">
-      <link rel="stylesheet" href="../../css/theme/league.css">
-      <link rel="stylesheet" href="../../css/s.css">
-			<script>
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+<head>
+	<!-- for gitbook -->
+	<title>Week 2 - Deep Learning from Scratch @ Opencampus.sh</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Linear algebra with Numpy, gradient descent, learning rate and convex functions.">
+	<meta name="keywords" content="Deep Learning, Opencampus, gradient descent">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
 
-				<!-- WELCOME TO WEEK 2 -->
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/league.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(.. / .. / css / print - pdf / gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<p class="slidetitle">Deep Learning from Scratch - Week 2</p><br>
+				<p class="slidetitle" style="padding-bottom: 4rem">
+					Introduction to Deep Learning and Neural Networks Basics
+				</p>
+				<p>Course starts soon..</p><br>
+
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">QUIZ</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 7 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/H21sq6ZuX0">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
+
+			<section>
+				<p class="slidetitle">Matrices in python</p>
+				<a href="https://colab.research.google.com/drive/1lc17eJBSaukFYCw9QB9SevqpRNN0-6la?usp=sharing">A Notebook to play with matrices</a>
+			</section>
+
+			<!-- RESOURCES -->
+			<section>
 				<section>
-					<p class="slidetitle">Deep Learning from Scratch <br><br> Week 2</p><br>
-					<p>Course starts soon..</p><br>
-
-				</section>
-
-				<!-- ADMIN -->
-				<section>
-                <p class="slidetitle">QUIZ</p><br>
-                <p>We will start now with a quiz based on the first week material</p>
-                <p>You have 6 minutes to answer the quiz. </p>
-                <p>The quiz link: <br>
-                <a href="https://forms.office.com/r/kjtPHXzjUq">Quiz Link</a><br>
-                It will be copied in Mattermost and in the Zoom chat.</p>
-				</section>
-
-				<!-- RESOURCES -->
-				<section>
-					<section>
-						<p class="slidetitle">RESOURCES</p><br>
-						<p>In case you need more material, you can check out these websites:</p>
-						<ul>
-							<li><b>Academic</b>: Papers With Code</li>
-                      <li><b>Short Videos</b>: Two Minute Papers</li>
-                      <li><b>Video Lectures</b>: Stanford CS230: Deep Learning</li>
-							<li><b>Articles</b>: Medium</li>
-							<li><b>Book</b>: Deep Learning Book</li>
-                      <li><b>Q&amp;A</b>: StackExchange</li>
-						</ul>
-                   <p class="fragment fade-up">Please add on our Mattermost Chat if have more ideas!</p>
-					</section>
-					<section>
-						<p class="slidetitle">Papers with Code</p>
-						<a href="https://paperswithcode.com/"><img src="../../res/papwithcode.png"></a>
-					</section>
-					<section>
-						<p class="slidetitle">Two Minute Papers Videos</p>
-						<a href="https://www.youtube.com/user/keeroyz"><img src="../../res/twominutepapers.png"></a>
-					</section>
-                <section>
-						<p class="slidetitle">Stanford Deep Learning Course</p>
-						<a href="https://cs230.stanford.edu/lecture/"><img src="../../res/d1/w2/cs230.png"></a>
-					</section>
-
-					<section>
-						<p class="slidetitle">Medium Articles</p>
-						<a href="https://medium.com/tag/deep-learning"><img src="../../res/medium.png"></a>
-					</section>
-					<section>
-						<p class="slidetitle">The Deep Learning Book</p>
-						<a href="https://www.deeplearningbook.org/"><img src="../../res/dlbook.png"></a>
-						<p>It is availabe in HTML format on the website.<br>
-							<a href="https://github.com/janishar/mit-deep-learning-book-pdf">A PDF version was created on Github</a></p>
-					</section>
-					<section>
-						<p class="slidetitle">Community Exchange</p>
-						<a href="https://stackexchange.com/"><img src="../../res/stack.png"></a>
-						<p>The largest community for Q&amp;A.</p>
-					</section>
-
-				</section>
-
-				<!-- PAPER OF THE WEEK -->
-				<section>
-					<p class="slidetitle">Paper of the Week</p>
-					<a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"><img src="../../res/dl2015.png"></a>
-					<p><i>Deep Learning</i>, Y. LeCunn, Y. Bengio and G. Hinton, <br><i>Nature, 2015</i></p>
-				</section>
-
-				<!-- QUIZ -->
-				<section>
-              <section>
-                <p class="slidetitle">Feed Forward Neural Network</p>
-                <img class="stretch-r" src='../../res/d1/w2/basic_nn.png'>
-              </section>
-              <section>
-                <p class="slidetitle">Quiz (10 Minutes)</p><br>
-                <ol class="slidewithreallyalotoftext">
-                  <li>We learned this week about supervised learning. Learning with labels. Do you think this course can be seen as a form of <i>human</i> supervised learning?</li>
-                  <li>Do babies learn using the same approach?</li>
-                  <li>Do you see any problem or limitation with this supervised learning approach?</li>
-                  <li>Deep Learning is taking off because of performances. 
-                    It drives on more data and deeper network. 
-                    From the video (or other material), can you think of which one could be more important, more data, or a deeper network?</li>
-                  <li>Since in this course we want to use supervised learning, should we use structured on unstructured data?</li>
-                  <li>Can you think of an example of this kind of data that could be use in a project? And what would the project be about?</li>
-                </ol>
-              </section>
-              
-				</section>
-
-            <section>
-					<section>
-						<p class="slidetitle">Open Source Project of the Week</p>
-                   <iframe src="https://magenta.tensorflow.org/" width="92%" height="450rem"></iframe>
-					</section>
-                <section>
-                    <p class="slidetitle">Listen to the Music</p>
-                    <iframe src="https://magenta.github.io/listen-to-transformer/#a1_18959.mid" width="92%" height="450rem"></iframe>
-                </section>
-                <section>
-                    <p class="slidetitle">Create your own Music</p>
-                    <iframe src="https://magenta.tensorflow.org/demos/colab/" width="92%" height="450rem"></iframe>
-                </section>
-
-				</section>
-
-
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle">RESOURCES</p><br>
+					<p>In case you need more material, you can check out these websites:</p>
 					<ul>
-                   <li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/2">second week of the course</a></li>
-						<li>Take the quiz</li>
-						<li>Do the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/ungradedLab/63Vsy/logistic-regression-with-a-neural-network-mindset">Programming Assignment on Logistic Regression</a></li>
-						<li>Do the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/ungradedLab/PBeOH/python-basics-with-numpy-optional">Programming Assignment on Python Numpy</a></li>
+						<li><b>Academic</b>: Papers With Code</li>
+						<li><b>Short Videos</b>: Two Minute Papers</li>
+						<li><b>Video Lectures</b>: Stanford CS230: Deep Learning</li>
+						<li><b>Articles</b>: Medium</li>
+						<li><b>Book</b>: Deep Learning Book</li>
+						<li><b>Q&amp;A</b>: StackExchange</li>
 					</ul>
+					<p class="fragment fade-up">Please add on our Mattermost Chat if have more ideas!</p>
+				</section>
+				<section>
+					<p class="slidetitle">Papers with Code</p>
+					<a href="https://paperswithcode.com/"><img src="../../res/papwithcode.png"></a>
+				</section>
+				<section>
+					<p class="slidetitle">Two Minute Papers Videos</p>
+					<a href="https://www.youtube.com/user/keeroyz"><img src="../../res/twominutepapers.png"></a>
+				</section>
+				<section>
+					<p class="slidetitle">Stanford Deep Learning Course</p>
+					<a href="https://cs230.stanford.edu/lecture/"><img src="../../res/d1/w2/cs230.png"></a>
 				</section>
 
+				<section>
+					<p class="slidetitle">Medium Articles</p>
+					<a href="https://medium.com/tag/deep-learning"><img src="../../res/medium.png"></a>
+				</section>
+				<section>
+					<p class="slidetitle">The Deep Learning Book</p>
+					<a href="https://www.deeplearningbook.org/"><img src="../../res/dlbook.png"></a>
+					<p>It is availabe in HTML format on the website.<br>
+						<a href="https://github.com/janishar/mit-deep-learning-book-pdf">A PDF version was created on Github</a>
+					</p>
+				</section>
+				<section>
+					<p class="slidetitle">Community Exchange</p>
+					<a href="https://stackexchange.com/"><img src="../../res/stack.png"></a>
+					<p>The largest community for Q&amp;A.</p>
+				</section>
+			</section>
 
-			</div>
+			<!-- PAPER OF THE WEEK -->
+			<section>
+				<p class="slidetitle">Paper of the Week</p>
+				<a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf"><img src="../../res/dl2015.png"></a>
+				<p><i>Deep Learning</i>, Y. LeCunn, Y. Bengio and G. Hinton, <br><i>Nature, 2015</i></p>
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">QUIZ (15 mins)</p><br>
+				<p class="slidewithalotoftext">
+					1. Why is the cost function important and why we need such a function for logistic regression?<br>
+					1b. Are you familiar with the concept of convex functions and why this helps gradient find the minimum?<br>
+					2. Is the concept of gradient descent clear? How do learning rate correlates to number of iterations?<br>
+					3. Why is vectorization faster than a loop in python?<br>
+					3b. Is it always the case? Can you think of a case when vectorization is not faster, or even slower?
+					<br>
+				</p>
+			</section>
+
+			<!-- ANSWERS -->
+			<section>
+				<section>
+					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+				</section>
+				<section>
+					<p class="slidetitle">Cost Function</p>
+					<img src="../../res/cf.png">
+					<p class="source">Image from <a href="https://www.internalpointers.com/post/cost-function-logistic-regression">this article</a>.</p>
+				</section>
+				<section>
+					<p class="slidetitle">Non Convex Functions</p>
+					<img src="../../res/ngconv.png">
+				</section>
+				<section>
+					<p class="slidetitle">Gradient Descent</p>
+					<img src="https://miro.medium.com/max/1400/1*N5WjbzwsCFse-KPjBWZZ6g.jpeg" width="70%">
+					<p class="source">Image from <a href="https://towardsdatascience.com/linear-regression-using-gradient-descent-97a6c8700931">this article</a>.</p>
+				</section>
+				<section>
+					<p class="slidetitle">Vectorization</p>
+					<a href="https://stackoverflow.com/questions/1422149/what-is-vectorization">A nice explanation about what vectorization is</a> <br>and<br>
+					<a href="https://stackoverflow.com/questions/35091979/why-is-vectorization-faster-in-general-than-loops">An interesting discussion on Stackoverflow</a>
+				</section>
+			</section>
+
+			<!-- EXERCISES -->
+			<section>
+				<section>
+					<p class="slidetitle">Exercise (15-20 mins)</p>
+					We go through the programming assignment that were planned for this week.<br>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p class="slidetitle">Open Source Project of the Week</p>
+					<img src="https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/doc/img/embedding.gif" width="92%" height="450rem">
+				</section>
+				<section>
+					<p class="slidetitle">Fashion MNIST Datasets</p>
+					<a href="https://github.com/zalandoresearch/fashion-mnist">Github Repository with Examples for MNIST Datasets</a>
+				</section>
+				<section>
+					<p class="slidetitle">Why?</p>
+					<p class="fragment"><img src="../../res/d1/w3/whynot.png"></p>
+					<p class="fragment"><img src="../../res/d1/w3/why.png"></p>
+				</section>
+				<section>
+					<p class="slidetitle">Conclusions</p>
+					<p>It is a good playground for your first project<br>A reward to motivate you further</p>
+				</section>
+			</section>
+
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle">For the next week</p>
+				<ul>
+					<li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/3">third week of the course</a></li>
+					<li>Do the Programming Assignment on Planar Data Classification</li>
+				</ul>
+			</section>
+
 		</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>

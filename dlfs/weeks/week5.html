@@ -1,228 +1,175 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 5 - Deep Learning from Scratch @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="(Hyper-)parameters and network architectures.">
-      <meta name="keywords" content="Deep Learning, Opencampus, hyper-parameters">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
-      
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/league.css">
-		<link rel="stylesheet" href="../../css/s.css">
-      <script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- WELCOME TO THE COURSE -->
-				<section>
-					<p class="slidetitle">Deep Learning from Scratch - Week 5</p><br>
-					<p>Course starts soon..</p><br>
-					
-				</section>
-				
-				<!-- QUIZ -->
-				<section>
-                <section>
-                    <p class="slidetitle">Quiz</p><br>
-                    <p>We will start now with a quiz based on the first week material</p>
-                    <p>You have 6 minutes to answer the quiz. </p>
-                    <p>The quiz link: <br>
-                    <a href="https://forms.office.com/r/uWQYRwk9Nw">Quiz Link</a><br>
-                    It will be copied in Mattermost and in the Zoom chat.</p>
-                </section>
-                <section>
-                    <p class="slidetitle">The biological Neuron</p>
-                    <img src="https://miro.medium.com/max/1400/1*K1ee1SzB0lxjIIo7CGI7LQ.png" width=80%><br><p class="slidewithreallyalotoftext">Source: Wikimedia Commons</p>
-                    <a href="https://towardsdatascience.com/what-is-the-relation-between-artificial-and-biological-neuron-18b05831036">Article about the difference and similarities</a>
-                </section>
-				</section>
-             
-				<section>
-					<section>
-						<p class="slidetitle">Projects</p>
-					</section>
-					
-					<section>
-						<p class="slidetitle">Requirements</p>
-						<ul>
-                    <li>A public repository</li>
-                    <li>A notebook with working code and explanation/comments</li>
-                    <li>A small video/screen recording/presentation.</li>
-                   </ul>
-               </section>
-              
-              
-               <section>
-                    <p class="slidetitle">Project Template Folder</p>
-                    <a href="https://github.com/opencampus-sh/project_template_folder"><img width=65% src="../../res/template_project.png">
-                    <p>Please use the project template</p></a>
-					</section>
-                
-              <section>
-                <p class="slidetitle">Bakery Sales Prediction</p>
-                <p>
-                  <a href="https://github.com/opencampus-sh/bakery-sales-project">Dataset available</a><br>
-						PRO: Dataset is well structured, we know the source, kiel-based, good fit for the course, challenge.<br>
-						CONS: not the most exciting project ever.
-                </p>
-              </section>
-					
-					<section>
-						<p class="slidetitle">Fake News</p>
-						<a href="https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset">Dataset available on Kaggle</a><br>
-						PRO: Well structured and easy to understand dataset. Actual and controversial topic.<br>
-						CONS: Very USA-based, not sure about source of the news.
-					</section>
-					
-					<section>
-						<p class="slidetitle">Image Classification</p>
-						<a href="https://www.kaggle.com/puneet6060/intel-image-classification">Natural Scene</a> or <a href="https://www.kaggle.com/gpiosenka/100-bird-species">Bird Species</a> classification<br>
-						PRO: Dataset is structured similar what we have seen in the course and task is straightforward<br>
-						CONS: it may be less exciting, more similar to the examples.
-					</section>
-					
-					<section>
-						<p class="slidetitle">Credit Card Fraud Detection</p>
-						<a href="https://www.kaggle.com/mlg-ulb/creditcardfraud">Dataset on Kaggle</a><br>
-						PRO: Real-world clear task<br>
-						CONS: Not sure you can have access to this kind of data outside the dataset
-					</section>
-					
-					<section>
-						<p class="slidetitle">Book Analysis and Recommendation</p>
-						<a href="https://www.kaggle.com/jealousleopard/goodreadsbooks">Dataset on Kaggle</a><br>
-						PRO: Very practical task that you can use yourself and as a starting project for future works <br>
-						CONS: It may not be complete and language dependent, plus is a quite abstract and complicated task
-					</section>
 
-                <section>
-                    <p class="slidetitle">Climate Change</p>
-						  <a href="https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data">Dataset on Earth Surface Temperature</a><br>
-                    <a href="https://www.kaggle.com/ucsandiego/carbon-dioxide">Dataset on Carbon Dioxide</a><br>
-						PRO: Very important and actual problem. Large datasets and a widely discussed field. <br>
-						CONS: Complex. Data collection changed during time, many factors are involved, and tasks may not be easy. 
-                </section>
-                
-					<section>
-						<p class="slidetitle">Project from you</p>
-						Please explain again your project and your team. <br>
-						We give the other people time to think about it.
-					</section>					
+<head>
+	<!-- for gitbook -->
+	<title>Week 5 - Deep Learning from Scratch @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Bias, under- and overfitting, dropout and other techniques to avoid them.">
+	<meta name="keywords" content="Deep Learning, Opencampus, activation">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
+
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/league.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<p class="slidetitle">Deep Learning from Scratch - Week 5</p><br>
+				<p class="slidetitle" style="padding-bottom: 4rem">
+					Practical Aspects of Deep Learning
+				</p>
+				<p>Course starts soon..</p><br>
+
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<section>
+					<p class="slidetitle">Quiz</p><br>
+					<p>We will start now with a quiz based on the first week material</p>
+					<p>You have 6 minutes to answer the quiz. </p>
+					<p>The quiz link: <br>
+						<a href="https://forms.office.com/r/zFsF96EaCr" target="_blank">Quiz Link</a><br>
+						It will be copied in Mattermost and in the Zoom chat.
+					</p>
+				</section>
+			</section>
+
+			<!-- COLLABORATION -->
+			<section>
+				<section>
+					<p class="slidetitle">Quick project overview</p>
 				</section>
 
-				
-				<!-- QUIZ -->
 				<section>
-              <p class="slidetitle">Open Questions (15 mins)</p><br>
-              <ol class="slidewithalotoftext">
-                <li>What is the difference between parameters and hyperparameters? Can you make some examples? </li>
-                <li>Is there a hyperparameter that is more important than the others?</li>
-                <li>How would you choose the parameters, if you do not know exactly what they do?</li>
-                <li>Once we start stacking layers in a neural network, how do we know what layer is doing?</li>
-                <li>Is it really important to know?</li>
-              </ol>			
-				</section>
-				
-				<!-- ANSWERS -->
-				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-					</section>
-				</section>
-				
-				
-				
-					<!-- EXERCISES -->
-				<section>
-					<section>
-						<p class="slidetitle">Exercises (15-20 mins)</p>
-						<p class="slidewithalotoftext left">
-							We go through the programming assignments that were planned for this week.<br>	
-					</section>
-                <section>
-                	   1. What is <code>np.random.seed(1)</code> ?<br>
-                     2. Why are using for loop, after talking about vectorization? How would you vectorize the implementation? <br>
-                     3. How can a neural network perform worse on training data and better on test data? How important is the accuracy on training data? Do we need it?<br>
-                </section>
-            </section>
-             
-             <section>
-                <section>
-                    <p class="slidetitle">For the Project: Tensorflow</p>
-                    <img src="https://www.gstatic.com/devrel-devsite/prod/v82ddc984cee1a5dd6ee4c16cb38492e67eefd500032375cc23778d6489eec4cb/tensorflow/images/lockup.svg" width=70%>
-                 </section>
-                 
-                    
-                <section>
-                    <p class="slidetitle">Until now we implemented everything..</p>
-                 <pre><code data-line-numbers="1-5|7-11">
-def initialize_parameters(n_x, n_h, n_y):
-    ...
-def linear_activation_forward(A_prev, W, b, activation):
-    ...
-def compute_cost(AL, Y):
-    ...
-def linear_activation_backward(dA, cache, activation):
-    ...
-def update_parameters(parameters, grads, learning_rate):
-    ...
-def L_layer_model(X, Y, layers_dims, learning_rate = 0.009, 
-                    num_iterations = 3000, print_cost=False):
-    ... 
-def predict(X, Y, parameters)
-    ...
-                </code></pre>
-                 </section>
-                 
-                 <section>
-                    <p class="slidetitle">Tensorflow allows us to use less code!</p>
-                 <pre><code>
-model = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(64, 64, 3)),
-    tf.keras.layers.Dense(7, activation='relu'),
-    tf.keras.layers.Dense(1, activation='sigmoid')
-])
+					<p class="slidetitle">How to setup a project</p>
+					<p class="slidewithalotoftext">Even though each project is different, they may have some common points. <br>
+						A typical skeleton for a project could look like this.
+					</p>
+					<ul class="slidewithalotoftext">
+						<li>Read about what has been done in this direction.</li>
+						<li>Decide on the tool you want to use. (everybody in the team)</li>
+						<li>Find a suitable and well-structured dataset. Pre-process if needed.</li>
+						<li>Start testing a very simple model. Start small, and increase complexity gradually.</li>
+						<li>Once parameters are tweaked, check it against a baseline.</li>
+						<li>Try to understand and justify your choices. Why this architecture?</li>
+						<li>Prepare a presentation to show what you have done.</li>
+					</ul>
 
-model.fit(train_images, train_labels, epochs=10)
-
-test_loss, test_acc = model.evaluate(test_images,  test_labels)
-                </code></pre>
-                 </section>
-                 
-                 <section>
-                      <p class="slidetitle">A lot of tutorials online</p>
-                     <p>
-                     <a href="https://www.tensorflow.org/tutorials/keras/classification">An example of classification</a></p>
-                 </section>
-             </section>
-				
-				<!-- HAUSAUFGABE -->
+				</section>
 				<section>
-					<p class="slidetitle">For the next week</p>
+					<p class="slidetitle">Timeline of a project</p>
+					<p><b>Start: 22 November 2021 &rarr; End: 17 January 2022</b><br>
+						<b>Duration:</b> ~6/8 Weeks<br>
+					</p>
+					<p class="slidetitle">Suggestion (not mandatory, of course):</p>
+					<p class="slidewithalotoftext"><b>22.11 - 20.12:</b> Project choice, dataset pre-processing, maybe first simple model and objective</p>
+					<p class="slidewithalotoftext"><b>20.12:</b> Peer Review session, each group present their status to another group</p>
+					<p class="slidewithalotoftext"><b>20.12-17.01:</b> Architecture, fine-tuning, preparing presentation</p>
+					<p class="slidewithalotoftext"><b>17/24.01:</b> Presentation of the projects</p>
+				</section>
+				<section>
+					<p class="slidetitle">Things to know:</p>
 					<ul>
-						<li>Finish the first week of the <a href="https://www.coursera.org/learn/deep-neural-network/home/welcome">Improving Deep Neural Network Course</a></li>
-						<li>Do the Programming Assignments: Initialization, Regularization and Gradient Checking </li>
+						<li>Project is necessary to get the credits and the opecampus certification.</li>
+						<li>Project is not graded.</li>
+						<li>(At least) once during the execution of the project, we can have extra session with your group to discuss status and issues.</li>
+						<li>External guests may be invited at the final presentation. </li>
 					</ul>
 				</section>
-				
-			</div>
+				<section>
+					<p class="slidetitle">Creation of the groups:</p>
+					<p>We divide now in smaller groups with the people who already know about their project and we assign the others to a groups. </p>
+				</section>
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">QUIZ (15 mins)</p><br>
+				<p class="slidewithreallyalotoftext">
+					1. What does having high bias mean? How is this related to the bias parameter <i>b</i>?<br>
+					2. Dropout consists in setting to 0 a random number of neurons. Why don't we eliminate them directly and we use less? Is dropout used in training, in testing or in both phases?<br>
+					3. Dropout and Regularization are techniques to reduce the usage of neurons. So why is it that we create always bigger network with more neurons and then techniques to shut them down? Would not be easier to just use smaller networks?<br>
+					4. If you are training a neural network which tends to overfit, would you choose Dropout or Regularization?<br>
+					5. How do you choose which part of the dataset goes into the training and which one into the test or dev set?<br>
+					<br>
+				</p>
+			</section>
+
+			<!-- ANSWERS -->
+			<section>
+				<section>
+					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+				</section>
+				<section>
+					<p class="slidetitle">Dropout vs Regularization</p>
+					<p class="slidewithalotoftext">
+						<b>TL;DR</b><br>
+						They are similar techinques with similar results, dropout seems to work slightly better for larger networks<br>
+						<b>Long Answer</b><br>
+						<a href="https://uksim.info/isms2016/CD/data/0665a174.pdf">There is even a full paper about that.. (for one-layer networks only)</a>
+					</p>
+				</section>
+			</section>
+
+			<!-- PAPER OF THE WEEK -->
+			<section>
+				<section>
+					<p class="slidetitle">PAPER OF THE WEEK</p>
+					<a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><img src="../../res/d1/w6/gan.png"></a>
+					<p class="source"><i><a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">Generative Adversarial Nets</a></i>, Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron
+						Courville, Yoshua Bengio, <br><i>NIPS'14: Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2December 2014 Pages 2672–2680</i></p>
+				</section>
+
+				<section>
+					<p>Quotation</p>
+					<p class="slidewithalotoftext">
+						<i>In the proposed adversarial nets framework, the generative model is pitted against an adversary: a discriminative model that learns to determine whether a sample is from the model distribution or the data distribution. The generative
+							model can be thought of as analogous to a team of counterfeiters, trying to produce fake currency and use it without detection, while the discriminative model is analogous to the police, trying to detect the counterfeit currency.
+							Competition in this game drives both teams to improve their methods until the counterfeits are indistiguishable from the genuine articles.</i>
+					</p>
+				</section>
+			</section>
+
+
+			<!-- EXERCISES -->
+			<section>
+				<section>
+					<p class="slidetitle">EXERCISE (15-20 mins)</p>
+					We go through the programming assignments that were planned for this week.<br>
+				</section>
+			</section>
+
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle">For the next week</p>
+				<ul>
+					<li>Finish the second week of the course</li>
+					<li>Do the Programming Assignment on Optimization</li>
+				</ul>
+			</section>
+
 		</div>
-      <script src="plugin/highlight/highlight.js"></script>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>

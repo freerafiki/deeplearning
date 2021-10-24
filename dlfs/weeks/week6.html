@@ -1,162 +1,77 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 6 - Deep Learning from Scratch @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Bias, under- and overfitting, dropout and other techniques to avoid them.">
-      <meta name="keywords" content="Deep Learning, Opencampus, activation">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
-      
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/league.css">
-		<link rel="stylesheet" href="../../css/s.css">
-		<script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!-- WELCOME TO THE COURSE -->
-				<section>
-					<p class="slidetitle">Deep Learning from Scratch - Week 6</p><br>
-					<p>Course starts soon..</p><br>
-					
-				</section>
-				
-             <!-- QUIZ -->
-				<section>
-                <section>
-                    <p class="slidetitle">Quiz</p><br>
-                    <p>We will start now with a quiz based on the first week material</p>
-                    <p>You have 6 minutes to answer the quiz. </p>
-                    <p>The quiz link: <br>
-                    <a href="https://forms.office.com/r/zFsF96EaCr" target="_blank">Quiz Link</a><br>
-                    It will be copied in Mattermost and in the Zoom chat.</p>
-                </section>
-				</section>
-				
-				<!-- COLLABORATION -->
-				<section>
-					<section>
-						<p class="slidetitle">Quick project overview</p>
-					</section>
-                
-                   <section>
-                      <p class="slidetitle">How to setup a project</p>
-                      <p class="slidewithalotoftext">Even though each project is different, they may have some common points. <br>
-                         A typical skeleton for a project could look like this.
-                      </p>	
-                      <ul class="slidewithalotoftext">
-                         <li>Read about what has been done in this direction.</li>
-                         <li>Decide on the tool you want to use. (everybody in the team)</li>
-                         <li>Find a suitable and well-structured dataset. Pre-process if needed.</li>
-                         <li>Start testing a very simple model. Start small, and increase complexity gradually.</li>
-                         <li>Once parameters are tweaked, check it against a baseline.</li>
-                         <li>Try to understand and justify your choices. Why this architecture?</li>
-                         <li>Prepare a presentation to show what you have done.</li>
-                      </ul>
+<head>
+	<!-- for gitbook -->
+	<title>Week 6 - Deep Learning from Scratch @ Opencampus - SoSe 2021</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Mini-batch, regularization, momentum, RMSProp and different Optimizers.">
+	<meta name="keywords" content="Deep Learning, Opencampus, optimizers">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
 
-                </section> 
-                <section>
-                    <p class="slidetitle">Timeline of a project</p>
-                    <p><b>Start: 17 May &rarr; End: 21/28 June</b><br>
-                        <b>Duration:</b> ~5/6 Weeks<br>
-                    </p>
-                    <p class="slidetitle">Suggestion (not mandatory, of course):</p>
-                    <p class="slidewithalotoftext"><b>17.05 - 07.06:</b> Project choice, dataset pre-processing, maybe first simple model and objective</p>
-                    <p class="slidewithalotoftext"><b>07.06:</b> Peer Review session, each group present their status to another group</p>
-                    <p class="slidewithalotoftext"><b>08.06 - 21.06:</b> Architecture, fine-tuning, preparing presentation</p>
-                    <p class="slidewithalotoftext"><b>21/28.06:</b> Presentation of the projects</p>
-                </section>
-                <section>
-                    <p class="slidetitle">Things to know:</p>
-                    <ul>
-                        <li>Project is necessary to get the credits and the opecampus certification.</li>
-                        <li>Project is not graded.</li>
-                        <li>(At least) once during the execution of the project, we can have extra session with your group to discuss status and issues.</li>
-                        <li>External guests may be invited at the final presentation. </li>
-                    </ul>
-                </section>
-                <section>
-                    <p class="slidetitle">Creation of the groups:</p>
-                    <p>We divide now in smaller groups with the people who already know about their project and we try to create the groups. </p>
-                </section>
-				</section>
-				
-				<!-- QUIZ -->
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/league.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<p class="slidetitle">Deep Learning from Scratch - Week 6</p><br>
+				<p class="slidetitle" style="padding-bottom: 4rem">
+					Optimization Algorithms
+				</p>
+				<p>Course starts soon..</p><br>
+			</section>
+
+			<!-- QUIZ -->
+			<section>
 				<section>
-						<p class="slidetitle">QUIZ (15 mins)</p><br>
-						<p class="slidewithreallyalotoftext">
-							1. What does having high bias mean? How is this related to the bias parameter <i>b</i>?<br>
-							2. Dropout consists in setting to 0 a random number of neurons. Why don't we eliminate them directly and we use less? Is dropout used in training, in testing or in both phases?<br>
-                     3. Dropout and Regularization are techniques to reduce the usage of neurons. So why is it that we create always bigger network with more neurons and then techniques to shut them down? Would not be easier to just use smaller networks?<br>
-                     4. If you are training a neural network which tends to overfit, would you choose Dropout or Regularization?<br>
-                     5. How do you choose which part of the dataset goes into the training and which one into the test or dev set?<br>
-						<br>
-						</p>
-				</section>
-				
-				<!-- ANSWERS -->
-				<section>
-					<section>
-						<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-					</section>
-               <section>
-                 <p class="slidetitle">Dropout vs Regularization</p>
-                 <p class="slidewithalotoftext">
-                   <b>TL;DR</b><br>
-                   They are similar techinques with similar results, dropout seems to work slightly better for larger networks<br>
-                   <b>Long Answer</b><br>
-                  <a href="https://uksim.info/isms2016/CD/data/0665a174.pdf">There is even a full paper about that.. (for one-layer networks only)</a>
-                 </p>
-               </section>
-				</section>
-				
-				<!-- PAPER OF THE WEEK -->
-				<section>
-					<section>
-						<p class="slidetitle">PAPER OF THE WEEK</p>
-						<a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><img src="../../res/d1/w6/gan.png"></a>
-						<p class="source"><i><a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">Generative Adversarial Nets</a></i>, Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio, <br><i>NIPS'14: Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2December 2014 Pages 2672–2680</i></p>
-					</section>
-					
-					<section>
-						<p>Quotation</p>
-						<p class="slidewithalotoftext">
-							<i>In the proposed adversarial nets framework, the generative model is pitted against an adversary: a discriminative model that learns to determine whether a sample is from the model distribution or the data distribution. The generative model can be thought of as analogous to a team of counterfeiters, trying to produce fake currency and use it without detection, while the discriminative model is analogous to the police, trying to detect the counterfeit currency. Competition in this game drives both teams to improve their methods until the counterfeits are indistiguishable from the genuine articles.</i>
-						</p>
+					<p class="slidetitle">Quiz</p><br>
+					<p>We will start now with a quiz based on the first week material</p>
+					<p>You have 6 minutes to answer the quiz. </p>
+					<p>The quiz link: <br>
+						<a href="https://forms.office.com/r/Tnrb9iJ60n" target="_blank">Quiz Link</a><br>
+						It will be copied in Mattermost and in the Zoom chat.</p>
 					</section>
 				</section>
-				
-				
-				<!-- EXERCISES -->
-				<section>
+
+
+					<!-- EXERCISES -->
 					<section>
-						<p class="slidetitle">EXERCISE (15-20 mins)</p>
-						We go through the programming assignments that were planned for this week.<br>	
+						<section>
+							<p class="slidetitle">EXERCISE (15-20 mins)</p>
+							We go through the programming assignment that were planned for this week.<br>
+							Here M. Peixeiro actually wrote an article <a href="https://towardsdatascience.com/the-3-best-optimization-methods-in-neural-networks-40879c887873">that explains exactly the solution of the assignment for this week.</a>
+						</section>
 					</section>
-				</section>
-				
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle">For the next week</p>
-					<ul>
-						<li>Finish the second week of the course</li>
-						<li>Do the Programming Assignment on Optimization</li>
-					</ul>
-				</section>
-				
+
+					<section>
+						<p class="slidetitle">Register your project</p>
+						<p><a href="https://forms.office.com/r/kp2GTbeVw0">Fill out this Form</a></p>
+					</section>
+
+					<!-- HAUSAUFGABE -->
+					<section>
+						<p class="slidetitle">For the next week</p>
+						<ul>
+							<li>Finish the third week of the course! Second course is also done!</li>
+							<li>Do the Programming Assignment on Tensorflow</li>
+						</ul>
+					</section>
+
+				</div>
 			</div>
-		</div>
 		<script src="../../js/reveal.js"></script>
 		<script>
 			Reveal.initialize();
