@@ -1,103 +1,109 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 4 - Deep Learning for Computer Vision @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Resources, activation functions and types of learning.">
-      <meta name="keywords" content="Deep Learning, Opencampus, activation">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
 
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/blood.css">
-		<link rel="stylesheet" href="../../css/s.css">
-		<script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-      <style>
-        .week {
-          border: 1px solid;
-          border-radius: 0.5rem;
-        }
-        .event {
-          color:red;
-          font-weight: 800;
-          float:right;
-          padding-right: 1rem;
-        }
-        .maybe {
-          color:orange;
-          font-weight: 600;
-        }
-      </style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+<head>
+	<!-- for gitbook -->
+	<title>Week 4 - Deep Learning for Computer Vision @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Resources, activation functions and types of learning.">
+	<meta name="keywords" content="Deep Learning, Opencampus, activation">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
+	<base target="_blank">
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/night.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.week {
+			border: 1px solid;
+			border-radius: 0.5rem;
+		}
 
-				<!-- WELCOME TO WEEK 3 -->
-				<section>
-					<h4 style="margin-bottom:0px">Deep Learning for<br>Computer Vision</h4>
-					<br>
-						<h2>Classic CNN Architectures</h2>
-					<br>
-					course starts soon..
-				</section>
+		.event {
+			color: red;
+			font-weight: 800;
+			float: right;
+			padding-right: 1rem;
+		}
 
-				<!-- ADMIN -->
-				<section>
-          <p class="slidetitle-2">QUIZ</p><br>
-          <p>We will start now with a quiz based on the first week material</p>
-          <p>You have 6 minutes to answer the quiz. </p>
-          <p>The quiz link: <br>
-          <a href="https://forms.office.com/r/CVcuLevhKh">Quiz Link</a><br>
-          It will be copied in Mattermost and in the Zoom chat.</p>
-				</section>
+		.maybe {
+			color: orange;
+			font-weight: 600;
+		}
+	</style>
+</head>
 
-        <section>
-					LeNet, AlexNet, VGG
-					Inception Module
-        </section>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- WELCOME TO WEEK 3 -->
+			<section>
+				<h4 style="margin-bottom:0px">Deep Learning for<br>Computer Vision</h4>
+				<br>
+				<h2>Classic CNN Architectures</h2>
+				<br>
+				course starts soon..
+			</section>
+
+			<!-- ADMIN -->
+			<section>
+				<p class="slidetitle-2">QUIZ</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 6 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/CVcuLevhKh">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
+
+			<section>
+				LeNet, AlexNet, VGG
+				Inception Module
+			</section>
 
 
-				<!-- ANSWERS -->
-					<!-- QUIZ -->
-				<section>
-					<p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
-					<ol class="slidewithalotoftext">
-						<li>What are the problems of training deeper networks?</li>
-						<li>Why is important to learn the identity function and how is this helping performance in ResNet?</li>
-						<li>What are the side branches of the inception network used for?</li>
-						<li>What is a skip connection and why/when it makes sense to use it?</li>
-					</ol>
-				</section>
+			<!-- ANSWERS -->
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
+				<ol class="slidewithalotoftext">
+					<li>What are the problems of training deeper networks?</li>
+					<li>Why is important to learn the identity function and how is this helping performance in ResNet?</li>
+					<li>What are the side branches of the inception network used for?</li>
+					<li>What is a skip connection and why/when it makes sense to use it?</li>
+				</ol>
+			</section>
 
-				<section>
-				  <p class="slidetitle-2">Homework</p>
-				  <p>Valentin and Julia (Manpreet?)</p>
-				</section>
+			<section>
+				<p class="slidetitle-2">Homework</p>
+				<p>Valentin and Julia (Manpreet?)</p>
+			</section>
 
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle-2">For the next week</p>
-					<ul>
-						<li>Homework on Transfer Learning</li>
-						<li>Edit the homework: can we classify 3 classes? Alpaca, Horses and Dogs? (or choose whatever you want)</li>
-					</ul>
-				</section>
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle-2">For the next week</p>
+				<ul>
+					<li>Homework on Transfer Learning</li>
+					<li>Edit the homework: can we classify 3 classes? Alpaca, Horses and Dogs? (or choose whatever you want)</li>
+				</ul>
+			</section>
 
-			</div>
 		</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>
