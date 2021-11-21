@@ -1,131 +1,120 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 5 - Advanced Deep Learning @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Resources, activation functions and types of learning.">
-      <meta name="keywords" content="Deep Learning, Opencampus">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
-			<base target="_blank">
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/night.css">
-		<link rel="stylesheet" href="../../css/s.css">
-		<script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-      <style>
-        .week {
-          border: 1px solid;
-          border-radius: 0.5rem;
-        }
-        .event {
-          color:red;
-          font-weight: 800;
-          float:right;
-          padding-right: 1rem;
-        }
-        .maybe {
-          color:orange;
-          font-weight: 600;
-        }
-      </style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
 
-				<!-- WELCOME TO WEEK 2 -->
-				<section>
-					<p class="slidetitle-2">Advanced Deep Learning - Week 5</p><br>
-					<p>Course starts soon..</p><br>
+<head>
+	<!-- for gitbook -->
+	<title>Week 5 - Deep Learning for Computer Vision @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Resources, activation functions and types of learning.">
+	<meta name="keywords" content="Deep Learning, Opencampus">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
+	<base target="_blank">
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/night.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.week {
+			border: 1px solid;
+			border-radius: 0.5rem;
+		}
 
-				</section>
+		.event {
+			color: red;
+			font-weight: 800;
+			float: right;
+			padding-right: 1rem;
+		}
 
-				<!-- ADMIN -->
-				<section>
-                <p class="slidetitle-2">QUIZ</p><br>
-                <p>We will start now with a quiz based on the first week material</p>
-                <p>You have 6 minutes to answer the quiz. </p>
-                <p>The quiz link: <br>
-                <a href="https://forms.office.com/r/Vyee4qkcHB">Quiz Link</a><br>
-                It will be copied in Mattermost and in the Zoom chat.</p>
-				</section>
+		.maybe {
+			color: orange;
+			font-weight: 600;
+		}
+	</style>
+</head>
 
-            <section>
-              <section>
-                <p class='slidetitle-2'>Project Groups</p>
+<body>
+	<div class="reveal">
+		<div class="slides">
 
-              </section>
-              <section>
-               <p class='slidetitle-2'>Next Week: Checkpoint</p>
-                <p>Prepare a small presentation with:</p>
-                <p class="fragment">1) The theme of your project</p>
-                <p class="fragment">2) State of the Art (a paper, a tutorial, an implementation)</p>
-                <p class="fragment">3) Your objective </p>
-                <p class="fragment">4) The dataset</p>
-                <p class="fragment">5) The architecture of the network</p>
-              </section>
-            </section>
+			<!-- WELCOME TO WEEK 5 -->
+			<section>
+				<h4 style="margin-bottom:0px">Deep Learning for<br>Computer Vision</h4>
+				<br>
+				<h2>Transfer Learning</h2>
+				<br>
+				course starts soon..
+			</section>
+
+			<!-- ADMIN -->
+			<section>
+				<p class="slidetitle-2">Quiz</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 6 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/Vyee4qkcHB">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
 
 
-						<!-- ANSWERS -->
-				      <!-- QUIZ -->
-						<section>
-		                <p class="slidetitle-2">Quiz (10 Minutes)</p><br>
-		                <ol class="slidewithalotoftext">
-		                    <li>Is the transposed convolution the inverse of the convolution? What are its advantages and limitations?</li>
-		                    <li>What are the main characteristics that differentiates YOLO form the previous approaches and makes it so fast? And what are its limitations?</li>
-		                    <li>Why do we need non-max suppression and how can we be sure that we are not suppressing different objects? Can it handle different classes?</li>
-		                </ol>
-						</section>
-
-				<!-- ANSWERS -->
-		      <!-- QUIZ -->
-				<section>
-                <p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
-                <ol class="slidewithalotoftext">
-									<li>How comes mobile net save some computations? Why are not all other network also doing the same? Where is the catch? </li>
-									<li>Can you think of a rule of thumb for:<br>a) when to use transfer learning, <br>b) when to use data augmentation?</li>
+			<section>
+				<p class="slidetitle-2">Session Exercise (5 Minutes)</p>
+				<ol>
+					<li>We divide on projects groups</li>
+					<li>What's the problem you are facing now?</li>
+					<li>Can it be associated with one "standard" task or what's the closest?</li>
+					<li>Find online a compatible pre-trained network</li>
+				</ol>
+			</section>
 
 
+			<!-- ANSWERS -->
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
+				<ol class="slidewithalotoftext">
+					<li>Can you make 3 examples of transfer learning for humans?</li>
+					<li>If you have not enough data, how do you decide whether to use: a) transfer learning, or b) data augmentation?<br>
+					Does one exclude the other?</li>
+					<li>What criteria would you use to decide when transfer learning is not suitable anymore and we need to train from scratch?</li>
+					<li>What kind of information would allow us to improve transfer learning and to choose which part of the network to re-use?</li>
+					<li>Therefore, are CNN better or worse than, for example, FFNN when it comes to transfer learning?</li>
+				</ol>
+			</section>
 
-                    <li>How can we choose triplets which are "hard" for the network to differentiate before having learned the similarity function?</li>
-                    <li>How and why do we select a middle layer for the content component of the cost function? What would be the disadvantage of using the last layer? </li>
-                    <li>How is the liveness of an image computed, preventing people to cheat with a photo?</li>
-                    <li>Could we apply the same idea behind neural style transfer to change the ethnicity of a face in a kind of "face style transfer"?</li>
-                </ol>
-				</section>
-
-           <section>
-              <p class="slidetitle-2">Homework</p>
-              <p>Face Recognition</p>
-              <p>Neural Style Transfer</p>
-           </section>
+			<section>
+				<p class="slidetitle-2">Homework</p>
+				<p>Transfer Learning</p>
+				<p>Edit with 3 classes</p>
+			</section>
 
 
 
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle-2">For the next week</p>
-					<ul>
-						<li>Focus on your project</li>
-						<li>Create a small presentation for the checkpoint</li>
-					</ul>
-				</section>
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle-2">For the next week</p>
+				<ul>
+					<li>Coursera third week (videos)</li>
+					<li>Homework on Car Detection</li>
+				</ul>
+			</section>
 
-			</div>
 		</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>
