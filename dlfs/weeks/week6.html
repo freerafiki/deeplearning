@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<!-- for gitbook -->
 	<title>Week 6 - Deep Learning from Scratch @ Opencampus - SoSe 2021</title>
@@ -15,13 +16,14 @@
 	<link rel="stylesheet" href="../../css/theme/night.css">
 	<link rel="stylesheet" href="../../css/s.css">
 	<script>
-	var link = document.createElement( 'link' );
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
 </head>
+
 <body>
 	<div class="reveal">
 		<div class="slides">
@@ -41,40 +43,51 @@
 					<p>We will start now with a quiz based on the first week material</p>
 					<p>You have 6 minutes to answer the quiz. </p>
 					<p>The quiz link: <br>
-						<a href="https://forms.office.com/r/Tnrb9iJ60n" target="_blank">Quiz Link</a><br>
-						It will be copied in Mattermost and in the Zoom chat.</p>
-					</section>
+						<a href="https://forms.office.com/r/Tnrb9iJ60n" target="_blank">quiz Link</a><br>
+						It will be copied in Mattermost and in the Zoom chat.
+					</p>
 				</section>
+			</section>
 
+			<section>
+				<p class="slidetitle">Open Questions (10 minutes)</p>
+				<ol>
+					<li>About exponentially weighted average: can you think of an application in which you want to use larger beta and one where you want to use small value for beta?</li>
+					<li>What would happen if we increase (instead of decreasing as in learning rate decay) the learning rate during training?</li>
+					<li>Can you describe what a saddle point, a plateau, a local minimum and a global minimum are?
+						Do these concepts refers to the weights of the network, to the cost function, to the backpropagation, to the activation functions, or to all of them?</li>
+				</ol>
+			</section>
 
-					<!-- EXERCISES -->
-					<section>
-						<section>
-							<p class="slidetitle">EXERCISE (15-20 mins)</p>
-							We go through the programming assignment that were planned for this week.<br>
-							Here M. Peixeiro actually wrote an article <a href="https://towardsdatascience.com/the-3-best-optimization-methods-in-neural-networks-40879c887873">that explains exactly the solution of the assignment for this week.</a>
-						</section>
-					</section>
+			<!-- EXERCISES -->
+			<section>
+				<section>
+					<p class="slidetitle">Exercise (15-20 mins)</p>
+					We go through the programming assignment that were planned for this week.<br>
+					Here M. Peixeiro actually wrote an article <a href="https://towardsdatascience.com/the-3-best-optimization-methods-in-neural-networks-40879c887873">that explains exactly the solution of the assignment for this week.</a>
+				</section>
+			</section>
 
-					<section>
-						<p class="slidetitle">Register your project</p>
-						<p><a href="https://forms.office.com/r/kp2GTbeVw0">Fill out this Form</a></p>
-					</section>
+<!--		<section>
+				<p class="slidetitle">Register your project</p>
+				<p><a href="https://forms.office.com/r/kp2GTbeVw0">Fill out this Form</a></p>
+			</section> -->
 
-					<!-- HAUSAUFGABE -->
-					<section>
-						<p class="slidetitle">For the next week</p>
-						<ul>
-							<li>Finish the third week of the course! Second course is also done!</li>
-							<li>Do the Programming Assignment on Tensorflow</li>
-						</ul>
-					</section>
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle">For the next week</p>
+				<ul>
+					<li>Finish the third week of the course! Second course is also done!</li>
+					<li>Do the Programming Assignment on Tensorflow</li>
+				</ul>
+			</section>
 
-				</div>
-			</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+		</div>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>
