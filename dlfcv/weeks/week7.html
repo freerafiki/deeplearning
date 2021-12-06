@@ -1,157 +1,109 @@
 <html>
-	<head>
-      <!-- for gitbook -->
-      <title>Week 7 - Advanced Deep Learning @ Opencampus</title>
-      <meta charset="UTF-8">
-      <meta name="description" content="Resources, activation functions and types of learning.">
-      <meta name="keywords" content="Deep Learning, Opencampus">
-      <meta name="author" content="Luca Palmieri">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
-      <meta property="og:image" content="../../res/icon/dl-icon.png">
-      <!-- until here -->
-			<base target="_blank">
-		<link rel="stylesheet" href="../../css/reveal.css">
-		<link rel="stylesheet" href="../../css/theme/night.css">
-		<link rel="stylesheet" href="../../css/s.css">
-		<script>
-         var link = document.createElement( 'link' );
-         link.rel = 'stylesheet';
-         link.type = 'text/css';
-         link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
-         document.getElementsByTagName( 'head' )[0].appendChild( link );
-      </script>
-      <style>
-        .week {
-          border: 1px solid;
-          border-radius: 0.5rem;
-        }
-        .event {
-          color:red;
-          font-weight: 800;
-          float:right;
-          padding-right: 1rem;
-        }
-        .maybe {
-          color:orange;
-          font-weight: 600;
-        }
-      </style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
 
-				<!-- WELCOME TO WEEK 2 -->
-				<section>
-					<p class="slidetitle-2">Advanced Deep Learning - Week 7</p><br>
-					<p>Course starts soon..</p><br>
+<head>
+	<!-- for gitbook -->
+	<title>Week 7 - Deep Learning for Computer Vision @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Resources, activation functions and types of learning.">
+	<meta name="keywords" content="Deep Learning, Opencampus">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../../res/icon/dl-icon.png">
+	<meta property="og:image" content="../../res/icon/dl-icon.png">
+	<!-- until here -->
+	<base target="_blank">
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/night.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.week {
+			border: 1px solid;
+			border-radius: 0.5rem;
+		}
 
-				</section>
+		.event {
+			color: red;
+			font-weight: 800;
+			float: right;
+			padding-right: 1rem;
+		}
 
-				<!-- ADMIN -->
-				<section>
-                <p class="slidetitle-2">QUIZ</p><br>
-                <p>We will start now with a quiz based on the first week material</p>
-                <p>You have 6 minutes to answer the quiz. </p>
-                <p>The quiz link: <br>
-                <a href="https://forms.office.com/r/urkvSKpntL" target="_blank">Quiz Link</a><br>
-                It will be copied in Mattermost and in the Zoom chat.</p>
-				</section>
+		.maybe {
+			color: orange;
+			font-weight: 600;
+		}
+	</style>
+</head>
 
-				<!-- ADMIN -->
-				<section>
-					<p class="slidetitle-2">Project Checkpoint</p><br>
-					<p>Let's have a round of presentation to check the state of the projects</p>
-				</section>
+<body>
+	<div class="reveal">
+		<div class="slides">
 
-        <section>
-          <section>
-            <p class='slidetitle-2'>Sessions</p>
-            <ul>
-              <li>07 June: Natural Language Processing and Word Embeddings</li>
-              <li>14 June: Sequence Models and Attention Mechanism</li>
-              <li>21 June: Transformer Network</li>
-              <li>28 June: Final Presentation</li>
-            </ul>
-          </section>
-        </section>
+			<!-- WELCOME TO WEEK 6 -->
+			<section>
+				<h4 style="margin-bottom:0px">Deep Learning for<br>Computer Vision</h4>
+				<br>
+				<h2>Image Segmentation</h2>
+				<br>
+				course starts soon..
+			</section>
 
-				<section>
-					<section>
-						<p class="slidetitle-2">Waterkant</p>
-						<img class='r-stretch' width=70% src='../../res/wk/wk.png'>
-						<p>03-12 June</p>
-					</section>
-					<section>
-						<p class="slidetitle-2">Hackathon</p>
-						<img class='r-stretch' width=70% src='../../res/wk/hackathon.png'>
-						<p>04-05 June</p>
-					</section>
-					<section>
-						<p class="slidetitle-2">Schedule</p>
-						<img class='r-stretch' width=55% src='../../res/wk/schedule.png'>
-					</section>
-					<section>
-						<p class="slidetitle-2">The Challenges</p>
-					</section>
-				</section>
+			<!-- ADMIN -->
+			<section>
+				<p class="slidetitle-2">Quiz</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 6 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/7k1kQ5ZJtD" target="_blank">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
 
-				<!-- ANSWERS -->
-		      <!-- QUIZ -->
-				<section>
-            <p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
-            <ol class="slidewithalotoftext">
-
-							<li>Is the transposed convolution the inverse of the convolution? What are its advantages and limitations?</li>
+			<!-- ADMIN -->
+			<section>
+				<p class="slidetitle-2">Project Checkpoint</p><br>
+				<p>Let's have a round of presentation to check the state of the projects</p>
+			</section>
 
 
-              <li>Why were RNN so important for the development in neural network, what characteristics did they have, that previous architecture did not have?</li>
-              <li>What is the fundamental problem LSTM are tackling and how is this solved?</li>
-              <li>What are the advantages and disadvantages of bidirectional RNNs? When would you use them and when not? </li>
+			<!-- ANSWERS -->
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
+				<ol class="slidewithalotoftext">
+					<li>Is the transposed convolution the inverse of the convolution? What are its advantages and limitations?</li>
+					<li>Let's say we want to change a fully connected layer to a convolutional layer. The output of the previous layer is a NxNxC volume, and we have 4096 neurons in the fully connected layer. Is it possible? And if yes, how many filters do we need?</li>
+					<li>Let's say we have an image of NxN pixels. If we have NxN classification networks (one for each pixels), would it be the same as segmenting the image? If not, what is the difference?</li>
+					<li>The U-Net architecture has some skip-connections. Do you remember (without checking it up online) which other architecture had them too? Are they used with the same idea?</li>
+				</ol>
+			</section>
 
-							<li>How can we choose triplets which are "hard" for the network to differentiate before having learned the similarity function?</li>
-							<li>How and why do we select a middle layer for the content component of the cost function? What would be the disadvantage of using the last layer? </li>
-							<li>How is the liveness of an image computed, preventing people to cheat with a photo?</li>
-							<li>Could we apply the same idea behind neural style transfer to change the ethnicity of a face in a kind of "face style transfer"?</li>
+			<section>
 
-						</ol>
-				</section>
+			</section>
 
-				<section>
-          <p class="slidetitle-2">Discussion</p><br>
-          <p><a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">The unreasonable effectiveness of RNNs</a><p>
-          <p><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTMs</a><p>
-          <p><a href="https://d2l.ai/chapter_recurrent-modern/bi-rnn.html">Bidirectional RNNs</a><p>
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle-2">For the next week</p>
+				<ul>
+					<li>Coursera Videos from Week 4</li>
+					<li>Assignment on Face Recognition</li>
+				</ul>
+			</section>
 
-				</section>
-
-				<section>
-					<p class="slidetitle-2">Homeworks</p>
-					<p>Building a RNN - Step by Step</p>
-					<p>Character Level Language Model</p>
-					<p>Jazz Improvisation with LSTM</p>
-				</section>
-
-				<section>
-					<p class="slidetitle-2">Register your project</p>
-					<p><a href="https://forms.office.com/r/kp2GTbeVw0">Fill out this Form</a></p>
-				</section>
-
-				<!-- HAUSAUFGABE -->
-				<section>
-					<p class="slidetitle-2">For the next week</p>
-					<ul>
-						<li>Homework on Operations on Word Vectors</li>
-						<li>Homework on Emojifying</li>
-					</ul>
-				</section>
-
-			</div>
 		</div>
-		<script src="../../js/reveal.js"></script>
-		<script>
-			Reveal.initialize();
-		</script>
-	</body>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
 </html>
