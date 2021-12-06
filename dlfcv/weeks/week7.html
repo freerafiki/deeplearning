@@ -77,9 +77,10 @@
 			<!-- QUIZ -->
 			<section>
 				<p class="slidetitle-2">Open Questions (10 Minutes)</p><br>
-				<ol class="slidewithalotoftext">
-					<li>Is the transposed convolution the inverse of the convolution? What are its advantages and limitations?</li>
-					<li>Let's say we want to change a fully connected layer to a convolutional layer. The output of the previous layer is a NxNxC volume, and we have 4096 neurons in the fully connected layer. Is it possible? And if yes, how many filters do we need?</li>
+				<ol class="slidewithreallyalotoftext">
+					<li>In some approaches (for example R-CNN), instead of segmenting the whole images with a sliding window approach, only some regions (2k) are selected.
+How can we choose the "interesting" windows to do the segmentation ?</li>
+					<li>Let's say we want to change a fully connected layer to a convolutional layer. The output of the previous layer is a 64x64x12 volume, and we have 128 neurons in the fully connected layer. Is it possible? And if yes, how many filters do we need?</li>
 					<li>Let's say we have an image of NxN pixels. If we have NxN classification networks (one for each pixels), would it be the same as segmenting the image? If not, what is the difference?</li>
 					<li>The U-Net architecture has some skip-connections. Do you remember (without checking it up online) which other architecture had them too? Are they used with the same idea?</li>
 				</ol>
