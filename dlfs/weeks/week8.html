@@ -40,7 +40,7 @@
 				<p class="slidetitle">Quiz</p><br>
 				<p>We will start now with a survey on your opinion on the course</p>
 				<p>The quiz link: <br>
-					<a href="https://forms.office.com/r/cTLFqhQu0X" target="_blank">Quiz Link</a><br>
+					<a href="https://forms.office.com/r/r6jzQW4hQB" target="_blank">Quiz Link</a><br>
 					It will be copied in Mattermost and in the Zoom chat.
 				</p>
 			</section>
@@ -49,35 +49,91 @@
 				<section>
 					<p class="slidetitle">Remaining Sessions</p>
 					<ul>
-						<li><b>next week (20.12):</b> discussion about architectures, project status and feedbacks</li>
-						<li><b>after holiday (10.01):</b> bonus topic (if there is)</li>
+						<li><b>after holiday (10.12):</b> discussion about architectures</li>
 						<li><b>last sessions (17-24.01):</b> final presentations</li>
+					</ul>
+				</section>
+				<section>
+					<p class="slidetitle">Presentation of the final project</p>
+					<ul class="slidewithalotoftext">
+						<li>Each group will make a presentation. Ideally, the presentation would be divided among all members of the group.</li>
+						<li>Each group should take 10-15 minutes. There will be the presentation and a round of questions.</li>
+						<li>The structure of the presentation is not strictly fixed, nor it is its content. However, there are some suggestions to have similar structures.</li>
+					</ul>
+				</section>
+				<section>
+					<p class="slidetitle">Guidelines for the presentation</p>
+					<ul class="slidewithreallyalotoftext">
+						<li><b>Group</b>: who are the people in the group.</li>
+						<li><b>Project</b>: short description of the project and the motivation behind.</li>
+						<li><b>(*Optional) Tools</b>: which tools you used and how you managed to work in a group.</li>
+						<li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
+						<li><b>(*Optional) Story</b>: attempts, failures, successes, whatever happened in the process. Sometimes what did not work can be as important as what worked!</li>
+						<li><b>Results</b>: how it works? can you quantify results or show some visualizations?</li>
+						<li><b>Baselines</b>:
+							<ul>
+								<li>is there a simple baseline with which you can compare? It can be as simple as the mean of the data for time series prediction, or a fixed value of 0.5 for the accuracy in a binary classification problem.</li>
+								<li>can you measure human performances on the task? can you personally take some samples from the test set and solve the problem yourself, and quantify the results?</li>
+							</ul>
+						</li>
+						<li><b>(*Optional) Missing:</b> is there something you missed to improve the project? Time, material, knowledge, data, computational power?</li>
+						<li><b>(*Optional) Future works:</b> how could the project be improved or extended?</li>
+					</ul>
+				</section>
+				<section>
+					<p class="slidetitle">Sharing is caring</p>
+					If not otherwise discussed with a single group,
+					we will add your project to our <a href="https://opencampus-sh.github.io/ML-Projects/">Project Page</a>
+					<ul class="slidewithalotoftext">
+						<li><b>Code</b>: Provide a link to your repository if you have one,
+							and also some short instructions to reproduce it if needed<br>
+							Please check that the code is clean (no testing or commented code)
+							and has comments or text fields to understand it!</li>
+						<li><b>Data:</b> mention if the data is public (with link),
+							or if it is not possible to share.</li>
 					</ul>
 				</section>
 			</section>
 
+			<!-- Questions -->
+			<section>
+				<p class="slidetitle">Open Questions (15 mins)</p><br>
+				<ol class="slidewithreallyalotoftext">
+					<li>Can you come out with one task where machine will never surpass human level performances and the opposite, where machines already surpassed human level and most likely it won't change?</li>
+					<li>What is the difference between random errors and sistematic errors on the labelling of your training data?</li>
+					<li>Can you explain the difference between multi-task and end-to-end learning? Can you make an example for both of them?</li>
+				</ol>
+			</section>
+
+			<!-- ANSWERS -->
 			<section>
 				<section>
-					<p class="slidetitle">Next Week: Peer Review on Projects</p><br>
-					<p>For next week there are no coursera homeworks, but you will discuss your project with another group in a "peer review process"</p>
+					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
 				</section>
-				<section>
-					<p class="slidetitle">How it works</p><br>
-					<p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
-					<p class="fragment slidewithalotoftext">The first group has 5 minutes to explain the project, and the other group 2 minutes for feedback and questions. Then group switches and the second group explains and first gives feedback. In total it
-						should take 14-15 minutes.</p>
-					<p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
-				</section>
-				<section>
-					<p class="slidetitle">What should be explained</p>
-					<ul>
-						<li>The choice of the dataset</li>
-						<li>The choice of the network architecture </li>
-						<li>The objective (what you want to achieve)</li>
-						<li>The problems or challenges you face</li>
-						<li>Whatever else you think may be important</li>
-					</ul>
-				</section>
+			</section>
+
+			<section>
+				<p class="slidetitle">Project Status</p><br>
+				<p>Small recap on how we are doing</p>
+			</section>
+			<section>
+				<p class="slidetitle">How it works</p><br>
+				<p class="fragment slidewithalotoftext">We create Breakout Rooms, and in each Breakout Rooms there are two groups.</p>
+				<p class="fragment slidewithalotoftext">One group explains (5mins), one group listen. Then switch and repeat.</p>
+				<p class="fragment slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
+			</section>
+			<section>
+				<p class="slidetitle">What could be explained</p>
+				<ul>
+					<li>The choice of the dataset and if you are satisfied</li>
+					<li>The choice of the network architecture or the doubts</li>
+					<li>The objective (what you want to achieve)</li>
+					<li>The problems or challenges you are facing</li>
+					<li>Whatever else you think may be important</li>
+				</ul>
+			</section>
+
+			<!-- <section>
 				<section>
 					<p class="slidetitle">Final Presentations</p><br>
 					<p>
@@ -90,13 +146,14 @@
 					<p class="slidetitle">Final Presentations, Part 1</p><br>
 					<p><b>17 of January</b></p>
 					<ol>
-						<li><b>Bakery Prediction, Group 1: </b>(16.00-16.20)<br>
+						<li>
+							<b>Kaggle Challenge </b>(16.00-16.30)<br>
 						</li>
-						<li><b>Bakery Prediction, Group 2: </b>(16.20-16.40)<br>
+						<li>
+							<b>Guess the Age: </b>(16.30-17.00)<br>
 						</li>
-						<li><b>Fake News, Group 1: </b>(16.40-17.00)<br>
-						</li>
-						<li><b>Fake News, Group 2: </b>(17.00-17.20)<br>
+						<li>
+							<b>Credit Card Fraud Detection </b>(17.00-17.30)<br>
 						</li>
 					</ol>
 					</p>
@@ -105,77 +162,28 @@
 					<p class="slidetitle">Final Presentations, Part 2</p><br>
 					<p><b>24 of January</b></p>
 					<ol>
-						<li><b>Climate Change </b>(16.00-16.20)<br>
+						<li>
+							<b>Particular Matter Pollution </b>(16.00-16.30)<br>
 						</li>
-						<li><b>Windfinder: </b>(16.20-16.40)<br>
+						<li>
+							<b>Predicting Future Plantes Discoveries </b>(16.30-17.00)<br>
 						</li>
-						<li><b>Hydrochemistry Time Series: </b>(16.40-17.00)<br>
+						<li>
+							<b>Hydrochemistry Time Series: </b>(16.40-17.00)<br>
 						</li>
-						<li><b>Phishing Website Detector: </b>(17.00-17.20)<br>
-						</li>
+
 					</ol>
 					</p>
 				</section>
-			</section>
-			<!-- QUIZ -->
-			<section>
-				<p class="slidetitle">QUIZ (15 mins)</p><br>
-				<p class="slidewithreallyalotoftext">
-					1. Which approach would you use in your project? Train one model and try to fine-tune it, or train several models and see which one works better?<br>
-					2. About hyperparameters search: which would you use? random, grid search, or a different solution? Is there a specific reason behind? <br>
-					3. If we use batch normalization, should we stop using normalization before the input layer? Should we use batch normalization in only some layers or an all levels?<br>
-					4. In which sense batch normalization makes the network train faster? If we add computations, shouldn't the single iteration be slower?<br>
-					5. Now you have seen many techniques as regularization, momentum, dropout, batch normalization. Would you use them in your project? Why?<br>
-					6. Let's say you have to classify the animals in one image. You want to know if there are any dogs, cats, ducks or horses in the image, or none of the above.
-					So you have 5 classes. How many output neurons would you use in your network?
-					And would you use softmax or sigmoid as an activation function? Why?
-				</p>
-			</section>
-
-			<!-- ANSWERS -->
-			<section>
-				<section>
-					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-				</section>
-			</section>
-
-			<!-- PAPER OF THE WEEK -->
-			<section>
-				<p class="slidetitle">Paper of the Week</p>
-				<a href="https://arxiv.org/abs/1805.11604"><img src="../../res/d1/w8/bn.png"></a>
-				<p class="source"><i>How Does Batch Normalization Help Optimization?</i>, Shibani Santurkar, Dimitris Tsipras, Andrew Ilyas, Aleksander Madry, <br><i>Thirty-second Conference on Neural Information Processing Systems, NeurIPS 2018</i></p>
-				<p>Also as <a href="http://gradientscience.org/batchnorm/">article</a> and <a href="https://www.youtube.com/watch?v=ZOabsYbmBRM&feature=youtu.be">video</a> </p>
-			</section>
-
-			<!-- EXERCISES -->
-			<section>
-				<section>
-					<p class="slidetitle">Exercise</p>
-					We go through the programming assignment that were planned for this week.
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<p class="slidetitle">Poll about next week </p>
-					Since next week there is no assignment, we can go through an example all together.<br>
-					<br>Which option do you prefer?<br>
-					<br>
-					<ol>
-						<li>Image Processing -- CNN </li>
-						<li>Time Series Analysis -- LSTM </li>
-						<li>Skip discussion and finish earlier </li>
-					</ol>
-				</section>
-			</section>
+			</section> -->
 
 			<!-- HAUSAUFGABE -->
 			<section>
-				<p class="slidetitle">For the next week</p>
+				<p class="slidetitle">Next Session after Holidays</p>
 				<ul>
-					<li>Finish the first week of the last course</li>
-					<li>No Programming Assignment! Work on your project!</li>
-					<li>Think about the peer review process</li>
+					<li>Enjoy the holidays</li>
+					<li>Work on your project</li>
+					<li>Start preparing the presentation</li>
 				</ul>
 			</section>
 
