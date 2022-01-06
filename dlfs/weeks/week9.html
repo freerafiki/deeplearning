@@ -29,44 +29,38 @@
 		<div class="slides">
 			<!-- WELCOME TO THE COURSE -->
 			<section>
-				<p class="slidetitle">Deep Learning - Week 9</p><br>
+				<h3>Deep Learning <br>from Scratch</h3>
+
+				<h2 class="slidetitle" style="padding-bottom: 4rem">
+					Overview of different Neural Networks
+				</h2>
 				<p>Course starts soon..</p><br>
 			</section>
 
-			<!-- QUIZ -->
+			<!-- PROJECT UPLOAD -->
 			<section>
 				<section>
-					<p class="slidetitle">Quiz</p><br>
-					<p>We will start now with a quiz based on last week's material</p>
-					<p>You have 6 minutes to answer the quiz. </p>
-					<p>The quiz link: <br>
-						<a href="https://forms.office.com/r/mytszy1aqV">Quiz Link</a><br>
-						It will be copied in Mattermost and in the Zoom chat.
-					</p>
+					<p class="slidetitle">How to Upload Your Project:<br>1 - Choose</p><br>
+					<img src="../../res/choose.png">
+				</section>
+				<section>
+					<p class="slidetitle">How to Upload Your Project:<br>2 - Fill and Upload</p><br>
+					<img src="../../res/upload.png">
 				</section>
 			</section>
 
+
 			<!-- ANSWERS -->
 			<section>
-				<section>
-					<p class="slidetitle">Short Overview of different Networks</p>
-					<div class="row">
-						<div class="col-6">
-							<p class="fragment">FFNN</p>
-						</div>
-						<div class="col-6">
-							<p class="fragment">ENCODER/DECODER</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<p class="fragment">CNN</p>
-						</div>
-						<div class="col-6">
-							<p class="fragment">RNN/LSTM</p>
-						</div>
-					</div>
-				</section>
+				<p class="slidetitle">Overview of different Networks</p>
+				<ul>
+					<li>FFNN</li>
+					<li>Encoder/Decoder</li>
+					<li>CNN</li>
+					<li>RNN/LSTM</li>
+					<li>GAN</li>
+					<li>Transformer</li>
+				</ul>
 			</section>
 
 			<section>
@@ -225,26 +219,71 @@
 						<br>[6] <a href="http://joshvarty.github.io/VisualizingRNNs/">Animation RNN</a>
 						<br>[7] <a href="http://blog.echen.me/">Detailed Explanation, LSTM</a>
 						<br>[8] <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">RNN representation</a>
-
 					</p>
 				</section>
 			</section>
 
+
+			<!-- GAN -->
 			<section>
 				<section>
-					<p class="slidetitle">Poll about next week </p>
-					Since next week there is no assignment, we can go through an example all together.<br>
-					<br>Which option do you prefer?<br>
-					<br>
-					<ol>
-						<li>Image Processing -- CNN </li>
-						<li>Time Series Analysis -- LSTM </li>
-						<li>Skip discussion and finish earlier </li>
-					</ol>
+					<p class="slidetitle">Generative Adversarial Networks</p>
+					<img src="../../res/advml/gan.png" class="r-stretch">
+					<p>What does adversarial mean?</p>
+				</section>
+				<section>
+					<p class="slidetitle">The birth of GAN</p>
+					<a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets"><img src="../../res/d1/w6/gan.png"></a>
+					<p class="source"><i><a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">Generative Adversarial Nets</a></i>, Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron
+						Courville, Yoshua Bengio, <br><i>NIPS'14: Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2December 2014 Pages 2672–2680</i></p>
+				</section>
+				<section>
+					<p class="slidetitle">Metaphor</p>
+					<p class="slidewithalotoftext">
+						<i>In the proposed adversarial nets framework, the generative model is pitted against an adversary: a discriminative model that learns to determine whether a sample is from the model distribution or the data distribution. The generative
+							model can be thought of as analogous to a team of counterfeiters, trying to produce fake currency and use it without detection, while the discriminative model is analogous to the police, trying to detect the counterfeit currency.
+							Competition in this game drives both teams to improve their methods until the counterfeits are indistiguishable from the genuine articles.</i>
+					</p>
+				</section>
+				<section>
+					<p class="slidetitle">Bibliography</p>
+					<p class="slidewithreallyalotoftext" style="text-align: left">
+						<b>Articles:</b>
+						<br>[1] <a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">Generative Adversarial Network, main Paper</a>
+					</p>
 				</section>
 			</section>
 
+			<!-- Transformers -->
+			<section>
+				<section>
+					<p class="slidetitle">Transformer</p>
+					<img src="../../res/advml/att.png" class="r-stretch">
+					<p class="fragment">Where is this name coming from?</p>
+					<p class="fragment">The biggest change is the attention mechanism</p>
+				</section>
+				<section>
+					<p class="slidetitle-2">Attention</p>
+					<p>
+						<a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/">
+							What it is and why we need it - with animations
+						</a>
+					</p>
+				</section>
+				<section>
+					<p class="slidetitle">Bibliography</p>
+					<p class="slidewithreallyalotoftext" style="text-align: left">
+						<br>[1] <a href="https://arxiv.org/pdf/1706.03762.pdf">Attention is All you Need (Paper)</a>
+						<br>[2] <a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/">Online Article with Animations</a>
+						<br>[3] <a href="https://www.youtube.com/watch?v=iH-wmtxHunk">Video Explanation of a transformer paper</a>
+					</p>
+
+				</section>
+			</section>
+
+
 			<!-- QUESTIONS -->
+			<!--
 			<section>
 				<section>
 					<p class="slidetitle">Peer Reviewed Project Check</p><br>
@@ -257,10 +296,10 @@
 						take 14-15 minutes.</p>
 					<p class="slidewithalotoftext">Afterwards we come back to the main session and each group reports shortly what they learned from the others. So listen carefully.</p>
 				</section>
-			</section>
+			</section> -->
 
 			<!-- QUIZ -->
-			<section>
+			<!-- <section>
 				<p class="slidetitle">QUIZ (15 mins)</p><br>
 				<p class="slidewithreallyalotoftext pb-1">
 					1. How would you define human and optimal performances in your project? Are they the same?
@@ -287,14 +326,7 @@
 					<br>
 					<br>
 				</p>
-			</section>
-
-			<!-- ANSWERS -->
-			<section>
-				<section>
-					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
-				</section>
-			</section>
+			</section> -->
 
 			<!-- EXERCISES
 			<section>
@@ -306,7 +338,7 @@
 			</section>-->
 
 			<!-- EXERCISES -->
-			<section>
+			<!-- <section>
 				<section>
 					<p class="slidetitle">EXERCISE (15-20 mins)</p>
 					We go through a tutorial for Time Series prediction using LSTM Networks from the Tensorflow Tutorials.
@@ -319,15 +351,14 @@
 						<a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21">Illustrated Guide to LSTM’s and GRU’s: A step by step explanation</a><br>
 						<a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a>
 					</p>
-
 				</section>
-			</section>
+			</section> -->
 
 			<!-- HAUSAUFGABE -->
 			<section>
 				<p class="slidetitle">For the next week</p>
 				<ul>
-					<li>Finish the last week of the last course</li>
+					<li>Finishing preparing the presentation</li>
 					<li>You are done! Missing only the project!</li>
 				</ul>
 			</section>
