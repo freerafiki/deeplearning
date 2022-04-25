@@ -1,0 +1,163 @@
+<html>
+
+<head>
+	<!-- for gitbook -->
+	<title>Week 3 - Deep Learning from Scratch @ Opencampus</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Weights initialization, forward- and backpropagation.">
+	<meta name="keywords" content="Deep Learning, Opencampus, backpropagation">
+	<meta name="author" content="Luca Palmieri">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../res/icon/dl-icon.png">
+	<meta property="og:image" content="../res/icon/dl-icon.png">
+	<!-- until here -->
+	<base target="_blank">
+	<link rel="stylesheet" href="../../css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/night.css">
+	<link rel="stylesheet" href="../../css/s.css">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.hard {
+			color: coral;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- WELCOME TO THE COURSE -->
+			<section>
+				<h3>Deep Learning <br>from Scratch</h3>
+
+				<h2 class="slidetitle" style="padding-bottom: 4rem">
+					Shallow Neural Networks
+				</h2>
+				<p>Course starts soon..</p><br>
+
+			</section>
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">Quiz</p><br>
+				<p>We will start now with a quiz based on the first week material</p>
+				<p>You have 7 minutes to answer the quiz. </p>
+				<p>The quiz link: <br>
+					<a href="https://forms.office.com/r/jSFhvZa1N6">Quiz Link</a><br>
+					It will be copied in Mattermost and in the Zoom chat.
+				</p>
+			</section>
+
+			<!-- <section>
+				<section>
+					<p class="slidetitle">Questions from last week</p>
+					<p>Leaky ReLU and negative numbers on the activation</p>
+					<p>Cost function for unsupervised learning</p>
+				</section>
+				<section>
+					<p class="slidetitle">Leaky ReLU</p>
+					<img src="../../res/leaky_ng.png" width="20%">
+					<p>difference between activation functions in hidden layers and output layer</p>
+					<p>from CS231:</p>
+					<img src="../../res/leaky.png">
+				</section>
+				<section>
+					<p class="slidetitle">Cost function for unsupervised learning</p>
+					<p>much wider topic: as an idea, the function it is used for is usually different</p>
+					<p>a typical example is to "learn" the characteristics of the input, for example dividing into different clusters or learning a lower dimensional representation. In this case the cost function can be defined as the difference betweeen the
+						"learned" representation and the input and is then minimized through the training.</p>
+					<a href="https://wtf-deeplearning.github.io/unsupervised/AISTATS2011_CoatesNL11.pdf">For more information, check out this paper from Adam Coates and Andrew Ng.</a>
+				</section>
+			</section> -->
+
+			<!-- PROJECTS -->
+			<section>
+				<section>
+					<p class="slidetitle">Start thinking about your Project</p>
+					<ul>
+						<li>What theme would you like to address?</li>
+						<li>What kind of data you want to use?</li>
+						<li>Remember to start simple: can you convert your data in 1D vectors?</li>
+						<li>From experience, better a small project that works and can be extended than a big project abandoned halfway through.</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- PAPER OF THE WEEK -->
+			<!-- <section>
+				<p class="slidetitle">Paper of the week</p>
+				<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"><i>ImageNet Classification with Deep Convolutional Neural Networks</i></a><br>
+				A. Krizhevsky, I. Sutskever, G. E. Hinton <br><i> Proceedings of the 25th International Conference on Neural Information Processing Systems (Lake Tahoe, NV, Dec. 2012), 1097–1105.</i>
+			</section> -->
+
+			<!-- QUIZ -->
+			<section>
+				<p class="slidetitle">Quiz (15 mins)</p>
+				<ol class='slidewithalotoftext'>
+					<li>What are the characteristics of an activation function?</li>
+					<li>Why we need to have random initialization and we cannot leave all weights equal to zeros?</li>
+					<li>Can we use different activation function in the same layer?</li>
+					<li>Are all neurons of a layer always connected to all the neurons of the next one?</li>
+					<li>What is the relation between the cost function, gradient descent, the activation function and the weights of the network?</li>
+					<li>Why do you need Non-Linear Activation Functions?</li>
+				</ol>
+			</section>
+
+			<!-- ANSWERS -->
+			<section>
+				<section>
+					<p class="slidetitle">DISCUSSION AND ANSWERS</p><br>
+				</section>
+			</section>
+
+			<!-- EXERCISES -->
+			<section>
+				<section>
+					<p class="slidetitle">Exercise (15-20 mins)</p>
+					We go through the programming assignment that were planned for this week.<br>
+
+				</section>
+				<section>
+					Q: Is having more hidden units better in terms of performances? Is it worse? Does it depends on a specific parameter? Do you have an intuition why?<br>
+					Q2: Does having more hidden layers require more iterations to train?
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p class="slidetitle">Open Source Project of the Week</p>
+					<a href="https://unity3d.com/machine-learning">Machine Learning Toolkit for Unity</a>
+				</section>
+				<section>
+					<p class="slidetitle">ML-Agents Community Challenge Winners</p>
+					<a href="https://connect.unity.com/p/hide-escape-avoidance-of-pursuing-enemies">Hide / Escape - Avoidance of Pursuing Enemies</a><br>
+					<img src="https://connect-prd-cdn.unity.com/p/images/d9b3e109-2d1d-4d1f-b66b-4bf57feffffe_Hide_Environment.png.2000x0x1.webp" width=70%><br>
+					<a href="https://www.youtube.com/watch?v=Lu56xVlZ40M&feature=emb_rel_end">A cool video on state-of-the-art on hide/escape with AI!</a>
+				</section>
+			</section>
+
+			<!-- HAUSAUFGABE -->
+			<section>
+				<p class="slidetitle">For the next week</p>
+				<ul>
+					<li>Finish the <a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/week/4">fourth week of the course</a></li>
+					<li>Do the Programming Assignments: Build your Neural Network Step by Step and Deep Neural Network Application </li>
+					<li>Prepare an idea for a project, or be ready to discuss projects ideas and start forming teams</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+	<script src="../../js/reveal.js"></script>
+	<script>
+		Reveal.initialize();
+	</script>
+</body>
+
+</html>
