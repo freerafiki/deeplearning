@@ -48,10 +48,51 @@
 
 			<section>
 				<section>
-					<p class="slidetitle">Final Presentations</p><br>
+					<p class="slidetitle">Presentation of the final project</p>
+					<ul class="slidewithalotoftext">
+						<li>Each group will make a presentation. Ideally, the presentation would be divided among all members of the group.</li>
+						<li>Live demo or example are very welcome</li>
+						<li>Each group should take 15-20 minutes. After the presentation there will be a small discussion.</li>
+						<li>The structure of the presentation is not fixed, nor it is its content. However, there are some suggestions to have similar structures.</li>
+					</ul>
+				</section>
+				<section>
+					<p class="slidetitle">Guidelines for the presentation</p>
+					<ul class="slidewithreallyalotoftext">
+					  <li><b>Project</b>: short description of the project and the motivation behind.</li>
+					  <li><b>Architecture</b>: what architecture did you use, how many layers, which function (you can be technical on this part)</li>
+						<li><b>Results</b>: how it works? can you quantify results or show some visualizations?</li>
+						<li><b>Baselines</b>:
+						<ul>
+							<li>is there a simple baseline with which you can compare? It can be as simple as the mean of the data for time series prediction, or a fixed value of 0.5 for the accuracy in a binary classification problem.</li>
+							<li>can you measure human performances on the task? can you personally take some samples from the test set and solve the problem yourself, and quantify the results?</li>
+						</ul>
+						</li>
+						<li><b>(*Optional) Missing:</b> is there something you missed to improve the project? Time, material, knowledge, data, computational power?</li>
+						<li><b>(*Optional) Future works:</b> how could the project be improved or extended?</li>
+					</ul>
+				</section>
+				<section>
+					<p class="slidetitle">Sharing is caring</p>
+					If not otherwise discussed with a single group,
+					we will add your project to our <a href="https://opencampus-sh.github.io/oc-ml-projects/">Project Page</a>
+					<ul class="slidewithalotoftext">
+						<li><b>Code</b>: Provide a link to your repository if you have one,
+							and also some short instructions to reproduce it if needed<br>
+							Please check that the code is clean (no testing or commented code)
+							and has comments or text fields to understand it!</li>
+						<li><b>Data:</b> mention if the data is public (with link),
+							or if it is not possible to share.</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p class="slidetitle">Schedule</p><br>
 					<p>
 						We divide in 2 days to avoid sessions which are too long.<br>
-						Each group will have 20 minutes:<br>15/20 of presentation, 5/10 of discussion<br>
+						Each group will have up to 30 minutes:<br>15/20 of presentation, 5/10 of discussion<br>
 						<b>Both sessions are mandatory</b>
 					</p>
 				</section>
@@ -60,13 +101,13 @@
 					<p><b>04th of July</b></p>
 					<ol>
 						<li>
-							<b>Deep Finance - Hedging and Calibration</b>(16.00-16.30)<br>
+							<b>Deep Finance - Hedging and Calibration</b> (16.00-16.30)<br>
 						</li>
 						<li>
-							<b>Hot Autonomous Wheels: </b>(16.30-17.00)<br>
+							<b>Hot Autonomous Wheels</b> (16.30-17.00)<br>
 						</li>
 						<li>
-							<b>Age Detection </b>(17.00-17.30)<br>
+							<b>Age Detection</b> (17.00-17.30)<br>
 						</li>
 					</ol>
 					</p>
@@ -82,11 +123,21 @@
 							<b>GANs </b>(16.30-17.00)<br>
 						</li>
 						<li>
-							<b>Text classification on arXiv abstracts</b>(16.40-17.00)<br>
+							<b>Text classification on arXiv abstracts</b> (17.00-17.30)<br>
 						</li>
 					</ol>
 					</p>
 				</section>
+			</section>
+
+			<!-- Questions -->
+			<section>
+				<p class="slidetitle">Open Questions (15 mins)</p><br>
+				<ol class="slidewithalotoftext">
+					<li>Can you think of a task where machines has not yet surpassed human level performances, but most likely in the future will?</li>
+					<li>What is the difference between random errors and sistematic errors on the labelling of your training data?</li>
+					<li>Can you explain the difference between multi-task and end-to-end learning? Can you make an example for both of them?</li>
+				</ol>
 			</section>
 
 			<!-- RNN/LSTM -->
@@ -122,20 +173,32 @@
 				<section>
 					<p class="slidetitle">Attention</p>
 					<p>
-						<a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/">
-							What it is and why we need it - with animations
-						</a>
+						<iframe src="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/" width=100% height="500rem;" style="background: white"></iframe>
 					</p>
 				</section>
 				<section>
 					<p class="slidetitle">Try it yourself</p>
+					<a href="https://transformer.huggingface.co/">Using huggingface models!</a><br>
+					(<a href="https://transformer.huggingface.co/model/arxiv-nlp">one also on arXiv abstracts!</a> )
 					</p>
 				</section>
 				<section>
 					<p class="slidetitle">GPT-3</p>
+					<iframe src="https://gpt3.website/" width=100% height="500rem;" style="background: white"></iframe>
+					<a href="https://arxiv.org/abs/2005.14165v4">Research Paper</a>
 				</section>
 				<section>
 					<p class="slidetitle">DALL-E</p>
+					<a href="https://openai.com/dall-e-2">OpenAI Model</a><br>
+					<a href="https://arxiv.org/abs/2204.06125">Research Paper</a>
+					<p class="slidetitle">DALL-E mini</p>
+					<a href="https://huggingface.co/spaces/dalle-mini/dalle-mini">Demo Page</a><br>
+					<a href="https://huggingface.co/dalle-mini/dalle-mini">Model Info</a>
+				</section>
+				<section>
+					<p class="slidetitle">EleutherAI</p>
+					<iframe src="https://www.eleuther.ai/" width=100% height="500rem;" style="background: white"></iframe>
+					<a href="https://github.com/EleutherAI">Github Org</a>
 				</section>
 				<section>
 					<p class="slidetitle">RNN/LSTM Bibliography</p>
@@ -146,35 +209,24 @@
 						<br>[4] <a href="https://distill.pub/2019/memorization-in-rnns/">Memorization RNN/LSTM</a>
 						<br>[5] <a href="http://iphome.hhi.de/samek/pdf/ICIP2018_4.pdf">Slide from Samek's presentation at ICIP 2018</a>
 						<br>[6] <a href="https://arxiv.org/pdf/1706.03762.pdf">Attention is All you Need (Paper)</a>
-						<br>[7] <a href="https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/">Online Article with Animations</a>
-						<br>[8] <a href="https://www.youtube.com/watch?v=iH-wmtxHunk">Video Explanation of a transformer paper</a>
-						<br>[9] <a href="https://transformer.huggingface.co/">Writing with Transformers</a>
-						<br>[10] <a href="https://transformer.huggingface.co/model/arxiv-nlp">ArXiv NLP model checkpoint</a>
+						<br>[7] <a href="https://www.youtube.com/watch?v=iH-wmtxHunk">Video Explanation of a transformer paper</a>
 
 						<br>Additional Resources:
-						<br>[6] <a href="http://joshvarty.github.io/VisualizingRNNs/">Animation RNN</a>
-						<br>[7] <a href="http://blog.echen.me/">Detailed Explanation, LSTM</a>
-						<br>[8] <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">RNN representation</a>
+						<br>[8] <a href="http://joshvarty.github.io/VisualizingRNNs/">Animation RNN</a>
+						<br>[9] <a href="http://blog.echen.me/">Detailed Explanation, LSTM</a>
+						<br>[10] <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/">RNN representation</a>
 					</p>
 				</section>
-				<section>
+				<!-- <section>
 					<p>If you like these, take the</p>
 					<a href="https://edu.opencampus.sh/courses/215"><p class="slidetitle huge">Machine Learning with Tensorflow</p></a>
 					<p>or</p>
 					<a href="https://edu.opencampus.sh/courses/233"><p class="slidetitle huge">Natural Language Processing with Transformer</p></a>
 					<p>course</p>
-				</section>
+				</section> -->
 			</section>
 
-			<!-- Questions -->
-			<section>
-				<p class="slidetitle">Open Questions (15 mins)</p><br>
-				<ol class="slidewithalotoftext">
-					<li>Can you think of a task where machines has not yet surpassed human level performances, but most likely in the future will?</li>
-					<li>What is the difference between random errors and sistematic errors on the labelling of your training data?</li>
-					<li>Can you explain the difference between multi-task and end-to-end learning? Can you make an example for both of them?</li>
-				</ol>
-			</section>
+
 
 			<!-- ANSWERS -->
 			<section>
